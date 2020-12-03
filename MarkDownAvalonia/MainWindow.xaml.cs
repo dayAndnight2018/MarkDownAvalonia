@@ -34,17 +34,22 @@ namespace MarkDownAvalonia
             OpenFolderDialog ofd = new OpenFolderDialog();
             ofd.ShowAsync(this);
         }
+
+        public void ExitButtonClicked(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
         
         public void LabelMouseEntered(object sender, PointerEventArgs e)
         {
-            Label label = sender as Label;
-            label.Background = new SolidColorBrush(Colors.Gray);
+            Button button = sender as Button;
+            button.Background = new SolidColorBrush(Colors.DodgerBlue);
         }
         
         public void LabelMouseLeave(object sender, PointerEventArgs e)
         {
-            Label label = sender as Label;
-            label.Background = new SolidColorBrush(Colors.Transparent);
+            Button button = sender as Button;
+            button.Background = new SolidColorBrush(Colors.Transparent);
         }
         
         

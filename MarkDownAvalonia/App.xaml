@@ -2,23 +2,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="MarkDownAvalonia.App"
              xmlns:themes="clr-namespace:Material.Styles.Themes;assembly=Material.Styles">
-    <!-- 
+    
     <Application.Styles>
         <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
         <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseLight.xaml"/>
-        <StyleInclude Source="avares://Material.Avalonia/Material.Avalonia.Templates.xaml" />
+        <!-- <StyleInclude Source="avares://Material.Avalonia/Material.Avalonia.Templates.xaml" /> -->
     </Application.Styles>
-    
+    <!--
     <Application.Resources>
         <themes:BundledTheme BaseTheme="Light" PrimaryColor="Teal" SecondaryColor="Amber"/>
     </Application.Resources>
     -->
-    
+    <!--
     <Application.Styles>
-        <!-- The line below is the only thing you need to get started.
-         Tested with Avalonia 0.9.0 only, although not with all controls. -->
         <StyleInclude Source="avares://Citrus.Avalonia/Citrus.xaml"/>
-
+    -->
         <!-- To use other themes:
          1. Comment out *all* of the <StyleInclude /> lines.
          2. Uncomment *one* of the <StyleInclude /> lines below. -->
@@ -26,5 +24,7 @@
         <!-- <StyleInclude Source="avares://Citrus.Avalonia/Rust.xaml"/> -->
         <!-- <StyleInclude Source="avares://Citrus.Avalonia/Candy.xaml"/> -->
         <!-- <StyleInclude Source="avares://Citrus.Avalonia/Magma.xaml"/> -->
+    <!--
     </Application.Styles>
+    -->
 </Application>

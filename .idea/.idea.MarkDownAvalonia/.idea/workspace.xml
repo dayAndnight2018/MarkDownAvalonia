@@ -14,16 +14,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14c2ef56-7a95-4143-8bf6-009a37c1fb77" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/App.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/App.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/MarkDownAvalonia.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/nuget.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/App.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MarkDownAvalonia.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MarkDownAvalonia.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Xaml" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -88,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606986494056</updated>
       <workItem from="1606986500141" duration="2083000" />
-      <workItem from="1606991755658" duration="5367000" />
+      <workItem from="1606991755658" duration="7700000" />
     </task>
     <servers />
   </component>
@@ -113,26 +110,26 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="206" key="GridCell.Tab.0.bottom" timestamp="1607000617168">
+    <state width="1398" height="62" key="GridCell.Tab.0.bottom" timestamp="1607003331336">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="206" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1606999248173" />
-    <state width="1398" height="206" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607000617168" />
-    <state width="1398" height="206" key="GridCell.Tab.0.center" timestamp="1607000617168">
+    <state width="1398" height="62" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607003331336" />
+    <state width="1398" height="62" key="GridCell.Tab.0.center" timestamp="1607003331335">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="206" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1606999248172" />
-    <state width="1398" height="206" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1607000617168" />
-    <state width="1398" height="206" key="GridCell.Tab.0.left" timestamp="1607000617167">
+    <state width="1398" height="62" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1607003331335" />
+    <state width="1398" height="62" key="GridCell.Tab.0.left" timestamp="1607003331334">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="206" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1606999248171" />
-    <state width="1398" height="206" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1607000617167" />
-    <state width="1398" height="206" key="GridCell.Tab.0.right" timestamp="1607000617168">
+    <state width="1398" height="62" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1607003331334" />
+    <state width="1398" height="62" key="GridCell.Tab.0.right" timestamp="1607003331335">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="206" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1606999248173" />
-    <state width="1398" height="206" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1607000617168" />
+    <state width="1398" height="62" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1607003331335" />
     <state x="320" y="189" key="Rider.ProjectTemplateDialog.Size" timestamp="1606996871404">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

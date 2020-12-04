@@ -16,7 +16,6 @@
     <list default="true" id="14c2ef56-7a95-4143-8bf6-009a37c1fb77" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/App.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MarkDownAvalonia.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MarkDownAvalonia.csproj" afterDir="false" />
@@ -31,14 +30,18 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E9CB8FBD-A44D-4E4D-9389-94F415C36F74/6A/SystemDialog.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F0341090-2FA4-47EC-870C-5B62969CB347/95/7d820d41/Markdown.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D9A6C8A2-6033-4D75-B6C9-E811A44646A3/cc/885d3d9a/WebView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C6B1368F-EFBD-495B-890F-F5C67710A11F/ef/53169db6/CTextBlock.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F0341090-2FA4-47EC-870C-5B62969CB347/2f/c17e6225/MarkdownScrollViewer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Program.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/App.xaml" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" />
       </list>
     </option>
   </component>
@@ -85,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606986494056</updated>
       <workItem from="1606986500141" duration="2083000" />
-      <workItem from="1606991755658" duration="7700000" />
+      <workItem from="1606991755658" duration="18683000" />
     </task>
     <servers />
   </component>
@@ -110,26 +113,26 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="62" key="GridCell.Tab.0.bottom" timestamp="1607003331336">
+    <state width="1398" height="66" key="GridCell.Tab.0.bottom" timestamp="1607047044522">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1606999248173" />
-    <state width="1398" height="62" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607003331336" />
-    <state width="1398" height="62" key="GridCell.Tab.0.center" timestamp="1607003331335">
+    <state width="1398" height="66" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607047044522" />
+    <state width="1398" height="66" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607041408475" />
+    <state width="1398" height="66" key="GridCell.Tab.0.center" timestamp="1607047044521">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1606999248172" />
-    <state width="1398" height="62" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1607003331335" />
-    <state width="1398" height="62" key="GridCell.Tab.0.left" timestamp="1607003331334">
+    <state width="1398" height="66" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607047044521" />
+    <state width="1398" height="66" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1607041408474" />
+    <state width="1398" height="66" key="GridCell.Tab.0.left" timestamp="1607047044520">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1606999248171" />
-    <state width="1398" height="62" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1607003331334" />
-    <state width="1398" height="62" key="GridCell.Tab.0.right" timestamp="1607003331335">
+    <state width="1398" height="66" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607047044520" />
+    <state width="1398" height="66" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1607041408473" />
+    <state width="1398" height="66" key="GridCell.Tab.0.right" timestamp="1607047044521">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1606999248173" />
-    <state width="1398" height="62" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1607003331335" />
+    <state width="1398" height="66" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607047044521" />
+    <state width="1398" height="66" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1607041408475" />
     <state x="320" y="189" key="Rider.ProjectTemplateDialog.Size" timestamp="1606996871404">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

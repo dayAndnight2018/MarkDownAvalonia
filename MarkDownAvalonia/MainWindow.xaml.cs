@@ -6,6 +6,7 @@ using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
+using Markdown.Avalonia;
 
 namespace MarkDownAvalonia
 {
@@ -51,7 +52,12 @@ namespace MarkDownAvalonia
             Button button = sender as Button;
             button.Background = new SolidColorBrush(Colors.Transparent);
         }
-        
-        
+
+        public void TbxKeyUp(object sender, KeyEventArgs e)
+        {
+            TextBox tbx = sender as TextBox;
+            this.FindControl<MarkdownScrollViewer>("md").Markdown = tbx.Text;
+        }
+
     }
 }

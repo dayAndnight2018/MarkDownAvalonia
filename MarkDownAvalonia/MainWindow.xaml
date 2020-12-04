@@ -2,6 +2,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:avalonia="clr-namespace:Markdown.Avalonia;assembly=Markdown.Avalonia"
+        xmlns:ctxt="clr-namespace:ColorTextBlock.Avalonia;assembly=ColorTextBlock.Avalonia"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="MarkDownAvalonia.MainWindow"
         Title="MarkDownAvalonia">
@@ -43,18 +45,58 @@
                         </Menu>
                         -->
                 </StackPanel>
-                <Grid Grid.Column="1">
+                <Grid Grid.Column="1" Background="#303030">
                         <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="5" />
+                                <ColumnDefinition Width="1" />
                                 <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                                    <TextBox FontFamily="Microsoft YaHei,Simsun,苹方-简,宋体-简" Grid.Column="0">
-                                            
-                                    </TextBox>
-                                    <GridSplitter Grid.Column="1" />
-                                    <TextBlock Grid.Column="2">这是是预览的区域</TextBlock>
+                            <TextBox FontFamily="Microsoft YaHei,Simsun,苹方-简,宋体-简" Grid.Column="0" TextWrapping="Wrap" AcceptsReturn="True" KeyUp="TbxKeyUp">
                                     
+                            </TextBox>
+                            <GridSplitter Grid.Column="1" Background="gray"/>
+                            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Background="#303030">
+                                    <avalonia:MarkdownScrollViewer Markdown="# 你好 ## Hi" Name="md">
+                                            <avalonia:MarkdownScrollViewer.Styles>
+                                                    <Style Selector="TextBlock">
+                                                            <Setter Property="FontFamily" Value="Microsoft YaHei,Simsun,苹方-简,宋体-简"></Setter>
+                                                    </Style>
+                                                    <Style Selector="ctxt|CTextBlock">
+                                                            <Setter Property="FontFamily" Value="Microsoft YaHei,Simsun,苹方-简,宋体-简"></Setter>
+                                                            <Setter Property="Foreground" Value="white"></Setter>
+                                                    </Style>
+                                                    <Style Selector="ctxt|CTextBlock.Heading1">
+                                                            <Setter Property="Foreground" Value="#C75049"></Setter>
+                                                            <Setter Property="FontSize" Value="28"></Setter>
+                                                    </Style>
+                                                    <Style Selector="ctxt|CTextBlock.Heading2">
+                                                            <Setter Property="Foreground" Value="#C75049"></Setter>
+                                                            <Setter Property="FontSize" Value="24"></Setter>
+                                                    </Style>
+                                                    <Style Selector="ctxt|CTextBlock.Heading3">
+                                                            <Setter Property="Foreground" Value="#C75049"></Setter>
+                                                            <Setter Property="FontSize" Value="20"></Setter>
+                                                    </Style>
+                                                    <Style Selector="ctxt|CTextBlock.Heading4">
+                                                            <Setter Property="Foreground" Value="#C75049"></Setter>
+                                                            <Setter Property="FontSize" Value="16"></Setter>
+                                                    </Style>
+                                                    <Style Selector="ctxt|CTextBlock.Heading5">
+                                                            <Setter Property="Foreground" Value="#C75049"></Setter>
+                                                            <Setter Property="FontSize" Value="12"></Setter>
+                                                    </Style>
+                                                    <Style Selector="ctxt|CTextBlock.Heading6">
+                                                            <Setter Property="Foreground" Value="#C75049"></Setter>
+                                                            <Setter Property="FontSize" Value="10"></Setter>
+                                                    </Style>
+                                                    <Style Selector="ctxt|CTextBlock.CodeBlock">
+                                                            <Setter Property="Foreground" Value="white"></Setter>
+                                                            <Setter Property="Background" Value="black"></Setter>
+                                                    </Style>
+                                            </avalonia:MarkdownScrollViewer.Styles>
+                                    </avalonia:MarkdownScrollViewer>
+                            </StackPanel>
+                            
                 </Grid>
         </Grid>
 </Window>

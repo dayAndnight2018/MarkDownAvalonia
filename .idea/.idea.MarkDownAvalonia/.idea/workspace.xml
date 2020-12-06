@@ -15,10 +15,7 @@
   <component name="ChangeListManager">
     <list default="true" id="14c2ef56-7a95-4143-8bf6-009a37c1fb77" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MarkDownAvalonia.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MarkDownAvalonia.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,13 +26,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C6B1368F-EFBD-495B-890F-F5C67710A11F/ca/7095a102/CSpan.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C6B1368F-EFBD-495B-890F-F5C67710A11F/cd/d6729392/CHyperlink.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C6B1368F-EFBD-495B-890F-F5C67710A11F/47/22fe211c/CInline.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C6B1368F-EFBD-495B-890F-F5C67710A11F/ef/53169db6/CTextBlock.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A76B8C80-4D9F-4FC8-8A9A-03F322A6D646/63/092cd641/AvaloniaObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E9CB8FBD-A44D-4E4D-9389-94F415C36F74/6A/SystemDialog.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F0341090-2FA4-47EC-870C-5B62969CB347/95/7d820d41/Markdown.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C6B1368F-EFBD-495B-890F-F5C67710A11F/2c/a16688ea/CLineBreak.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B971FD86-5926-47CF-90D5-9F158B07D572/f9/2662fa72/MarkdownScrollViewer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D9A6C8A2-6033-4D75-B6C9-E811A44646A3/cc/885d3d9a/WebView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C6B1368F-EFBD-495B-890F-F5C67710A11F/cd/d6729392/CHyperlink.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C6B1368F-EFBD-495B-890F-F5C67710A11F/ef/53169db6/CTextBlock.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B971FD86-5926-47CF-90D5-9F158B07D572/44/08d38f1d/Markdown.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F0341090-2FA4-47EC-870C-5B62969CB347/2f/c17e6225/MarkdownScrollViewer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C6B1368F-EFBD-495B-890F-F5C67710A11F/bc/2b7835c1/CCode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F0341090-2FA4-47EC-870C-5B62969CB347/70/4650fb00/MarkdownStyle.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -94,7 +97,7 @@
       <workItem from="1606991755658" duration="25388000" />
       <workItem from="1607125878597" duration="988000" />
       <workItem from="1607127126004" duration="168000" />
-      <workItem from="1607127428169" duration="5714000" />
+      <workItem from="1607127428169" duration="9153000" />
     </task>
     <servers />
   </component>
@@ -119,32 +122,32 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="99" key="GridCell.Tab.0.bottom" timestamp="1607236065240">
+    <state width="1398" height="99" key="GridCell.Tab.0.bottom" timestamp="1607240465748">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="66" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607083352877" />
-    <state width="1398" height="99" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607236065240" />
+    <state width="1398" height="99" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607240465748" />
     <state width="1398" height="66" key="GridCell.Tab.0.bottom/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1607054768176" />
     <state width="1398" height="215" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1607219810158" />
-    <state width="1398" height="99" key="GridCell.Tab.0.center" timestamp="1607236065240">
+    <state width="1398" height="99" key="GridCell.Tab.0.center" timestamp="1607240465747">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="66" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607083352877" />
-    <state width="1398" height="99" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1607236065240" />
+    <state width="1398" height="99" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1607240465747" />
     <state width="1398" height="66" key="GridCell.Tab.0.center/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1607054768173" />
     <state width="1398" height="215" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1607219810157" />
-    <state width="1398" height="99" key="GridCell.Tab.0.left" timestamp="1607236065239">
+    <state width="1398" height="99" key="GridCell.Tab.0.left" timestamp="1607240465747">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="66" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607083352876" />
-    <state width="1398" height="99" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1607236065239" />
+    <state width="1398" height="99" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1607240465747" />
     <state width="1398" height="66" key="GridCell.Tab.0.left/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1607054768172" />
     <state width="1398" height="215" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1607219810156" />
-    <state width="1398" height="99" key="GridCell.Tab.0.right" timestamp="1607236065240">
+    <state width="1398" height="99" key="GridCell.Tab.0.right" timestamp="1607240465748">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="66" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607083352877" />
-    <state width="1398" height="99" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1607236065240" />
+    <state width="1398" height="99" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1607240465748" />
     <state width="1398" height="66" key="GridCell.Tab.0.right/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1607054768175" />
     <state width="1398" height="215" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1607219810157" />
     <state x="308" y="192" key="IDE.errors.dialog" timestamp="1607126819179">

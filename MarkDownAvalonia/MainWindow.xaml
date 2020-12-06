@@ -59,49 +59,25 @@
                             #### Heading2
                             ##### Heading2
                             ###### Heading2
-                            
-                            [this is a link](www.baidu.com)
-                            
-                            `this is code block`
-                            
                             | col1 | col2 | col3 |
-                            |------|------|------|
+                            |:----:|:----:|:----:|
                             | one  |------|------|
                             | two  |------|------|
                             | three|------|------|
                             
-                            > blockquote
+                            >这是引用的内容
+                            >>这是引用的内容
+                            >>>>>>>>>>这是引用的内容
                             
                             some text, any text.
                             
-                            
-                            
-                            *italic*
-                            
-                            **bold**
-                            
-                            ***bold and italic***
-                            
-                            1. list1
-                            
-                            2. list2
-                            
-                            * listitem1
-                            
-                            * listitem2
-                            
-                            # sss
-                            
-                            a. aaa
-                            
-                            b. bbb
-
-                           
-
-
-                            
-                            >
-                            > p>. and enhance syntax
+                            **这是加粗的文字**
+                                            
+                            *这是倾斜的文字*
+                                            
+                            ***这是斜体加粗的文字***
+                                            
+                            ~~这是加删除线的文字~~
                             </TextBox>
                             <GridSplitter Grid.Column="1" Background="gray"/>
                             <!--<StackPanel HorizontalAlignment="Stretch" Grid.Column="2" Background="#303030">-->
@@ -155,12 +131,13 @@
                                                             <Style.Setters>
                                                                     <Setter Property="BorderBrush"     Value="#DEDEDE"/>
                                                                     <Setter Property="BorderThickness" Value="5,0,0,0"/>
+                                                                    <Setter Property="Background" Value="#C75049"></Setter>
                                                             </Style.Setters>
                                                     </Style>
 
                                                     <Style Selector="StackPanel.Blockquote">
                                                             <Style.Setters>
-                                                                    <Setter Property="Margin" Value="0"/>
+                                                                    <Setter Property="Margin" Value="10,5"/>
                                                                     <Setter Property="Background" Value="#C75049"></Setter>
                                                             </Style.Setters>
                                                     </Style>
@@ -225,15 +202,16 @@
                                                     
                                                     <Style Selector="Border.CodeBlock">
                                                             <Style.Setters>
-                                                                    <Setter Property="BorderBrush"     Value="#DEDEDE"/>
-                                                                    <Setter Property="BorderThickness" Value="0,5,0,5"/>
+                                                                    <Setter Property="BorderThickness" Value="0"/>
+                                                                    <Setter Property="Padding" Value="10"></Setter>
                                                                     <Setter Property="Margin"          Value="5,0,5,0"/>
-                                                                    <Setter Property="Background"      Value="#EEEEEE"/>
+                                                                    <Setter Property="Background"      Value="silver"/>
+                                                                    <Setter Property="CornerRadius" Value="2"></Setter>
                                                             </Style.Setters>
                                                     </Style>
                                                     <Style Selector="TextBlock.CodeBlock">
                                                             <Style.Setters>
-                                                                    <Setter Property="Foreground"      Value="Black"/>
+                                                                    <Setter Property="Foreground"      Value="black"/>
                                                             </Style.Setters>
                                                     </Style>
 
@@ -254,12 +232,50 @@
                                                     </Style>
                                             
                                             </avalonia:MarkdownScrollViewer.Styles>
-                                            | col1 | col2 | col3 |
-                                            |------|------|------|
-                                            | one  |------|------|
-                                            | two  |------|------|
-                                            | three|------|------|
-                                            | four|------|------|
+                            
+                                            [this is a link](www.baidu.com)
+                                            
+                                            ```
+                                            function fun(){
+                                                echo "这是一句非常牛逼的代码";
+                                            }
+                                            fun();
+                                            ```
+                            
+                                            `this is code block`
+                            
+                                            ---
+                                            
+                                            ====
+                                            
+                                            ***
+                                            
+                                            ___
+                                            
+                                            - 列表内容
+                                            + 列表内容
+                                            * 列表内容   
+                                            
+                                            1. list1
+                            
+                                            2. list2
+                            
+                                            * listitem1
+                            
+                                            * listitem2
+                            
+                                            # sss
+                            
+                                            a. aaa
+                            
+                                            b. bbb
+
+                           
+
+
+                            
+                                            >
+                                            > p>. and enhance syntax
                                     </avalonia:MarkdownScrollViewer>
                            <!-- </StackPanel> -->
                             

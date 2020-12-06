@@ -20,7 +20,7 @@
         <PackageReference Include="Material.Avalonia" Version="0.10.4" />
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="Controls" />
+      <Folder Include="Data" />
     </ItemGroup>
     <ItemGroup>
       <None Remove="img.png" />

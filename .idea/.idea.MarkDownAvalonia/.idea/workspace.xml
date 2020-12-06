@@ -14,8 +14,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14c2ef56-7a95-4143-8bf6-009a37c1fb77" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MarkDownAvalonia.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MarkDownAvalonia.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +51,11 @@
       <list>
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Program.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/App.xaml" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.xaml" />
       </list>
     </option>
   </component>
@@ -97,7 +105,7 @@
       <workItem from="1606991755658" duration="25388000" />
       <workItem from="1607125878597" duration="988000" />
       <workItem from="1607127126004" duration="168000" />
-      <workItem from="1607127428169" duration="9153000" />
+      <workItem from="1607127428169" duration="12971000" />
     </task>
     <servers />
   </component>
@@ -122,32 +130,32 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="99" key="GridCell.Tab.0.bottom" timestamp="1607240465748">
+    <state width="1398" height="302" key="GridCell.Tab.0.bottom" timestamp="1607246526629">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="66" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607083352877" />
-    <state width="1398" height="99" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607240465748" />
+    <state width="1398" height="302" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607246526629" />
     <state width="1398" height="66" key="GridCell.Tab.0.bottom/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1607054768176" />
     <state width="1398" height="215" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1607219810158" />
-    <state width="1398" height="99" key="GridCell.Tab.0.center" timestamp="1607240465747">
+    <state width="1398" height="302" key="GridCell.Tab.0.center" timestamp="1607246526629">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="66" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607083352877" />
-    <state width="1398" height="99" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1607240465747" />
+    <state width="1398" height="302" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1607246526629" />
     <state width="1398" height="66" key="GridCell.Tab.0.center/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1607054768173" />
     <state width="1398" height="215" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1607219810157" />
-    <state width="1398" height="99" key="GridCell.Tab.0.left" timestamp="1607240465747">
+    <state width="1398" height="302" key="GridCell.Tab.0.left" timestamp="1607246526629">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="66" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607083352876" />
-    <state width="1398" height="99" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1607240465747" />
+    <state width="1398" height="302" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1607246526629" />
     <state width="1398" height="66" key="GridCell.Tab.0.left/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1607054768172" />
     <state width="1398" height="215" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1607219810156" />
-    <state width="1398" height="99" key="GridCell.Tab.0.right" timestamp="1607240465748">
+    <state width="1398" height="302" key="GridCell.Tab.0.right" timestamp="1607246526629">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="66" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607083352877" />
-    <state width="1398" height="99" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1607240465748" />
+    <state width="1398" height="302" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1607246526629" />
     <state width="1398" height="66" key="GridCell.Tab.0.right/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1607054768175" />
     <state width="1398" height="215" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1607219810157" />
     <state x="308" y="192" key="IDE.errors.dialog" timestamp="1607126819179">

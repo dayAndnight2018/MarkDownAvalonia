@@ -1,4 +1,5 @@
 using System;
+using Windows.UI.Popups;
 using ABI.Windows.UI;
 using Avalonia;
 using Avalonia.Controls;
@@ -7,7 +8,9 @@ using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using Markdown.Avalonia;
+using MarkDownAvalonia.Controls;
 using Color = Avalonia.Media.Color;
+using MessageDialog = ABI.Windows.UI.Popups.MessageDialog;
 
 namespace MarkDownAvalonia
 {
@@ -16,6 +19,11 @@ namespace MarkDownAvalonia
         public MainWindow()
         {
             InitializeComponent();
+            MessageBox mb = new MessageBox();
+            mb.Width = 420;
+            mb.Height = 360;
+            
+                mb.ShowDialog(this);
         }
 
         private void InitializeComponent()

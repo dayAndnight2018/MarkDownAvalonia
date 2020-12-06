@@ -129,6 +129,7 @@
                                                     
                                                     <Style Selector="Border.Blockquote">
                                                             <Style.Setters>
+                                                                    <Setter Property="Margin" Value="10"></Setter>
                                                                     <Setter Property="BorderBrush"     Value="#DEDEDE"/>
                                                                     <Setter Property="BorderThickness" Value="5,0,0,0"/>
                                                                     <Setter Property="Background" Value="#C75049"></Setter>
@@ -149,6 +150,7 @@
                                                     
                                                     <Style Selector="Border.Table">
                                                             <Style.Setters>
+                                                                    <Setter Property="Margin" Value="10"></Setter>
                                                                     <Setter Property="Padding" Value="5"/>
                                                                     <Setter Property="BorderThickness" Value="0.5"/>
                                                                     <Setter Property="BorderBrush" Value="silver"/>

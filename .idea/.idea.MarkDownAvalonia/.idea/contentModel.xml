@@ -7,7 +7,11 @@
         <e p="App.xaml" t="Include" />
         <e p="App.xaml.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Controls" t="Include" />
+        <e p="Controls" t="Include">
+          <e p="MessageBox.xaml" t="Include" />
+          <e p="MessageBox.xaml.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include" />
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />
         <e p="MarkDownAvalonia.csproj" t="IncludeRecursive" />

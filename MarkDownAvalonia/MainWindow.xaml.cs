@@ -7,6 +7,7 @@ using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using Markdown.Avalonia;
+using Color = Avalonia.Media.Color;
 
 namespace MarkDownAvalonia
 {
@@ -44,13 +45,15 @@ namespace MarkDownAvalonia
         public void LabelMouseEntered(object sender, PointerEventArgs e)
         {
             Button button = sender as Button;
-            button.Background = new SolidColorBrush(Colors.DodgerBlue);
+            button.Background = new SolidColorBrush(Color.FromRgb(199,80,73));
+            button.FontWeight = FontWeight.Bold;
         }
         
         public void LabelMouseLeave(object sender, PointerEventArgs e)
         {
             Button button = sender as Button;
             button.Background = new SolidColorBrush(Colors.Transparent);
+            button.FontWeight = FontWeight.Normal;
         }
 
         public void TbxKeyUp(object sender, KeyEventArgs e)

@@ -8,8 +8,16 @@
         <e p="App.xaml.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controls" t="Include">
+          <e p="EditorWindow.xaml" t="Include" />
+          <e p="EditorWindow.xaml.cs" t="Include" />
           <e p="MessageBox.xaml" t="Include" />
           <e p="MessageBox.xaml.cs" t="Include" />
+          <e p="NewPostWindow.xaml" t="Include" />
+          <e p="NewPostWindow.xaml.cs" t="Include" />
+          <e p="PostItemControl.xaml" t="Include" />
+          <e p="PostItemControl.xaml.cs" t="Include" />
+          <e p="SettingWindow.xaml" t="Include" />
+          <e p="SettingWindow.xaml.cs" t="Include" />
         </e>
         <e p="Data" t="Include" />
         <e p="MainWindow.xaml" t="Include" />
@@ -27,6 +35,8 @@
           </e>
         </e>
         <e p="Program.cs" t="Include" />
+        <e p="WelcomeWindow.xaml" t="Include" />
+        <e p="WelcomeWindow.xaml.cs" t="Include" />
       </e>
       <e p="MarkDownAvalonia.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

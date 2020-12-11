@@ -5,21 +5,22 @@ using Avalonia.Markup.Xaml;
 
 namespace MarkDownAvalonia.Controls
 {
-    public class MessageBox : Window
+    public class NewPostWindow : Window
     {
         private string title;
         private string content;
         
-        public MessageBox(string title, string content)
+        public NewPostWindow(string title, string content)
         {
             AvaloniaXamlLoader.Load(this);
             this.title = title;
             this.content = content;
             this.FindControl<Label>("title").Content = title;
-            this.FindControl<TextBlock>("content").Text = content;
+            this.FindControl<TextBox>("content").Text = content;
+            this.FindControl<TextBox>("content").Width = Width / 5.0 * 4;
         }
 
-        public MessageBox():this("Message",String.Empty)
+        public NewPostWindow():this("New Post",String.Empty)
         {
         }
         

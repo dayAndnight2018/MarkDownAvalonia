@@ -15,7 +15,10 @@ namespace MarkDownAvalonia
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
-                desktop.MainWindow = new MainWindow();
+                var mainWindow = new MainWindow();
+                mainWindow.Width = 900;
+                mainWindow.Height = 640;
+                desktop.MainWindow = mainWindow;
             }
 
             base.OnFrameworkInitializationCompleted();

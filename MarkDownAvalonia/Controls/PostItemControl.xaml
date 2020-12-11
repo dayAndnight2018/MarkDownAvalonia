@@ -1,0 +1,34 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="120"
+             x:Class="MarkDownAvalonia.Controls.PostItemControl"
+             Background="white" BorderThickness="0 1 0 1" BorderBrush="silver" PointerEnter="GetFocus" PointerLeave="LostFocus">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label FontSize="20" Margin="5" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Grid.ColumnSpan="2">这是测试标题,再长一点也是可以的</Label>
+        <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Background="TransParent" BorderThickness="0">
+                <PathIcon Data="M252.3 743.3l235.8-42.4-147.8-179.1zM868.3 389L720.2 210.2l-355 291.2 148.2 178.8zM958 259.7l-92.6-111.9c-15.1-18.4-43.7-20.3-63.7-4.2l-53.9 44 148.1 179.1 53.9-44c19.6-16.1 23.3-44.6 8.2-63z M890.6 545.1c-26.6 0-48.1 21.5-48.1 48.1v132c0 40-32.4 72.4-72.4 72.4H259.6c-40 0-72.4-32.4-72.4-72.4V345.4c0-40 32.4-72.4 72.4-72.4h49.6c26.6 0 48.1-21.5 48.1-48.1s-21.5-48.1-48.1-48.1h-49.6c-93.1 0-168.5 75.5-168.5 168.5v379.8c0 93.1 75.5 168.5 168.5 168.5h510.5c93.1 0 168.5-75.5 168.5-168.5v-132c0-26.5-21.5-48-48-48z"></PathIcon>
+            </Button>
+            <Button Background="TransParent" BorderThickness="0">
+                <PathIcon Data="M954.181818 186.181818a46.545455 46.545455 0 1 1 0 93.090909h-48.011636l-18.734546 563.362909a139.636364 139.636364 0 0 1-134.330181 134.725819l-5.213091 0.09309H276.107636a139.636364 139.636364 0 0 1-139.543272-134.818909L117.806545 279.272727H69.818182a46.545455 46.545455 0 1 1 0-93.090909h884.363636z m-141.265454 93.090909H211.060364l18.548363 560.151273a46.545455 46.545455 0 0 0 42.961455 44.8l3.537454 0.139636h471.784728a46.545455 46.545455 0 0 0 46.498909-44.939636L812.916364 279.272727zM628.363636 418.909091a46.545455 46.545455 0 0 1 46.545455 46.545454v209.454546a46.545455 46.545455 0 1 1-93.090909 0v-209.454546a46.545455 46.545455 0 0 1 46.545454-46.545454z m-232.727272 0a46.545455 46.545455 0 0 1 46.545454 46.545454v209.454546a46.545455 46.545455 0 1 1-93.090909 0v-209.454546a46.545455 46.545455 0 0 1 46.545455-46.545454zM651.636364 23.272727a46.545455 46.545455 0 1 1 0 93.090909H349.090909a46.545455 46.545455 0 1 1 0-93.090909h302.545455z"></PathIcon>
+            </Button>
+            <Button Background="TransParent" BorderThickness="0">
+                <PathIcon Data="M977.824 454.016C826.432 280.288 672.512 192 516.128 192c-156.384 0-310.304 88.288-461.696 262.016a112 112 0 0 0-1.632 145.248c138.24 165.984 293.088 250.24 463.328 250.24s325.088-84.256 463.328-250.24a112 112 0 0 0-1.632-145.248z m-47.552 104.32c-126.848 152.32-264.48 227.2-414.144 227.2s-287.296-74.88-414.144-227.2a48 48 0 0 1 0.704-62.24C243.008 335.072 380.8 256 516.128 256s273.152 79.072 413.44 240.064c15.488 17.792 15.776 44.16 0.704 62.272z M512 288a224 224 0 1 0 0 448 224 224 0 0 0 0-448z m-64 224a64 64 0 1 1 0.032-128.032A64 64 0 0 1 448 512z"></PathIcon>
+            </Button>
+        </StackPanel>
+        <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="5">2020/12/01 11:11:00</Label>
+    </Grid>
+</UserControl>

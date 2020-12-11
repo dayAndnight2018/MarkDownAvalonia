@@ -3,8 +3,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="420" d:DesignHeight="360"
-        x:Class="MarkDownAvalonia.Controls.MessageBox"
-        Title="Message" Background="white" SystemDecorations="BorderOnly" WindowStartupLocation="CenterOwner">
+        x:Class="MarkDownAvalonia.Controls.SettingWindow"
+        Title="Setting" Background="white" SystemDecorations="BorderOnly" WindowStartupLocation="CenterOwner">
         <Window.Styles>
                 <Style Selector="Button.tab">
                         <Setter Property="Background" Value="#303030"></Setter>
@@ -13,6 +13,10 @@
                         <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
                         <Setter Property="VerticalAlignment" Value="Center"></Setter>
                         <Setter Property="BorderThickness" Value="0"></Setter>
+                </Style>
+                <Style Selector="TextBox.input">
+                        <Setter Property="BorderThickness" Value="0 0 0 1"></Setter>
+                        <Setter Property="BorderBrush" Value="silver"></Setter>
                 </Style>
         </Window.Styles>
         <Grid>
@@ -31,17 +35,41 @@
                                 <Border HorizontalAlignment="Center" BorderThickness="1" BorderBrush="white" Width="30" Height="30" CornerRadius="15" Margin="10 5" Background="white">
                                         <PathIcon Margin="5" Data="M670.4 329.344L512 487.744 353.6 329.344a31.936 31.936 0 0 0-25.344-9.216l-2.56 0.384a32 32 0 0 0-37.76 31.488l0.064 320a32 32 0 0 0 64 0l-0.064-253.76 137.408 137.408a32 32 0 0 0 40.832 3.712l4.48-3.712L672 418.24V672a32 32 0 1 0 64 0v-320A32 32 0 0 0 704 320l-5.76 0.512-2.496-0.384a31.936 31.936 0 0 0-25.344 9.216z"></PathIcon>
                                 </Border>
-                                <Label Name="title" VerticalAlignment="Center" Foreground="white" FontSize="16">Message</Label>
+                                <Label Name="title" VerticalAlignment="Center" Foreground="white" FontSize="16">Settings</Label>
                         </StackPanel>
                         <Button Grid.Column="2" Width="30" Height="30" Foreground="white" Background="#C75049" BorderThickness="0" Margin="10 0" Click="CloseWindow">
                                 <PathIcon Foreground="white" Data="M1023.997 114.97 911.408 2.388 516.149 397.629 118.5 0 5.91 112.585l397.649 397.629L7.107 906.648l112.587 112.59 396.454-396.439 395.259 395.249 112.59-112.59L628.738 510.214 1023.997 114.97z"></PathIcon>
                         </Button>
                 </Grid>
-                <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled">
-                        <TextBlock  Name="content" FontSize="16" Padding="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontFamily="Microsoft YaHei,Simsun,华文宋体,苹方,苹方-简,宋体-简" Text="iceshi ceshi ceshi ceshi ceshi ceshi  ceshi ceshi ceshi ceshi  ceshi ceshi ceshi ceshi  ceshi ceshi ceshi ceshi  ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshiceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshiceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshiceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshiceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshiceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshiceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshiceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshiceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshiceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshiceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi ceshi">
+                
+                <Grid Grid.Row="1" Name="centerArea">
+                        <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <PathIcon Grid.Column="1" Grid.Row="1" Data="M907.636364 791.272727c0 32.093091-26.088727 58.181818-58.181819 58.181818h-674.90909A58.228364 58.228364 0 0 1 116.363636 791.272727V314.181818h733.090909c32.093091 0 58.181818 26.088727 58.181819 58.181818v418.909091zM116.363636 197.818182c0-6.4 5.236364-11.636364 11.636364-11.636364h305.058909c4.096 0 7.936 2.187636 10.030546 5.725091l30.999272 52.456727H116.363636v-46.545454z m733.090909 46.545454H555.170909l-51.968-87.970909A81.780364 81.780364 0 0 0 433.058909 116.363636H128C83.083636 116.363636 46.545455 152.901818 46.545455 197.818182V791.272727c0 70.562909 57.437091 128 128 128h674.90909c70.562909 0 128-57.437091 128-128V372.363636c0-70.562909-57.437091-128-128-128z">
+                                
+                        </PathIcon>
+                        <!-- <Label Content="Root Path:" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalContentAlignment="Right"></Label> -->
+                        <TextBox Classes="input" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" MaxHeight="24" VerticalAlignment="Center" Watermark="click here to select root directory"  GotFocus="selectDir"></TextBox>
+                        <PathIcon Data="M512 64c247.424 0 448 200.576 448 448S759.424 960 512 960h-0.0016C264.576 960 64 759.424 64 512S264.576 64 512 64z m126.1168 632.2848l-1.8912 0.2384C596.7808 701.392 555.1008 704 512 704c-43.792 0-86.1136-2.6928-126.1184-7.712 8.6784 42.1216 20.3136 80.5504 34.4736 113.5872C449.3984 877.648 484.208 912 512 912h-0.0032c27.7952 0 62.6048-34.352 91.648-102.1248 14.16-33.0368 25.7968-71.4672 34.472-113.5904zM123.5152 607.688c35.3616 144.0448 148.7456 257.4288 292.7872 292.792-35.8352-48.1728-64.3824-122.5664-80.8224-211.952-89.3936-16.448-163.7952-44.9968-211.9648-80.84z m776.9664 0l-0.4848 0.3632c-48.184 35.6736-122.384 64.0848-211.4784 80.4704-16.4384 89.392-44.984 163.7856-80.824 211.9552 144.0448-35.36 257.4272-148.744 292.7872-292.7872zM512 368c-46.6912 0-92.0864 3.224-134.7088 9.2912C371.224 419.9136 368 465.3072 368 512c0 46.6912 3.224 92.0864 9.2912 134.7088C419.9136 652.776 465.3072 656 512 656c46.6912 0 92.0864-3.224 134.7088-9.2912C652.776 604.0864 656 558.6928 656 512c0-46.6912-3.224-92.0864-9.2912-134.7088C604.0864 371.224 558.6928 368 512 368z m-184.288 17.8784l-2.4752 0.5184c-41.152 8.6208-78.7232 20.0768-111.112 33.9584C146.352 449.3984 112 484.208 112 512c0 27.792 34.352 62.6016 102.1248 91.6448 33.0384 14.16 71.4688 25.7968 113.5936 34.4736-5.024-40-7.7184-82.3264-7.7184-126.1184 0-43.792 2.6928-86.1168 7.712-126.1216z m368.5696 0.0032l0.5888 4.7488C701.5152 429.232 704 469.9376 704 512c0 43.792-2.6928 86.1168-7.712 126.1216 42.1184-8.68 80.5488-20.3168 113.5872-34.4768C877.648 574.6016 912 539.792 912 512c0-27.792-34.352-62.6016-102.1248-91.6448-33.0384-14.16-71.4688-25.7968-113.5936-34.4736zM416.3056 123.5232l-2.3536 0.5808c-142.9248 36.016-255.2672 148.9488-290.4336 292.208 48.168-35.8432 122.568-64.392 211.9632-80.8336 16.4384-89.392 44.9856-163.7856 80.824-211.9552z m191.392-0.0032l0.3536 0.4832c35.672 48.1824 64.0832 122.3792 80.4688 211.4704 89.3936 16.4464 163.7952 44.9952 211.9648 80.8384C865.1232 272.2672 751.7392 158.8832 607.6976 123.52zM512 112l-0.8352 0.0096c-27.6528 0.6816-62.056 35.0224-90.8096 102.1152-14.16 33.0368-25.7952 71.4656-34.472 113.5888C425.8864 322.6928 468.208 320 512 320c43.792 0 86.1136 2.6928 126.1184 7.712-8.6784-42.1216-20.3136-80.5504-34.4736-113.5872C574.6016 146.352 539.792 112 512 112z" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" ></PathIcon>
+                        <TextBox Classes="input" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" MaxHeight="24" VerticalAlignment="Center" Watermark="type here project git address"></TextBox>
                         
-                        </TextBlock>
-                </ScrollViewer>
+                        <PathIcon Data="M1019.839129 1024H3.479517v-138.752165a233.797399 233.797399 0 0 1 233.797399-236.572443h548.071054a234.49116 234.49116 0 0 1 234.491159 233.797399zM107.543641 919.935876h808.231364v-37.463085a130.427036 130.427036 0 0 0-130.427035-129.733274h-548.071054a129.733275 129.733275 0 0 0-129.733275 129.733274zM511.312443 607.743504a303.867242 303.867242 0 1 1 303.867242-303.173482 303.173482 303.173482 0 0 1-303.867242 303.173482z m0-502.9766a199.803118 199.803118 0 1 0 199.803118 199.803118A199.803118 199.803118 0 0 0 511.312443 104.766904z" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" ></PathIcon>
+                        <TextBox Classes="input" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" MaxHeight="24" VerticalAlignment="Center" Watermark="type here git username"></TextBox>
+                        <PathIcon Data="M879.849856 385.02485h-106.549958V256.5999S796.749889 0 512 0c0 0-258.287399 0-258.287399 258.112399v126.912451H144.137644a53.549979 53.549979 0 0 0-53.749979 53.012479v533.074792c0 29.087489 24.212491 52.887479 53.749979 52.887479H879.849856a53.549979 53.549979 0 0 0 53.749979-52.937479V437.974829a53.549979 53.549979 0 0 0-53.749979-52.937479z m-529.524793 0V258.099899S348.275064 96.062462 517.062498 96.062462c0 0 159.137438-4.999998 159.137438 159.999938v128.96245z m0 0" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" ></PathIcon>
+                        <TextBox Classes="input" Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2" MaxHeight="24" VerticalAlignment="Center" Watermark="type here git password"></TextBox>
+                </Grid>
                 
                 
                 <Grid Grid.Row="2">
@@ -89,3 +117,4 @@
 
         </Grid>
 </Window>
+

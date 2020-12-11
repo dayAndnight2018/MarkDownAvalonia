@@ -1,0 +1,303 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:avalonia="clr-namespace:Markdown.Avalonia;assembly=Markdown.Avalonia"
+        xmlns:ctxt="clr-namespace:ColorTextBlock.Avalonia;assembly=ColorTextBlock.Avalonia"
+        xmlns:mdctl="clr-namespace:Markdown.Avalonia.Controls;assembly=Markdown.Avalonia"
+        mc:Ignorable="d" d:DesignWidth="960" d:DesignHeight="720"
+        x:Class="MarkDownAvalonia.WelcomeWindow"
+        Title="MarkDownAvalonia" WindowStartupLocation="CenterScreen">
+        <Window.Styles>
+                <Style Selector="Button.tab">
+                        <Setter Property="Background" Value="#303030"></Setter>
+                        <Setter Property="Foreground" Value="white" />
+                        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                        <Setter Property="BorderThickness" Value="0"></Setter>
+                </Style>
+        </Window.Styles>
+        <Grid>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="6*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="0" Orientation="Vertical" Background="#303030">
+                        <Border HorizontalAlignment="Center" BorderThickness="1" BorderBrush="white" Width="80" Height="80" CornerRadius="40" Margin="0 50" Background="white">
+                                <Label FontSize="30" Foreground="black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">MD</Label>
+                        </Border>
+                        <Button Classes="tab" Margin="0 20 0 10" Padding="10" Content="New" PointerEnter="LabelMouseEntered" PointerLeave="LabelMouseLeave"></Button>
+                        <Button Classes="tab" Margin="0 10" Padding="10"  Content="Delete" PointerEnter="LabelMouseEntered" PointerLeave="LabelMouseLeave"></Button>
+                        <Button Classes="tab" Margin="0 10" Padding="10"  Content="Pull" PointerEnter="LabelMouseEntered" PointerLeave="LabelMouseLeave"></Button>
+                        <Button Classes="tab" Margin="0 10" Padding="10"  Content="Push" PointerEnter="LabelMouseEntered" PointerLeave="LabelMouseLeave"></Button>
+                        <Button Classes="tab" Margin="0 10" Padding="10"  Content="Options" PointerEnter="LabelMouseEntered" PointerLeave="LabelMouseLeave"></Button>
+                        <Button Classes="tab" Margin="0 10" Padding="10"  Content="Quit" PointerEnter="LabelMouseEntered" PointerLeave="LabelMouseLeave" Click="ExitButtonClicked"></Button>
+                        <!-- 
+                        <Menu Background="#303030" Foreground="white" VerticalAlignment="Stretch">
+                                <MenuItem Header="_File" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                                        <MenuItem Header="_Open..." Click="OpenMenuClicked"/>
+                                        <Separator/>
+                                        <MenuItem Header="_Exit"/>
+                                </MenuItem>
+                                <MenuItem Header="_Edit" VerticalAlignment="Center">
+                                        <MenuItem Header="Copy"/>
+                                        <MenuItem Header="Paste"/>
+                                </MenuItem>
+                        </Menu>
+                        -->
+                </StackPanel>
+                <Grid Grid.Column="1" Background="#303030">
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="1" />
+                                <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                            <TextBox FontFamily="Microsoft YaHei,Simsun,苹方,苹方-简,宋体-简" Grid.Column="0" TextWrapping="Wrap" AcceptsReturn="True" KeyUp="TbxKeyUp" FontStyle="Italic">
+                            # Heading1
+                            ## Heading2
+                            ### Heading2
+                            #### Heading2
+                            ##### Heading2
+                            ###### Heading2
+                            | col1 | col2 | col3 |
+                            |:----:|:----:|:----:|
+                            | one  |------|------|
+                            | two  |------|------|
+                            | three|------|------|
+                            
+                            >这是引用的内容
+                            >>这是引用的内容
+                            >>>>>>>>>>这是引用的内容
+                            
+                            some text, any text.
+                            
+                            **这是加粗的文字**
+                                            
+                            *这是倾斜的文字*
+                                            
+                            ***这是斜体加粗的文字***
+                                            
+                            ~~这是加删除线的文字~~
+                            </TextBox>
+                            <GridSplitter Grid.Column="1" Background="gray"/>
+                            <!--<StackPanel HorizontalAlignment="Stretch" Grid.Column="2" Background="#303030">-->
+                                    <avalonia:MarkdownScrollViewer Name="md" Grid.Column="2">
+                                            <avalonia:MarkdownScrollViewer.Styles>
+                                                    <Style Selector="TextBlock">
+                                                            <Setter Property="FontFamily" Value="苹方,苹方-简,Microsoft YaHei,Simsun,宋体-简"></Setter>
+                                                    </Style>
+                                                    <Style Selector="ctxt|CTextBlock">
+                                                            <Setter Property="FontFamily" Value="苹方,苹方-简,Microsoft YaHei,Simsun,宋体-简"></Setter>
+                                                            <Setter Property="Foreground" Value="white"></Setter>
+                                                    </Style>
+                                                    <Style Selector="ctxt|CTextBlock.Heading1">
+                                                            <Setter Property="Foreground" Value="#C75049"></Setter>
+                                                            <Setter Property="FontSize" Value="28"></Setter>
+                                                            <Setter Property="FontWeight" Value="Bold"></Setter>
+                                                            <Setter Property="Background" Value="TransParent"></Setter>
+                                                    </Style>
+                                                    <Style Selector="ctxt|CTextBlock.Heading2">
+                                                            <Setter Property="Foreground" Value="#C75049"></Setter>
+                                                            <Setter Property="FontSize" Value="24"></Setter>
+                                                            <Setter Property="FontWeight" Value="Bold"></Setter>
+                                                            <Setter Property="Background" Value="TransParent"></Setter>
+                                                    </Style>
+                                                    <Style Selector="ctxt|CTextBlock.Heading3">
+                                                            <Setter Property="Foreground" Value="#C75049"></Setter>
+                                                            <Setter Property="FontSize" Value="20"></Setter>
+                                                            <Setter Property="FontWeight" Value="Bold"></Setter>
+                                                            <Setter Property="Background" Value="TransParent"></Setter>
+                                                    </Style>
+                                                    <Style Selector="ctxt|CTextBlock.Heading4">
+                                                            <Setter Property="Foreground" Value="#C75049"></Setter>
+                                                            <Setter Property="FontSize" Value="16"></Setter>
+                                                            <Setter Property="FontWeight" Value="Bold"></Setter>
+                                                            <Setter Property="Background" Value="TransParent"></Setter>
+                                                    </Style>
+                                                    <Style Selector="ctxt|CTextBlock.Heading5">
+                                                            <Setter Property="Foreground" Value="#C75049"></Setter>
+                                                            <Setter Property="FontSize" Value="12"></Setter>
+                                                            <Setter Property="FontWeight" Value="Bold"></Setter>
+                                                            <Setter Property="Background" Value="TransParent"></Setter>
+                                                    </Style>
+                                                    <Style Selector="ctxt|CTextBlock.Heading6">
+                                                            <Setter Property="Foreground" Value="#C75049"></Setter>
+                                                            <Setter Property="FontSize" Value="10"></Setter>
+                                                            <Setter Property="FontWeight" Value="Bold"></Setter>
+                                                            <Setter Property="Background" Value="TransParent"></Setter>
+                                                    </Style>
+                                                    
+                                                    <Style Selector="Border.Blockquote">
+                                                            <Style.Setters>
+                                                                    <Setter Property="Margin" Value="10"></Setter>
+                                                                    <Setter Property="BorderBrush"     Value="#DEDEDE"/>
+                                                                    <Setter Property="BorderThickness" Value="5,0,0,0"/>
+                                                                    <Setter Property="Background" Value="#C75049"></Setter>
+                                                            </Style.Setters>
+                                                    </Style>
+
+                                                    <Style Selector="StackPanel.Blockquote">
+                                                            <Style.Setters>
+                                                                    <Setter Property="Margin" Value="10,5"/>
+                                                                    <Setter Property="Background" Value="#C75049"></Setter>
+                                                            </Style.Setters>
+                                                    </Style>
+                                                    
+                                                    <Style Selector="ctxt|CTextBlock.Note">
+                                                            <Setter Property="Background" Value="#C75049"></Setter>
+                                                            <Setter Property="Foreground" Value="white"></Setter>
+                                                    </Style>
+                                                    
+                                                    <Style Selector="Border.Table">
+                                                            <Style.Setters>
+                                                                    <Setter Property="Margin" Value="10"></Setter>
+                                                                    <Setter Property="Padding" Value="5"/>
+                                                                    <Setter Property="BorderThickness" Value="0.5"/>
+                                                                    <Setter Property="BorderBrush" Value="silver"/>
+                                                            </Style.Setters>
+                                                    </Style>
+
+                                                    <Style Selector="Grid.Table > Border">
+                                                            <Style.Setters>
+                                                                    <Setter Property="Margin" Value="0"/>
+                                                                    <Setter Property="BorderThickness" Value="0.5"/>
+                                                                    <Setter Property="BorderBrush" Value="silver"/>
+                                                                    <Setter Property="Padding" Value="13, 6"/>
+                                                            </Style.Setters>
+                                                    </Style>
+
+                                                    
+                                                    <Style Selector="Border.TableHeader">
+                                                            <Style.Setters>
+                                                                    <Setter Property="Background" Value="#C75049"/>
+                                                            </Style.Setters>
+                                                    </Style>
+                                                    <Style Selector="Border.TableHeader ctxt|CTextBlock">
+                                                            <Style.Setters>
+                                                                    <Setter Property="FontWeight" Value="Bold"/>
+                                                            </Style.Setters>
+                                                    </Style>
+                                                    
+                                                    <Style Selector="Border.OddTableRow">
+                                                            <Style.Setters>
+                                                                    <Setter Property="Background" Value="white"/>
+                                                            </Style.Setters>
+                                                    </Style>
+
+                                                    <Style Selector="Border.EvenTableRow">
+                                                            <Style.Setters>
+                                                                    <Setter Property="Background" Value="lightgray"/>
+                                                            </Style.Setters>
+                                                    </Style>
+                                                    
+                                                    <Style Selector=".OddTableRow ctxt|CTextBlock">
+                                                            <Style.Setters>
+                                                                    <Setter Property="Foreground" Value="black"/>
+                                                            </Style.Setters>
+                                                    </Style>
+
+                                                    <Style Selector="Border.EvenTableRow ctxt|CTextBlock">
+                                                            <Style.Setters>
+                                                                    <Setter Property="Foreground" Value="black"/>
+                                                            </Style.Setters>
+                                                    </Style>
+                                                    
+                                                    <Style Selector="Border.CodeBlock">
+                                                            <Style.Setters>
+                                                                    <Setter Property="BorderThickness" Value="0"/>
+                                                                    <Setter Property="Padding" Value="10"></Setter>
+                                                                    <Setter Property="Margin"          Value="5,0,5,0"/>
+                                                                    <Setter Property="Background"      Value="silver"/>
+                                                                    <Setter Property="CornerRadius" Value="2"></Setter>
+                                                            </Style.Setters>
+                                                    </Style>
+                                                    <Style Selector="TextBlock.CodeBlock">
+                                                            <Style.Setters>
+                                                                    <Setter Property="Foreground"      Value="black"/>
+                                                            </Style.Setters>
+                                                    </Style>
+
+                                                    <Style Selector="ctxt|CCode">
+                                                            <Style.Setters>
+                                                                    <Setter Property="Foreground" Value="white" />
+                                                                    <Setter Property="Background" Value="#C75049" />
+                                                            </Style.Setters>
+                                                    </Style>
+                                                    
+                                                    <!-- style for urls [link](htttp://www.xxx.com)-->
+                                                    <Style Selector="ctxt|CHyperlink">
+                                                            <Style.Setters>
+                                                                    <Setter Property="IsUnderline" Value="true"/>
+                                                                    <Setter Property="Foreground" Value="#C75049"/>
+                                                                    <Setter Property="HoverForeground" Value="#C75049"/>
+                                                            </Style.Setters>
+                                                    </Style>
+                                                    
+                                                    <Style Selector="mdctl|Rule.Single">
+                                                            <Setter Property="Foreground" Value="#C75049"/>
+                                                    </Style>
+
+                                                    <Style Selector="mdctl|Rule.TwoLines">
+                                                            <Setter Property="Foreground" Value="#C75049"/>
+                                                    </Style>
+
+                                                    <Style Selector="mdctl|Rule.Bold">
+                                                            <Setter Property="Foreground" Value="#C75049"/>
+                                                    </Style>
+
+                                                    <Style Selector="mdctl|Rule.BoldWithSingle">
+                                                            <Setter Property="Foreground" Value="#C75049"/>
+                                                    </Style>
+                                            
+                                            </avalonia:MarkdownScrollViewer.Styles>
+                            
+                                            [this is a link](www.baidu.com)
+                                            
+                                            ```
+                                            function fun(){
+                                                echo "这是一句非常牛逼的代码";
+                                            }
+                                            fun();
+                                            ```
+                            
+                                            `this is code block`
+                            
+                                            ---
+                                            
+                                            ====
+                                            
+                                            ***
+                                            
+                                            ___
+                                            
+                                            - 列表内容
+                                            + 列表内容
+                                            * 列表内容   
+                                            
+                                            1. list1
+                            
+                                            2. list2
+                            
+                                            * listitem1
+                            
+                                            * listitem2
+                            
+                                            # sss
+                            
+                                            a. aaa
+                            
+                                            b. bbb
+
+                           
+
+
+                            
+                                            >
+                                            > p>. and enhance syntax
+                                    </avalonia:MarkdownScrollViewer>
+                           <!-- </StackPanel> -->
+                            
+                </Grid>
+        </Grid>
+</Window>

@@ -19,16 +19,27 @@ namespace MarkDownAvalonia
         public MainWindow()
         {
             InitializeComponent();
-            MessageBox mb = new MessageBox();
-            mb.Width = 420;
-            mb.Height = 360;
-            
-                mb.ShowDialog(this);
         }
 
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
         }
         
         public void OnButtonClick(object sender, RoutedEventArgs e)
@@ -48,6 +59,14 @@ namespace MarkDownAvalonia
         public void ExitButtonClicked(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        public void OpenSettingWindow(Object sender, RoutedEventArgs e)
+        {
+            SettingWindow mb = new SettingWindow();
+            mb.Width = 500;
+            mb.Height = 320;
+            mb.ShowDialog(this);
         }
         
         public void LabelMouseEntered(object sender, PointerEventArgs e)

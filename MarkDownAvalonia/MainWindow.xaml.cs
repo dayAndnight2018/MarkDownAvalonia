@@ -40,6 +40,25 @@ namespace MarkDownAvalonia
             this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
             this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
             this.FindControl<StackPanel>("postItemsPanel").Children.Add(new PostItemControl());
+            InfoMessageBox messageBox = new InfoMessageBox();
+            messageBox.Width = 480;
+            messageBox.Height = 300;
+            messageBox.ShowDialog(this);
+            
+            SuccessMessageBox success = new SuccessMessageBox();
+            success.Width = 480;
+            success.Height = 300;
+            success.ShowDialog(this);
+            
+            WarningMessageBox warning = new WarningMessageBox();
+            warning.Width = 480;
+            warning.Height = 300;
+            warning.ShowDialog(this);
+            
+            ErrorMessageBox errorMessageBox = new ErrorMessageBox();
+            errorMessageBox.Width = 480;
+            errorMessageBox.Height = 300;
+            errorMessageBox.ShowDialog(this);
         }
         
         public void OnButtonClick(object sender, RoutedEventArgs e)

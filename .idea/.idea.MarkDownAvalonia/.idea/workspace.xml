@@ -14,22 +14,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14c2ef56-7a95-4143-8bf6-009a37c1fb77" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/EditorWindow.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/EditorWindow.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/NewPostWindow.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/NewPostWindow.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/SettingWindow.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/SettingWindow.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/WelcomeWindow.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/WelcomeWindow.xaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/ErrorMessageBox.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/ErrorMessageBox.xaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/InfoMessageBox.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/InfoMessageBox.xaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/SuccessMessageBox.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.xaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/SuccessMessageBox.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MarkDownAvalonia.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MarkDownAvalonia.csproj" afterDir="false" />
     </list>
@@ -65,21 +60,30 @@
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Program.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/App.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.cs" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/NewPostWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/NewPostWindow.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/WelcomeWindow.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/WelcomeWindow.xaml.cs" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/SettingWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/EditorWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/EditorWindow.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/App.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/SettingWindow.xaml" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.xaml" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/SuccessMessageBox.xaml" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/SuccessMessageBox.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox - Copy.xaml" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/InfoMessageBox.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/ErrorMessageBox.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/ErrorMessageBox.xaml" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/InfoMessageBox.xaml" />
       </list>
     </option>
   </component>
@@ -137,7 +141,7 @@
       <workItem from="1607513231153" duration="3582000" />
       <workItem from="1607564341728" duration="392000" />
       <workItem from="1607664237810" duration="47000" />
-      <workItem from="1607688901728" duration="13343000" />
+      <workItem from="1607688901728" duration="17722000" />
     </task>
     <servers />
   </component>
@@ -162,49 +166,49 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="115" key="GridCell.Tab.0.bottom" timestamp="1607702207636">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state width="1398" height="147" key="GridCell.Tab.0.bottom" timestamp="1607789723041">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1398" height="138" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607339880163" />
     <state width="1398" height="302" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607248273506" />
     <state width="1398" height="66" key="GridCell.Tab.0.bottom/0.23.1440.806/1440.23.1920.1057@0.23.1440.806" timestamp="1607664284037" />
     <state width="1398" height="112" key="GridCell.Tab.0.bottom/0.23.1440.808/1440.23.1920.1057@0.23.1440.808" timestamp="1607392263625" />
-    <state width="1398" height="116" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1607694103870" />
+    <state width="1398" height="147" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1607789723041" />
     <state width="1398" height="112" key="GridCell.Tab.0.bottom/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1607392822854" />
-    <state width="1398" height="115" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1607702207636" />
+    <state width="1398" height="115" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1607702639304" />
     <state width="1398" height="115" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1607700889377" />
-    <state width="1398" height="115" key="GridCell.Tab.0.center" timestamp="1607702207636">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state width="1398" height="147" key="GridCell.Tab.0.center" timestamp="1607789723041">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1398" height="138" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607339880161" />
     <state width="1398" height="302" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1607248273505" />
     <state width="1398" height="66" key="GridCell.Tab.0.center/0.23.1440.806/1440.23.1920.1057@0.23.1440.806" timestamp="1607664284036" />
     <state width="1398" height="112" key="GridCell.Tab.0.center/0.23.1440.808/1440.23.1920.1057@0.23.1440.808" timestamp="1607392263624" />
-    <state width="1398" height="116" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1607694103867" />
+    <state width="1398" height="147" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1607789723041" />
     <state width="1398" height="112" key="GridCell.Tab.0.center/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1607392822854" />
-    <state width="1398" height="115" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1607702207636" />
+    <state width="1398" height="115" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1607702639303" />
     <state width="1398" height="115" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1607700889376" />
-    <state width="1398" height="115" key="GridCell.Tab.0.left" timestamp="1607702207635">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state width="1398" height="147" key="GridCell.Tab.0.left" timestamp="1607789723040">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1398" height="138" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607339880160" />
     <state width="1398" height="302" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1607248273504" />
     <state width="1398" height="66" key="GridCell.Tab.0.left/0.23.1440.806/1440.23.1920.1057@0.23.1440.806" timestamp="1607664284036" />
     <state width="1398" height="112" key="GridCell.Tab.0.left/0.23.1440.808/1440.23.1920.1057@0.23.1440.808" timestamp="1607392263623" />
-    <state width="1398" height="116" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1607694103867" />
+    <state width="1398" height="147" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1607789723040" />
     <state width="1398" height="112" key="GridCell.Tab.0.left/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1607392822854" />
-    <state width="1398" height="115" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1607702207635" />
+    <state width="1398" height="115" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1607702639303" />
     <state width="1398" height="115" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1607700889375" />
-    <state width="1398" height="115" key="GridCell.Tab.0.right" timestamp="1607702207636">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state width="1398" height="147" key="GridCell.Tab.0.right" timestamp="1607789723041">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1398" height="138" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1607339880162" />
     <state width="1398" height="302" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1607248273505" />
     <state width="1398" height="66" key="GridCell.Tab.0.right/0.23.1440.806/1440.23.1920.1057@0.23.1440.806" timestamp="1607664284037" />
     <state width="1398" height="112" key="GridCell.Tab.0.right/0.23.1440.808/1440.23.1920.1057@0.23.1440.808" timestamp="1607392263624" />
-    <state width="1398" height="116" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1607694103870" />
+    <state width="1398" height="147" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1607789723041" />
     <state width="1398" height="112" key="GridCell.Tab.0.right/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1607392822854" />
-    <state width="1398" height="115" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1607702207636" />
+    <state width="1398" height="115" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1607702639303" />
     <state width="1398" height="115" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1607700889377" />
     <state width="1398" height="281" key="GridCell.Tab.1.bottom" timestamp="1607691008422">
       <screen x="0" y="23" width="1440" height="808" />

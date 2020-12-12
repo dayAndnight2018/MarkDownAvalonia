@@ -1,0 +1,41 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="420" d:DesignHeight="360"
+        x:Class="MarkDownAvalonia.Controls.ErrorMessageBox"
+        Title="Message" Background="white" SystemDecorations="BorderOnly" WindowStartupLocation="CenterOwner">
+        <Window.Styles>
+                <Style Selector="Button.tab">
+                        <Setter Property="Background" Value="#303030"></Setter>
+                        <Setter Property="Foreground" Value="white" />
+                        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                        <Setter Property="BorderThickness" Value="0"></Setter>
+                </Style>
+        </Window.Styles>
+        <Grid>
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1">
+                        <Border Width="80" Height="80" Padding="10" Background="#C0015A" CornerRadius="40">
+                                <PathIcon Foreground="white" Data="M265.28 310.72a32 32 0 0 1 45.44-45.44l448 448a32 32 0 0 1-45.44 45.44z M713.28 265.28a32 32 0 0 1 45.44 45.44l-448 448a32 32 0 0 1-45.44-45.44z" HorizontalAlignment="Center"></PathIcon>
+                        </Border>
+                </Grid>
+                <Label Grid.Row="3" HorizontalAlignment="Center" FontSize="15">这是错误的内容</Label>
+                <Grid Grid.Row="5">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 10 5">
+                                <Button Grid.Column="2" Foreground="white" Width="100" Height="30" BorderThickness="0" Background="#C0015A" Content="OK" Click="CloseWindow">
+                                </Button>
+                        </StackPanel>
+                </Grid>
+        </Grid>
+</Window>

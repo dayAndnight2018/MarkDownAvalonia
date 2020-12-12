@@ -10,14 +10,20 @@
         <e p="Controls" t="Include">
           <e p="EditorWindow.xaml" t="Include" />
           <e p="EditorWindow.xaml.cs" t="Include" />
-          <e p="MessageBox.xaml" t="Include" />
-          <e p="MessageBox.xaml.cs" t="Include" />
+          <e p="ErrorMessageBox.xaml" t="Include" />
+          <e p="ErrorMessageBox.xaml.cs" t="Include" />
+          <e p="InfoMessageBox.xaml" t="Include" />
+          <e p="InfoMessageBox.xaml.cs" t="Include" />
           <e p="NewPostWindow.xaml" t="Include" />
           <e p="NewPostWindow.xaml.cs" t="Include" />
           <e p="PostItemControl.xaml" t="Include" />
           <e p="PostItemControl.xaml.cs" t="Include" />
           <e p="SettingWindow.xaml" t="Include" />
           <e p="SettingWindow.xaml.cs" t="Include" />
+          <e p="SuccessMessageBox.xaml" t="Include" />
+          <e p="SuccessMessageBox.xaml.cs" t="Include" />
+          <e p="WarningMessageBox.xaml" t="Include" />
+          <e p="WarningMessageBox.xaml.cs" t="Include" />
         </e>
         <e p="Data" t="Include" />
         <e p="MainWindow.xaml" t="Include" />

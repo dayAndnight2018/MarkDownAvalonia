@@ -13,6 +13,12 @@
         <Compile Update="Controls\EditorWindow.xaml.cs">
           <DependentUpon>EditorWindow.xaml</DependentUpon>
         </Compile>
+        <Compile Update="Controls\SuccessMessageBox.xaml.cs">
+          <DependentUpon>SuccessMessageBox.xaml</DependentUpon>
+        </Compile>
+        <Compile Update="Controls\WarningMessageBox.xaml.cs">
+          <DependentUpon>WarningMessageBox.xaml</DependentUpon>
+        </Compile>
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Avalonia" Version="0.10.0-preview6" />

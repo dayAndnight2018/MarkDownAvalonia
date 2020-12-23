@@ -1,4 +1,12 @@
-$HEADER$namespace $NAMESPACE$
+namespace MarkDownAvalonia.Data
 {
-  public class $CLASS$ {$END$}
+    public static class CommonData
+    {
+        public static Configuration config = null;
+
+        static CommonData()
+        {
+            config = ConfigManager.LoadConfig();
+        }
+    }
 }

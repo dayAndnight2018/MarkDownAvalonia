@@ -23,7 +23,6 @@
                 <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="*"/>
-                        <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" Background="#303030">
                         <Grid.ColumnDefinitions>
@@ -42,7 +41,7 @@
                         </Button>
                 </Grid>
                 
-                <Grid Grid.Row="1" Name="centerArea">
+                <Grid Grid.Row="1" Name="centerArea" Margin="0 0 0 50">
                         <Grid.RowDefinitions>
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="*"/>
@@ -61,60 +60,15 @@
                                 
                         </PathIcon>
                         <!-- <Label Content="Root Path:" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalContentAlignment="Right"></Label> -->
-                        <TextBox Classes="input" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" MaxHeight="24" VerticalAlignment="Center" Watermark="click here to select root directory"  GotFocus="selectDir"></TextBox>
+                        <TextBox Name="rootDirectoryTbx" Classes="input" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" MaxHeight="24" VerticalAlignment="Center" Watermark="click here to select root directory"  GotFocus="selectDir"></TextBox>
                         <PathIcon Data="M512 64c247.424 0 448 200.576 448 448S759.424 960 512 960h-0.0016C264.576 960 64 759.424 64 512S264.576 64 512 64z m126.1168 632.2848l-1.8912 0.2384C596.7808 701.392 555.1008 704 512 704c-43.792 0-86.1136-2.6928-126.1184-7.712 8.6784 42.1216 20.3136 80.5504 34.4736 113.5872C449.3984 877.648 484.208 912 512 912h-0.0032c27.7952 0 62.6048-34.352 91.648-102.1248 14.16-33.0368 25.7968-71.4672 34.472-113.5904zM123.5152 607.688c35.3616 144.0448 148.7456 257.4288 292.7872 292.792-35.8352-48.1728-64.3824-122.5664-80.8224-211.952-89.3936-16.448-163.7952-44.9968-211.9648-80.84z m776.9664 0l-0.4848 0.3632c-48.184 35.6736-122.384 64.0848-211.4784 80.4704-16.4384 89.392-44.984 163.7856-80.824 211.9552 144.0448-35.36 257.4272-148.744 292.7872-292.7872zM512 368c-46.6912 0-92.0864 3.224-134.7088 9.2912C371.224 419.9136 368 465.3072 368 512c0 46.6912 3.224 92.0864 9.2912 134.7088C419.9136 652.776 465.3072 656 512 656c46.6912 0 92.0864-3.224 134.7088-9.2912C652.776 604.0864 656 558.6928 656 512c0-46.6912-3.224-92.0864-9.2912-134.7088C604.0864 371.224 558.6928 368 512 368z m-184.288 17.8784l-2.4752 0.5184c-41.152 8.6208-78.7232 20.0768-111.112 33.9584C146.352 449.3984 112 484.208 112 512c0 27.792 34.352 62.6016 102.1248 91.6448 33.0384 14.16 71.4688 25.7968 113.5936 34.4736-5.024-40-7.7184-82.3264-7.7184-126.1184 0-43.792 2.6928-86.1168 7.712-126.1216z m368.5696 0.0032l0.5888 4.7488C701.5152 429.232 704 469.9376 704 512c0 43.792-2.6928 86.1168-7.712 126.1216 42.1184-8.68 80.5488-20.3168 113.5872-34.4768C877.648 574.6016 912 539.792 912 512c0-27.792-34.352-62.6016-102.1248-91.6448-33.0384-14.16-71.4688-25.7968-113.5936-34.4736zM416.3056 123.5232l-2.3536 0.5808c-142.9248 36.016-255.2672 148.9488-290.4336 292.208 48.168-35.8432 122.568-64.392 211.9632-80.8336 16.4384-89.392 44.9856-163.7856 80.824-211.9552z m191.392-0.0032l0.3536 0.4832c35.672 48.1824 64.0832 122.3792 80.4688 211.4704 89.3936 16.4464 163.7952 44.9952 211.9648 80.8384C865.1232 272.2672 751.7392 158.8832 607.6976 123.52zM512 112l-0.8352 0.0096c-27.6528 0.6816-62.056 35.0224-90.8096 102.1152-14.16 33.0368-25.7952 71.4656-34.472 113.5888C425.8864 322.6928 468.208 320 512 320c43.792 0 86.1136 2.6928 126.1184 7.712-8.6784-42.1216-20.3136-80.5504-34.4736-113.5872C574.6016 146.352 539.792 112 512 112z" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" ></PathIcon>
-                        <TextBox Classes="input" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" MaxHeight="24" VerticalAlignment="Center" Watermark="type here project git address"></TextBox>
+                        <TextBox Name="gitAddressTbx" Classes="input" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" MaxHeight="24" VerticalAlignment="Center" Watermark="type here project git address"></TextBox>
                         
                         <PathIcon Data="M1019.839129 1024H3.479517v-138.752165a233.797399 233.797399 0 0 1 233.797399-236.572443h548.071054a234.49116 234.49116 0 0 1 234.491159 233.797399zM107.543641 919.935876h808.231364v-37.463085a130.427036 130.427036 0 0 0-130.427035-129.733274h-548.071054a129.733275 129.733275 0 0 0-129.733275 129.733274zM511.312443 607.743504a303.867242 303.867242 0 1 1 303.867242-303.173482 303.173482 303.173482 0 0 1-303.867242 303.173482z m0-502.9766a199.803118 199.803118 0 1 0 199.803118 199.803118A199.803118 199.803118 0 0 0 511.312443 104.766904z" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" ></PathIcon>
                         <TextBox Classes="input" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" MaxHeight="24" VerticalAlignment="Center" Watermark="type here git username"></TextBox>
                         <PathIcon Data="M879.849856 385.02485h-106.549958V256.5999S796.749889 0 512 0c0 0-258.287399 0-258.287399 258.112399v126.912451H144.137644a53.549979 53.549979 0 0 0-53.749979 53.012479v533.074792c0 29.087489 24.212491 52.887479 53.749979 52.887479H879.849856a53.549979 53.549979 0 0 0 53.749979-52.937479V437.974829a53.549979 53.549979 0 0 0-53.749979-52.937479z m-529.524793 0V258.099899S348.275064 96.062462 517.062498 96.062462c0 0 159.137438-4.999998 159.137438 159.999938v128.96245z m0 0" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" ></PathIcon>
                         <TextBox Classes="input" Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2" MaxHeight="24" VerticalAlignment="Center" Watermark="type here git password"></TextBox>
                 </Grid>
-                
-                
-                <Grid Grid.Row="2">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 20 10 5">
-                                <Button Grid.Column="2" MinWidth="45" MinHeight="20" BorderThickness="0" Margin="10 5" Background="#C75049">
-                                        <PathIcon Data="M1294.05884 30.413001L537.965817 786.792939 170.212384 419.326422C131.909218 380.951527 68.859625 377.938918 29.910899 416.026898A98.268423 98.268423 0 0 0 28.69151 555.826282l439.410479 439.410479a99.344354 99.344354 0 0 0 7.172878 6.742505l2.510507 1.864948c1.793219 1.362847 3.586439 2.797422 5.523116 4.016811l3.156066 1.864949c1.721491 1.075932 3.442981 2.151863 5.236201 3.084337l3.442981 1.578033c1.793219 0.860745 3.51471 1.721491 5.307929 2.438778l3.586439 1.291118c1.793219 0.645559 3.586439 1.362847 5.451387 1.864949l3.801625 0.932474c1.793219 0.430373 3.658168 0.932474 5.523116 1.291118l3.873354 0.57383c1.864948 0 3.658168 0.57383 5.523115 0.789016h18.936397l4.160269-0.57383c1.721491 0 3.51471-0.430373 5.236201-0.789016l4.231997-1.004203c1.649762-0.430373 3.371252-0.789017 5.021015-1.291118l4.231997-1.434576c1.578033-0.57383 3.227795-1.075932 4.805828-1.72149s2.725693-1.291118 4.160269-1.936677 3.084337-1.362847 4.590642-2.223592 2.653965-1.578033 4.016811-2.36705 2.94088-1.721491 4.375456-2.653965 2.582236-1.864948 3.801625-2.797422 2.797422-2.008406 4.08854-3.084337 2.438778-2.151863 3.586439-3.227795 2.223592-1.936677 3.299524-3.012609L1435.507985 166.841132A98.268423 98.268423 0 0 0 1434.575511 26.826562c-39.092183-37.801065-102.141776-34.788456-140.516671 3.586439z" Foreground="white"></PathIcon>
-                                </Button>
-                        </StackPanel>
-                </Grid>
-                        
-                <!-- 
-                <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="0" Orientation="Vertical" Background="#303030">
-                        <Border HorizontalAlignment="Center" BorderThickness="1" BorderBrush="white" Width="80" Height="80" CornerRadius="40" Margin="0 50" Background="white">
-                                <Label FontSize="30" Foreground="black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">MD</Label>
-                        </Border>
-                        <Button Classes="tab" Margin="0 20 0 10" Padding="10" Content="New" PointerEnter="LabelMouseEntered" PointerLeave="LabelMouseLeave"></Button>
-                        <Button Classes="tab" Margin="0 10" Padding="10"  Content="Delete" PointerEnter="LabelMouseEntered" PointerLeave="LabelMouseLeave"></Button>
-                        <Button Classes="tab" Margin="0 10" Padding="10"  Content="Pull" PointerEnter="LabelMouseEntered" PointerLeave="LabelMouseLeave"></Button>
-                        <Button Classes="tab" Margin="0 10" Padding="10"  Content="Push" PointerEnter="LabelMouseEntered" PointerLeave="LabelMouseLeave"></Button>
-                        <Button Classes="tab" Margin="0 10" Padding="10"  Content="Options" PointerEnter="LabelMouseEntered" PointerLeave="LabelMouseLeave"></Button>
-                        <Button Classes="tab" Margin="0 10" Padding="10"  Content="Quit" PointerEnter="LabelMouseEntered" PointerLeave="LabelMouseLeave" Click="ExitButtonClicked"></Button>
-                         
-                        <Menu Background="#303030" Foreground="white" VerticalAlignment="Stretch">
-                                <MenuItem Header="_File" VerticalAlignment="Center" HorizontalAlignment="Stretch">
-                                        <MenuItem Header="_Open..." Click="OpenMenuClicked"/>
-                                        <Separator/>
-                                        <MenuItem Header="_Exit"/>
-                                </MenuItem>
-                                <MenuItem Header="_Edit" VerticalAlignment="Center">
-                                        <MenuItem Header="Copy"/>
-                                        <MenuItem Header="Paste"/>
-                                </MenuItem>
-                        </Menu>
-                        
-                </StackPanel>
-                
-                                <Grid Grid.Column="1" Background="#303030">
-                        <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="1" />
-                                <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                </Grid>
-                -->
-
         </Grid>
 </Window>
 

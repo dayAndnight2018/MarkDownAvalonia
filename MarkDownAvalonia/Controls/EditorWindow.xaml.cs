@@ -1,3 +1,4 @@
+using System;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;
@@ -14,12 +15,10 @@ namespace MarkDownAvalonia.Controls
         public EditorWindow()
         {
             InitializeComponent();
-            SettingWindow mb = new SettingWindow();
-            //SaveFileDialog sfd = new SaveFileDialog();
-            mb.Width = 640;
-            mb.Height = 320;
-            mb.ShowDialog(this);
-            //sfd.ShowAsync(this);
+            this.FindControl<TextBox>("inputTextBox").Text =
+                $"---\r\n\r\ntitle: \r\n\r\ndate: {DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")}\r\n\r\ntags: \r\n\r\n---\r\n\r\n";
+            this.FindControl<MarkdownScrollViewer>("markdownPreview").Markdown = 
+                $"---\r\n\r\ntitle: \r\n\r\ndate: {DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")}\r\n\r\ntags: \r\n\r\n---\r\n\r\n";
         }
 
         private void InitializeComponent()
@@ -63,7 +62,7 @@ namespace MarkDownAvalonia.Controls
         public void TbxKeyUp(object sender, KeyEventArgs e)
         {
             TextBox tbx = sender as TextBox;
-            this.FindControl<MarkdownScrollViewer>("md").Markdown = tbx.Text;
+            this.FindControl<MarkdownScrollViewer>("markdownPreview").Markdown = tbx.Text;
         }
 
     }

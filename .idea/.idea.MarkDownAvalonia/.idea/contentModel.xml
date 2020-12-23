@@ -7,6 +7,7 @@
         <e p="App.xaml" t="Include" />
         <e p="App.xaml.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="config.json" t="Include" />
         <e p="Controls" t="Include">
           <e p="EditorWindow.xaml" t="Include" />
           <e p="EditorWindow.xaml.cs" t="Include" />
@@ -25,7 +26,11 @@
           <e p="WarningMessageBox.xaml" t="Include" />
           <e p="WarningMessageBox.xaml.cs" t="Include" />
         </e>
-        <e p="Data" t="Include" />
+        <e p="Data" t="Include">
+          <e p="CommonData.cs" t="Include" />
+          <e p="ConfigManager.cs" t="Include" />
+          <e p="Configuration.cs" t="Include" />
+        </e>
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />
         <e p="MarkDownAvalonia.csproj" t="IncludeRecursive" />
@@ -41,8 +46,6 @@
           </e>
         </e>
         <e p="Program.cs" t="Include" />
-        <e p="WelcomeWindow.xaml" t="Include" />
-        <e p="WelcomeWindow.xaml.cs" t="Include" />
       </e>
       <e p="MarkDownAvalonia.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

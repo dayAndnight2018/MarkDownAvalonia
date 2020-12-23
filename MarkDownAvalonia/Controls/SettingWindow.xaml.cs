@@ -6,15 +6,27 @@ using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using MarkDownAvalonia.Data;
 
 namespace MarkDownAvalonia.Controls
 {
     public class SettingWindow : Window
     {
-
+        private TextBox gitAddressTbx;
+        private TextBox rootDirectoryTbx;
+        private Configuration config;
+        
         public SettingWindow()
         {
             AvaloniaXamlLoader.Load(this);
+            this.rootDirectoryTbx = this.FindControl<TextBox>("rootDirectoryTbx");
+            this.gitAddressTbx = this.FindControl<TextBox>("gitAddressTbx");
+            this.config = CommonData.config;
+            if (config != null)
+            {
+                this.rootDirectoryTbx.Text = config.RootDirectory??String.Empty;
+                this.gitAddressTbx.Text = config.GitAddress??String.Empty;
+            }
         }
 
         public void CloseWindow(object sender, RoutedEventArgs e)

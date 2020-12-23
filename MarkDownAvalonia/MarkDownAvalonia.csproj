@@ -27,11 +27,13 @@
         <PackageReference Include="Citrus.Avalonia" Version="1.3.0-preview" />
         <PackageReference Include="Markdown.Avalonia" Version="0.10.0-a4" />
         <PackageReference Include="Material.Avalonia" Version="0.10.4" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Data" />
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     </ItemGroup>
     <ItemGroup>
       <None Remove="img.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="config.json" />
+      <Resource Include="config.json" />
     </ItemGroup>
 </Project>

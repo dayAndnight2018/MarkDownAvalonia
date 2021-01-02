@@ -30,7 +30,7 @@
                                 <PathIcon Foreground="white" Data="M63.222927 512c0 0 231.767598 189.584869 254.790964 350.823134 0 0 303.906591-497.491565 641.581264-542.003338 0 0-102.837156-74.943876-69.070098-193.395662 0 0-187.255825 18.684548-540.279067 566.637388L184.79375 413.212066 63.222927 512z" HorizontalAlignment="Center"></PathIcon>
                         </Border>
                 </Grid>
-                <Label Grid.Row="3" HorizontalAlignment="Center" FontSize="15">这是通知的内容</Label>
+                <Label Grid.Row="3" HorizontalAlignment="Center" FontSize="15" Name="message">这是通知的内容</Label>
                 <Grid Grid.Row="5">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 10 5">
                                 <Button Grid.Column="2" Foreground="white" Width="100" Height="30" BorderThickness="0" Background="#1FDC97" Content="OK" Click="CloseWindow">

@@ -3,4 +3,5 @@
   &lt;Assembly Path="/Users/dxm/.nuget/packages/markdown.avalonia/0.10.0-a1/lib/net47/Markdown.Avalonia.dll" /&gt;
   &lt;Assembly Path="/Users/dxm/.nuget/packages/markdown.avalonia/0.10.0-a1/lib/net47/ColorTextBlock.Avalonia.dll" /&gt;
   &lt;Assembly Path="/Users/dxm/.nuget/packages/markdown.avalonia/0.10.0-a3/lib/net47/Markdown.Avalonia.dll" /&gt;
+  &lt;Assembly Path="/Users/dxm/.nuget/packages/markdown.avalonia/0.10.0-a4/lib/net47/Markdown.Avalonia.dll" /&gt;
 &lt;/AssemblyExplorer&gt;</s:String></wpf:ResourceDictionary>

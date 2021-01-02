@@ -4,6 +4,7 @@ namespace MarkDownAvalonia.Data
     {
         private string rootDirectory;
         private string gitAddress;
+        private string postDirectory;
 
         public string RootDirectory
         {
@@ -15,6 +16,12 @@ namespace MarkDownAvalonia.Data
         {
             get => gitAddress;
             set => gitAddress = value;
+        }
+
+        public string PostDirectory
+        {
+            get => postDirectory;
+            set => postDirectory = value;
         }
     }
 }

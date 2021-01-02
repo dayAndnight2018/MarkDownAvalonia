@@ -30,7 +30,7 @@
                                 <PathIcon Foreground="white" Data="M265.28 310.72a32 32 0 0 1 45.44-45.44l448 448a32 32 0 0 1-45.44 45.44z M713.28 265.28a32 32 0 0 1 45.44 45.44l-448 448a32 32 0 0 1-45.44-45.44z" HorizontalAlignment="Center"></PathIcon>
                         </Border>
                 </Grid>
-                <Label Grid.Row="3" HorizontalAlignment="Center" FontSize="15">这是错误的内容</Label>
+                <Label Grid.Row="3" HorizontalAlignment="Center" FontSize="15" Name="message">这是错误的内容</Label>
                 <Grid Grid.Row="5">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 10 5">
                                 <Button Grid.Column="2" Foreground="white" Width="100" Height="30" BorderThickness="0" Background="#C0015A" Content="OK" Click="CloseWindow">

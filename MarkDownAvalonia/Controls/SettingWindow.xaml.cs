@@ -1,7 +1,4 @@
 using System;
-using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
-using Windows.Storage.Pickers;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;

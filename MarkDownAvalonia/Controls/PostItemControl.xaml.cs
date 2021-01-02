@@ -13,7 +13,7 @@ namespace MarkDownAvalonia.Controls
     public class PostItemControl : UserControl
     {
         private TextBlock itemTitleTbk, itemTimeTbk;
-        private FileInfo info = null;
+        public FileInfo info = null;
         private TextBox inputTbx;
         private Timer timer;
         private string cache = String.Empty;
@@ -32,6 +32,11 @@ namespace MarkDownAvalonia.Controls
             this.itemTitleTbk.Text = "md*";
             this.itemTimeTbk.Text = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
         }
+
+        public string GetName()
+        {
+            return this.itemTitleTbk.Text;
+        }
         
         public PostItemControl(string file, TextBox inputTbx)
         {
@@ -49,6 +54,12 @@ namespace MarkDownAvalonia.Controls
                 this.itemTimeTbk.Text = date;
                 isExists = true;
             }
+        }
+
+        public void updateItemPresent(String name)
+        {
+            this.itemTitleTbk.Text = name;
+            this.itemTimeTbk.Text = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
         }
 
         public void updateCache()
@@ -169,7 +180,7 @@ namespace MarkDownAvalonia.Controls
         private string read(String path)
         {
             string text = String.Empty;
-            using (StreamReader sr = new StreamReader(path))
+            using (StreamReader sr = new StreamReader(path, Encoding.UTF8))
             {
                 text = sr.ReadToEnd();
             }

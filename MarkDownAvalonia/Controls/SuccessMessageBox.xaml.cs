@@ -9,12 +9,15 @@ namespace MarkDownAvalonia.Controls
     {
         private string title;
         private string content;
+        private Label messageLabel;
         
         public SuccessMessageBox(string title, string content)
         {
             AvaloniaXamlLoader.Load(this);
             this.title = title;
             this.content = content;
+            this.messageLabel = this.FindControl<Label>("message");
+            this.messageLabel.Content = content;
         }
 
         public SuccessMessageBox():this("Message",String.Empty)

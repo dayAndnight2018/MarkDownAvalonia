@@ -19,7 +19,9 @@ namespace MarkDownAvalonia.Data
                 using (StreamReader sr = new StreamReader(CONFIG))
                 {
                     string data = sr.ReadToEnd();
-                    return JsonConvert.DeserializeObject<Configuration>(data);
+                    Configuration config =  JsonConvert.DeserializeObject<Configuration>(data);
+                    config.PostDirectory = Path.Combine(config.RootDirectory, "editor", "source", "_posts");
+                    return config;
                 }
             }
 

@@ -27,9 +27,13 @@
           <e p="WarningMessageBox.xaml.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
+          <e p="CommandRunner.cs" t="Include" />
           <e p="CommonData.cs" t="Include" />
           <e p="ConfigManager.cs" t="Include" />
           <e p="Configuration.cs" t="Include" />
+          <e p="FileHandler.cs" t="Include" />
+          <e p="GitUtils.cs" t="Include" />
+          <e p="MessageBox.cs" t="Include" />
         </e>
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Controls.Notifications;
 using Avalonia.Input;
 using Avalonia.Input.Platform;
 using Avalonia.Interactivity;
@@ -29,9 +30,11 @@ namespace MarkDownAvalonia
         // container for posts
         private StackPanel articleListPanel;
 
+        private Grid mainGrid;
+
         // previewer
         private MarkdownScrollViewer markdownPreview;
-
+        
         // selected item
         private PostItemControl selectedItem = null;
 
@@ -41,6 +44,9 @@ namespace MarkDownAvalonia
         private static readonly string TIME_PATTERN = "yyyy/MM/dd HH:mm:ss";
 
         private static readonly string SUFFIX = ".md";
+
+        private bool hidden = false;
+        private double oldGridWidth = 0;
         
         public MainWindow()
         {
@@ -50,6 +56,7 @@ namespace MarkDownAvalonia
             this.searchBox = this.FindControl<TextBox>("searchBox");
             this.articleListPanel = this.FindControl<StackPanel>("postItemsPanel");
             this.markdownPreview = this.FindControl<MarkdownScrollViewer>("markdownPreview");
+            this.mainGrid = this.FindControl<Grid>("mainGrid");
             // load config
             // todo: check config is null or not
             this.markdownPreview.AssetPathRoot = CommonData.config.PostDirectory;
@@ -152,7 +159,7 @@ namespace MarkDownAvalonia
             current.updateCache();
             articleListPanel.Children.Insert(0, current);
             cacheControls.Add(current);
-            selectControl(current);
+            SelectControl(current);
         }
 
         /// <summary>
@@ -356,6 +363,22 @@ namespace MarkDownAvalonia
             mb.Height = 320;
             mb.ShowDialog(this);
         }
+        
+        public void ToggleListPanel(Object sender, RoutedEventArgs e)
+        {
+            if (!hidden)
+            {
+                oldGridWidth = mainGrid.ColumnDefinitions[0].ActualWidth;
+                mainGrid.ColumnDefinitions[0].Width = new GridLength(0);
+            }
+            else
+            {
+                mainGrid.ColumnDefinitions[0].Width = new GridLength(oldGridWidth);
+            }
+
+            hidden = !hidden;
+
+        }
 
         /// <summary>
         /// button effect
@@ -390,7 +413,9 @@ namespace MarkDownAvalonia
         {
             if (e.Property.Name.Equals("Text"))
             {
+                Vector old = markdownPreview.ScrollValue;
                 markdownPreview.Markdown = this.inputTbx.Text;
+                markdownPreview.ScrollValue = new Vector(old.X, old.Y);
             }
         }
 
@@ -411,7 +436,7 @@ namespace MarkDownAvalonia
         /// 选中指定项
         /// </summary>
         /// <param name="target"></param>
-        private void selectControl(PostItemControl target)
+        private void SelectControl(PostItemControl target)
         {
             foreach (PostItemControl control in this.cacheControls)
             {
@@ -437,6 +462,7 @@ namespace MarkDownAvalonia
         {
             KeyModifiers modifiers = e.KeyModifiers;
             Key key = e.Key;
+            // control + v
             if (modifiers == KeyModifiers.Control && key == Key.V)
             {
                 String[] format = await Application.Current.Clipboard.GetFormatsAsync();
@@ -459,9 +485,134 @@ namespace MarkDownAvalonia
                             this.inputTbx.Text.Insert(this.inputTbx.CaretIndex, $"![image]({filePath})");
                     }
                 }
+                return;
+            }
+            // tab
+            if (key == Key.Tab)
+            {
+                e.Handled = true;
+                this.inputTbx.Text =
+                    this.inputTbx.Text.Insert(this.inputTbx.CaretIndex, "        ");
+                return;
+            }
+
+            String selectedText = this.inputTbx.SelectedText;
+            // control + 1
+            if (modifiers == KeyModifiers.Control && key == Key.D1)
+            {
+                if (String.IsNullOrWhiteSpace(selectedText))
+                {
+                    return;
+                }
+
+                if (selectedText.StartsWith("# "))
+                {
+                    this.inputTbx.SelectedText = selectedText.Substring("# ".Length);
+                }
+                else
+                {
+                    this.inputTbx.SelectedText = String.Concat("# ", selectedText);
+                }
+            }
+            // control + 2
+            if (modifiers == KeyModifiers.Control && key == Key.D2)
+            {
+                if (String.IsNullOrWhiteSpace(selectedText))
+                {
+                    return;
+                }
+                if (selectedText.StartsWith("## "))
+                {
+                    this.inputTbx.SelectedText = selectedText.Substring("## ".Length);
+                }
+                else
+                {
+                    this.inputTbx.SelectedText = String.Concat("## ", selectedText);
+                }
+            }
+            // control + 3
+            if (modifiers == KeyModifiers.Control && key == Key.D3)
+            {
+                if (String.IsNullOrWhiteSpace(selectedText))
+                {
+                    return;
+                }
+                if (selectedText.StartsWith("### "))
+                {
+                    this.inputTbx.SelectedText = selectedText.Substring("### ".Length);
+                }
+                else
+                {
+                    this.inputTbx.SelectedText = String.Concat("### ", selectedText);
+                }
+            }
+            // control + 4
+            if (modifiers == KeyModifiers.Control && key == Key.D4)
+            {
+                if (String.IsNullOrWhiteSpace(selectedText))
+                {
+                    return;
+                }
+                if (selectedText.StartsWith("#### "))
+                {
+                    this.inputTbx.SelectedText = selectedText.Substring("#### ".Length);
+                }
+                else
+                {
+                    this.inputTbx.SelectedText = String.Concat("#### ", selectedText);
+                }
+            }
+            // control + 5
+            if (modifiers == KeyModifiers.Control && key == Key.D5)
+            {
+                if (String.IsNullOrWhiteSpace(selectedText))
+                {
+                    return;
+                }
+                if (selectedText.StartsWith("##### "))
+                {
+                    this.inputTbx.SelectedText = selectedText.Substring("##### ".Length);
+                }
+                else
+                {
+                    this.inputTbx.SelectedText = String.Concat("##### ", selectedText);
+                }
+            }
+            // control + 6
+            if (modifiers == KeyModifiers.Control && key == Key.D6)
+            {
+                if (String.IsNullOrWhiteSpace(selectedText))
+                {
+                    return;
+                }
+                if (selectedText.StartsWith("###### "))
+                {
+                    this.inputTbx.SelectedText = selectedText.Substring("###### ".Length);
+                }
+                else
+                {
+                    this.inputTbx.SelectedText = String.Concat("###### ", selectedText);
+                }
+            }
+
+            if (modifiers == KeyModifiers.Control && key == Key.S)
+            {
+                SavePost(null, null);
             }
         }
 
+        public void InputKeyDown(object sender, KeyEventArgs e)
+        {
+            KeyModifiers modifiers = e.KeyModifiers;
+            Key key = e.Key;
+            if (key == Key.Tab)
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+        
+        
         public void SearchBoxKeyDown(object sender, KeyEventArgs e)
         {
             Key key = e.Key;

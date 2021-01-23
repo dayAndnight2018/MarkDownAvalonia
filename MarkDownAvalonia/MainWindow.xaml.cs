@@ -260,6 +260,11 @@ namespace MarkDownAvalonia
         
         public void PreviewPost(object sender, RoutedEventArgs e)
         {
+            FindWindow mb = new FindWindow(inputTbx);
+            mb.Width = 500;
+            mb.Height = 320;
+            mb.Show(this);
+
         }
 
         /// <summary>
@@ -298,21 +303,25 @@ namespace MarkDownAvalonia
                     // file exists
                     if (File.Exists(selectedItem.info.FullName))
                     {
-                        // stop auto save
-                        selectedItem.Remove();
-                        // delete from dosk
-                        File.Delete(selectedItem.info.FullName);
-                        // remove 
-                        this.articleListPanel.Children.Remove(selectedItem);
-                        if (cacheControls.Contains(selectedItem))
+                        bool result = await MessageBox.showWarnning(this, "Deleting file, continue?");
+                        if (result)
                         {
-                            cacheControls.Remove(selectedItem);
+                            // stop auto save
+                            selectedItem.Remove();
+                            // delete from dosk
+                            File.Delete(selectedItem.info.FullName);
+                            // remove 
+                            this.articleListPanel.Children.Remove(selectedItem);
+                            if (cacheControls.Contains(selectedItem))
+                            {
+                                cacheControls.Remove(selectedItem);
+                            }
+                            // remove selected
+                            selectedItem = null;
+                            // clear input text box
+                            inputTbx.Text = String.Empty;
+                            await MessageBox.showSuccess(this, "Delete success!");
                         }
-                        // remove selected
-                        selectedItem = null;
-                        // clear input text box
-                        inputTbx.Text = String.Empty;
-                        await MessageBox.showSuccess(this, "Delete success!");
                     }
                     else
                     {
@@ -321,16 +330,21 @@ namespace MarkDownAvalonia
                 }
                 else
                 {
-                    // temp file
-                    selectedItem.Remove();
-                    this.articleListPanel.Children.Remove(selectedItem);
-                    if (cacheControls.Contains(selectedItem))
+                    bool result = await MessageBox.showWarnning(this, "Deleting file, continue?");
+                    if (result)
                     {
-                        cacheControls.Remove(selectedItem);
+                        // temp file
+                        selectedItem.Remove();
+                        this.articleListPanel.Children.Remove(selectedItem);
+                        if (cacheControls.Contains(selectedItem))
+                        {
+                            cacheControls.Remove(selectedItem);
+                        }
+
+                        // clear resource and input area
+                        selectedItem = null;
+                        inputTbx.Text = String.Empty;
                     }
-                    // clear resource and input area
-                    selectedItem = null;
-                    inputTbx.Text = String.Empty;
                 }
             }
         }
@@ -357,11 +371,11 @@ namespace MarkDownAvalonia
         /// <param name="sender"></param>
         /// <param name="e"></param>
         public void OpenSettingWindow(Object sender, RoutedEventArgs e)
-        {
+        { 
             SettingWindow mb = new SettingWindow();
             mb.Width = 500;
             mb.Height = 320;
-            mb.ShowDialog(this);
+            mb.Show(this);
         }
         
         public void ToggleListPanel(Object sender, RoutedEventArgs e)

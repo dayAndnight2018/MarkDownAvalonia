@@ -13,13 +13,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14c2ef56-7a95-4143-8bf6-009a37c1fb77" name="Default Changelist" comment="update">
+    <list default="true" id="14c2ef56-7a95-4143-8bf6-009a37c1fb77" name="Default Changelist" comment="add listPanel hidden related">
+      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/FindWindow.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/FindWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Data/MessageBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Data/MessageBox.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MarkDownAvalonia.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MarkDownAvalonia.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infoflow 2020-12-23 22-37-52.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +66,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F0341090-2FA4-47EC-870C-5B62969CB347/70/4650fb00/MarkdownStyle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C6B1368F-EFBD-495B-890F-F5C67710A11F/ca/7095a102/CSpan.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B971FD86-5926-47CF-90D5-9F158B07D572/44/08d38f1d/Markdown.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3256A3CF-2946-4D07-98F9-B6351DDB69EB/78/Window.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/410A92BC-5ECF-42CB-A4C0-2665C7792429/2f/4fdc0a7d/Console.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F0341090-2FA4-47EC-870C-5B62969CB347/95/7d820d41/Markdown.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3256A3CF-2946-4D07-98F9-B6351DDB69EB/30/GridLength.cs" root0="SKIP_HIGHLIGHTING" />
@@ -71,6 +75,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C6B1368F-EFBD-495B-890F-F5C67710A11F/47/22fe211c/CInline.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8982FC25-74E3-4111-8620-D874DFEAB093/12/VisualExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C6B1368F-EFBD-495B-890F-F5C67710A11F/2c/a16688ea/CLineBreak.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EB067793-5C3F-4219-AEF1-3AB117C20649/b2/e74fb2de/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E9CB8FBD-A44D-4E4D-9389-94F415C36F74/82/8790babe/Window.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E9CB8FBD-A44D-4E4D-9389-94F415C36F74/c2/1bb65d65/TopLevel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E0CFF5D8-25D4-401D-A1F8-020629D917CC/E/Timer.cs" root0="SKIP_HIGHLIGHTING" />
@@ -92,9 +97,7 @@
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox - Copy.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/InfoMessageBox.xaml.cs" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/InfoMessageBox.xaml" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/EditorWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/EditorWindow.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/ScrollViewDictionary.xaml" />
@@ -106,7 +109,6 @@
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/SuccessMessageBox.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/Configuration.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/SettingWindow.xaml.cs" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/MessageBox.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/ConfigManager.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/FileHandler.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/SuccessMessageBox.xaml" />
@@ -114,8 +116,13 @@
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/CommandRunner.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/GitUtils.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/MessageBox.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/FindWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/FindWindow.xaml" />
       </list>
     </option>
   </component>
@@ -201,7 +208,9 @@
       <workItem from="1609845384275" duration="13842000" />
       <workItem from="1610520378800" duration="2843000" />
       <workItem from="1610883000838" duration="1449000" />
-      <workItem from="1610959783795" duration="1896000" />
+      <workItem from="1610959783795" duration="2551000" />
+      <workItem from="1611127180102" duration="896000" />
+      <workItem from="1611129104457" duration="12217000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1609588163173</created>
@@ -210,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609588163173</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add listPanel hidden related">
+      <created>1611021732114</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611021732115</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,68 +249,69 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="add listPanel hidden related" />
+    <option name="LAST_COMMIT_MESSAGE" value="add listPanel hidden related" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="104" key="GridCell.Tab.0.bottom" timestamp="1610961623683">
+    <state width="1398" height="140" key="GridCell.Tab.0.bottom" timestamp="1611388507022">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="104" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1610961623683" />
-    <state width="1398" height="203" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.23.1920.1057@0.0.1440.900" timestamp="1609302094656" />
+    <state width="1398" height="140" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1611388507022" />
+    <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.23.1920.1057@0.0.1440.900" timestamp="1611109305961" />
     <state width="1398" height="104" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1610884566725" />
     <state width="1398" height="162" key="GridCell.Tab.0.bottom/0.23.1440.806/1440.23.1920.1057@0.23.1440.806" timestamp="1608703076197" />
     <state width="1398" height="64" key="GridCell.Tab.0.bottom/0.23.1440.806@0.23.1440.806" timestamp="1608726976398" />
     <state width="1398" height="162" key="GridCell.Tab.0.bottom/0.23.1440.808/1440.23.1920.1057@0.23.1440.808" timestamp="1608788716362" />
     <state width="1398" height="42" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1608734651257" />
-    <state width="1398" height="173" key="GridCell.Tab.0.bottom/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1609300470543" />
+    <state width="1398" height="63" key="GridCell.Tab.0.bottom/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1611133125159" />
     <state width="1398" height="319" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1609507315138" />
     <state width="1398" height="135" key="GridCell.Tab.0.bottom/0.23.1440.812/1440.23.1920.1057@0.23.1440.812" timestamp="1608873417907" />
     <state width="1398" height="173" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1609288432655" />
     <state width="1398" height="252" key="GridCell.Tab.0.bottom/0.23.1440.814/1440.23.1920.1057@0.23.1440.814" timestamp="1609214300879" />
     <state width="1398" height="145" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1609561802406" />
-    <state width="1398" height="104" key="GridCell.Tab.0.center" timestamp="1610961623681">
+    <state width="1398" height="140" key="GridCell.Tab.0.center" timestamp="1611388507021">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="104" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1610961623681" />
-    <state width="1398" height="203" key="GridCell.Tab.0.center/0.0.1440.900/1440.23.1920.1057@0.0.1440.900" timestamp="1609302094655" />
+    <state width="1398" height="140" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1611388507021" />
+    <state width="1398" height="238" key="GridCell.Tab.0.center/0.0.1440.900/1440.23.1920.1057@0.0.1440.900" timestamp="1611109305955" />
     <state width="1398" height="104" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1610884566724" />
     <state width="1398" height="162" key="GridCell.Tab.0.center/0.23.1440.806/1440.23.1920.1057@0.23.1440.806" timestamp="1608703076196" />
     <state width="1398" height="64" key="GridCell.Tab.0.center/0.23.1440.806@0.23.1440.806" timestamp="1608726976397" />
     <state width="1398" height="162" key="GridCell.Tab.0.center/0.23.1440.808/1440.23.1920.1057@0.23.1440.808" timestamp="1608788716362" />
     <state width="1398" height="42" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1608734651256" />
-    <state width="1398" height="173" key="GridCell.Tab.0.center/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1609300470540" />
+    <state width="1398" height="63" key="GridCell.Tab.0.center/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1611133125158" />
     <state width="1398" height="319" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1609507315137" />
     <state width="1398" height="135" key="GridCell.Tab.0.center/0.23.1440.812/1440.23.1920.1057@0.23.1440.812" timestamp="1608873417906" />
     <state width="1398" height="173" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1609288432655" />
     <state width="1398" height="252" key="GridCell.Tab.0.center/0.23.1440.814/1440.23.1920.1057@0.23.1440.814" timestamp="1609214300879" />
     <state width="1398" height="145" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1609561802405" />
-    <state width="1398" height="104" key="GridCell.Tab.0.left" timestamp="1610961623681">
+    <state width="1398" height="140" key="GridCell.Tab.0.left" timestamp="1611388507020">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="104" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1610961623681" />
-    <state width="1398" height="203" key="GridCell.Tab.0.left/0.0.1440.900/1440.23.1920.1057@0.0.1440.900" timestamp="1609302094653" />
+    <state width="1398" height="140" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1611388507020" />
+    <state width="1398" height="238" key="GridCell.Tab.0.left/0.0.1440.900/1440.23.1920.1057@0.0.1440.900" timestamp="1611109305949" />
     <state width="1398" height="104" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1610884566724" />
     <state width="1398" height="162" key="GridCell.Tab.0.left/0.23.1440.806/1440.23.1920.1057@0.23.1440.806" timestamp="1608703076196" />
     <state width="1398" height="64" key="GridCell.Tab.0.left/0.23.1440.806@0.23.1440.806" timestamp="1608726976397" />
     <state width="1398" height="162" key="GridCell.Tab.0.left/0.23.1440.808/1440.23.1920.1057@0.23.1440.808" timestamp="1608788716362" />
     <state width="1398" height="42" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1608734651255" />
-    <state width="1398" height="173" key="GridCell.Tab.0.left/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1609300470536" />
+    <state width="1398" height="63" key="GridCell.Tab.0.left/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1611133125157" />
     <state width="1398" height="319" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1609507315137" />
     <state width="1398" height="135" key="GridCell.Tab.0.left/0.23.1440.812/1440.23.1920.1057@0.23.1440.812" timestamp="1608873417906" />
     <state width="1398" height="173" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1609288432654" />
     <state width="1398" height="252" key="GridCell.Tab.0.left/0.23.1440.814/1440.23.1920.1057@0.23.1440.814" timestamp="1609214300878" />
     <state width="1398" height="145" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1609561802403" />
-    <state width="1398" height="104" key="GridCell.Tab.0.right" timestamp="1610961623682">
+    <state width="1398" height="140" key="GridCell.Tab.0.right" timestamp="1611388507021">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="104" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1610961623682" />
-    <state width="1398" height="203" key="GridCell.Tab.0.right/0.0.1440.900/1440.23.1920.1057@0.0.1440.900" timestamp="1609302094655" />
+    <state width="1398" height="140" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1611388507021" />
+    <state width="1398" height="238" key="GridCell.Tab.0.right/0.0.1440.900/1440.23.1920.1057@0.0.1440.900" timestamp="1611109305957" />
     <state width="1398" height="104" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1610884566725" />
     <state width="1398" height="162" key="GridCell.Tab.0.right/0.23.1440.806/1440.23.1920.1057@0.23.1440.806" timestamp="1608703076196" />
     <state width="1398" height="64" key="GridCell.Tab.0.right/0.23.1440.806@0.23.1440.806" timestamp="1608726976398" />
     <state width="1398" height="162" key="GridCell.Tab.0.right/0.23.1440.808/1440.23.1920.1057@0.23.1440.808" timestamp="1608788716362" />
     <state width="1398" height="42" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1608734651256" />
-    <state width="1398" height="173" key="GridCell.Tab.0.right/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1609300470540" />
+    <state width="1398" height="63" key="GridCell.Tab.0.right/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1611133125158" />
     <state width="1398" height="319" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1609507315138" />
     <state width="1398" height="135" key="GridCell.Tab.0.right/0.23.1440.812/1440.23.1920.1057@0.23.1440.812" timestamp="1608873417906" />
     <state width="1398" height="173" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1609288432655" />
@@ -496,6 +513,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="VCS.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1609471894555" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1611021756880">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1611021756880" />
     <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1609469395347">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -517,13 +538,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs</url>
-          <line>462</line>
+          <line>476</line>
           <properties documentPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" initialLine="440">
             <startOffsets>
-              <option value="16010" />
+              <option value="16611" />
             </startOffsets>
             <endOffsets>
-              <option value="16050" />
+              <option value="16651" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />

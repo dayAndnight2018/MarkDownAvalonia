@@ -31,12 +31,12 @@ namespace MarkDownAvalonia.Data
             return infoMessageBox.ShowDialog(sender);
         }
         
-        public static Task showWarnning(Window sender, String message)
+        public static Task<bool> showWarnning(Window sender, String message)
         {
             WarningMessageBox warningMessageBox = new WarningMessageBox(null, message);
             warningMessageBox.Width = 480;
             warningMessageBox.Height = 300;
-            return warningMessageBox.ShowDialog(sender);
+            return warningMessageBox.ShowDialog<bool>(sender);
         }
 
     }

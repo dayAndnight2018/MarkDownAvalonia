@@ -1,0 +1,72 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="420" d:DesignHeight="360"
+        x:Class="MarkDownAvalonia.Controls.FindWindow"
+        Title="Message" Background="white" SystemDecorations="BorderOnly" WindowStartupLocation="CenterOwner">
+        <Window.Styles>
+                <Style Selector="Button.tab">
+                        <Setter Property="Background" Value="#303030"></Setter>
+                        <Setter Property="Foreground" Value="white" />
+                        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                        <Setter Property="BorderThickness" Value="0"></Setter>
+                </Style>
+        </Window.Styles>
+        <Grid>
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Background="#303030">
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal" Grid.Column="0">
+                                <Border HorizontalAlignment="Center" BorderThickness="1" BorderBrush="white" Width="30" Height="30" CornerRadius="15" Margin="10 5" Background="white">
+                                        <PathIcon Margin="5" Data="M670.4 329.344L512 487.744 353.6 329.344a31.936 31.936 0 0 0-25.344-9.216l-2.56 0.384a32 32 0 0 0-37.76 31.488l0.064 320a32 32 0 0 0 64 0l-0.064-253.76 137.408 137.408a32 32 0 0 0 40.832 3.712l4.48-3.712L672 418.24V672a32 32 0 1 0 64 0v-320A32 32 0 0 0 704 320l-5.76 0.512-2.496-0.384a31.936 31.936 0 0 0-25.344 9.216z"></PathIcon>
+                                </Border>
+                                <Label Name="title" VerticalAlignment="Center" Foreground="white" FontSize="16">Search</Label>
+                        </StackPanel>
+                        <Button Grid.Column="2" Width="30" Height="30" Foreground="white" Background="#C75049" BorderThickness="0" Margin="10 0" Click="CloseWindow">
+                                <PathIcon Foreground="white" Data="M1023.997 114.97 911.408 2.388 516.149 397.629 118.5 0 5.91 112.585l397.649 397.629L7.107 906.648l112.587 112.59 396.454-396.439 395.259 395.249 112.59-112.59L628.738 510.214 1023.997 114.97z"></PathIcon>
+                        </Button>
+                </Grid>
+                
+                <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="2*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Center">
+                                <Label VerticalContentAlignment="Center" VerticalAlignment="Center">Search:</Label>
+                                <TextBox Width="200" Height="28"  TextWrapping="NoWrap" Name="inputBox" FontFamily="Microsoft YaHei,Simsun,苹方,苹方-简,宋体-简"></TextBox>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Center">
+                                <Label VerticalContentAlignment="Center" VerticalAlignment="Center">Replace:</Label>
+                                <TextBox Width="200" Height="28"  TextWrapping="NoWrap" Name="replaceBox" FontFamily="Microsoft YaHei,Simsun,苹方,苹方-简,宋体-简"></TextBox>
+                        </StackPanel>
+                        <Grid Grid.Row="5" HorizontalAlignment="Center">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Button  Foreground="white" Width="80" Height="30" BorderThickness="0" Background="#303030" Content="Last" Click="LastMatch" Margin="10 0 10 0">
+                                        </Button>
+                                        <Button  Foreground="white" Width="80" Height="30" BorderThickness="0" Background="#303030" Content="Next" Click="NextMatch" Margin="10 0 10 0">
+                                        </Button>
+                                        <Button  Foreground="white" Width="80" Height="30" BorderThickness="0" Background="#303030" Content="Replace" Click="Replace" Margin="10 0 10 0">
+                                        </Button>
+                                        <Button  Foreground="white" Width="80" Height="30" BorderThickness="0" Background="#303030" Content="ReplaceAll" Click="ReplaceAll" Margin="10 0 10 0">
+                                        </Button>
+                                </StackPanel>
+                        </Grid>
+                </Grid>
+        </Grid>
+</Window>

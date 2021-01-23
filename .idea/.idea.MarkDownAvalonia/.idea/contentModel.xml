@@ -13,6 +13,8 @@
           <e p="EditorWindow.xaml.cs" t="Include" />
           <e p="ErrorMessageBox.xaml" t="Include" />
           <e p="ErrorMessageBox.xaml.cs" t="Include" />
+          <e p="FindWindow.xaml" t="Include" />
+          <e p="FindWindow.xaml.cs" t="Include" />
           <e p="InfoMessageBox.xaml" t="Include" />
           <e p="InfoMessageBox.xaml.cs" t="Include" />
           <e p="NewPostWindow.xaml" t="Include" />

@@ -5,8 +5,6 @@ using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using Markdown.Avalonia;
-using MarkDownAvalonia.Controls;
-using Color = Avalonia.Media.Color;
 
 namespace MarkDownAvalonia.Controls
 {

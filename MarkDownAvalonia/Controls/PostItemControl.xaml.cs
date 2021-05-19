@@ -6,7 +6,6 @@ using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
-using Timer = System.Timers.Timer;
 
 namespace MarkDownAvalonia.Controls
 {
@@ -14,42 +13,46 @@ namespace MarkDownAvalonia.Controls
     {
         private TextBlock itemTitleTbk, itemTimeTbk;
         public FileInfo info = null;
-        private TextBox inputTbx;
+        private readonly TextBox inputTbx;
         private Timer timer;
         private string cache = String.Empty;
         public bool isExists = false;
-        
+
+        private static readonly string DATE_PATTERN = "yyyy/MM/dd HH:mm:ss";
+        private static readonly string DEFAULT_TITLE = "md*";
+
         public PostItemControl()
         {
             AvaloniaXamlLoader.Load(this);
         }
-        
+
         public PostItemControl(TextBox inputTbx)
         {
             AvaloniaXamlLoader.Load(this);
-            this.inputTbx = inputTbx;
             init();
-            this.itemTitleTbk.Text = "md*";
-            this.itemTimeTbk.Text = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+            
+            this.inputTbx = inputTbx;
+            itemTitleTbk.Text = DEFAULT_TITLE;
+            itemTimeTbk.Text = DateTime.Now.ToString(DATE_PATTERN);
         }
 
         public string GetName()
         {
-            return this.itemTitleTbk.Text;
+            return itemTitleTbk.Text;
         }
-        
+
         public PostItemControl(string file, TextBox inputTbx)
         {
             AvaloniaXamlLoader.Load(this);
             this.inputTbx = inputTbx;
             info = new FileInfo(file);
-            
+
             init();
 
             if (info.Exists)
             {
                 string name = Path.GetFileNameWithoutExtension(info.FullName);
-                string date = info.LastWriteTime.ToString("yyyy/MM/dd HH:mm:ss");
+                string date = info.LastWriteTime.ToString(DATE_PATTERN);
                 this.itemTitleTbk.Text = name;
                 this.itemTimeTbk.Text = date;
                 isExists = true;
@@ -59,7 +62,7 @@ namespace MarkDownAvalonia.Controls
         public void updateItemPresent(String name)
         {
             this.itemTitleTbk.Text = name;
-            this.itemTimeTbk.Text = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+            this.itemTimeTbk.Text = DateTime.Now.ToString(DATE_PATTERN);
         }
 
         public void updateCache()
@@ -107,6 +110,7 @@ namespace MarkDownAvalonia.Controls
                             sw.Flush();
                         }
                     }
+
                     cache = inputTbx.Text;
                 }
             }
@@ -140,10 +144,10 @@ namespace MarkDownAvalonia.Controls
         /// <param name="e"></param>
         public void GetFocus(Object sender, PointerEventArgs e)
         {
-            this.Background = new SolidColorBrush(Color.FromRgb(199,80,73));
+            this.Background = new SolidColorBrush(Color.FromRgb(199, 80, 73));
             this.Foreground = new SolidColorBrush(Colors.White);
         }
-        
+
         /// <summary>
         /// item effect
         /// </summary>
@@ -168,7 +172,7 @@ namespace MarkDownAvalonia.Controls
             {
                 inputTbx.Text = cache;
             }
-            
+
             configTimer();
         }
 

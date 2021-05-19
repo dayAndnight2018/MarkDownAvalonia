@@ -9,15 +9,21 @@ namespace MarkDownAvalonia.Controls
     {
         private string title;
         private string content;
+        private Label titleLabel;
+        private TextBox contentTbx;
         
         public NewPostWindow(string title, string content)
         {
             AvaloniaXamlLoader.Load(this);
             this.title = title;
             this.content = content;
-            this.FindControl<Label>("title").Content = title;
-            this.FindControl<TextBox>("content").Text = content;
-            this.FindControl<TextBox>("content").Width = Width / 5.0 * 4;
+            
+            titleLabel = this.FindControl<Label>("title");
+            contentTbx = this.FindControl<TextBox>("content");
+
+            titleLabel.Content = title;
+            contentTbx.Text = content;
+            contentTbx.Width = Width / 5.0 * 4;
         }
 
         public NewPostWindow():this("New Post",String.Empty)

@@ -13,11 +13,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14c2ef56-7a95-4143-8bf6-009a37c1fb77" name="Default Changelist" comment="add search and replace function">
+    <list default="true" id="14c2ef56-7a95-4143-8bf6-009a37c1fb77" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/EditorWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/EditorWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Data/MessageBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Data/MessageBox.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/NewPostWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/NewPostWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +62,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BB698D63-B8CD-4EE2-9436-AAA05641FA43/2a/42338437/Interactive.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/EB067793-5C3F-4219-AEF1-3AB117C20649/1D8/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E9CB8FBD-A44D-4E4D-9389-94F415C36F74/c2/1bb65d65/TopLevel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E7E5FBEB-8FF9-4361-AC40-6E2BE797EAC7/b3/7937de10/FileInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5ED2EDBF-CA1F-4309-BA1B-B60955D0959C/E/Directory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C6B1368F-EFBD-495B-890F-F5C67710A11F/ef/53169db6/CTextBlock.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8982FC25-74E3-4111-8620-D874DFEAB093/12/VisualExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -83,7 +83,6 @@
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Program.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/App.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/MessageBox.cs" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/NewPostWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/NewPostWindow.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/WelcomeWindow.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/WelcomeWindow.xaml.cs" />
@@ -106,7 +105,6 @@
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/ConfigManager.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/FileHandler.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/SuccessMessageBox.xaml" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/CommandRunner.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/GitUtils.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml" />
@@ -118,6 +116,8 @@
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/MessageBox.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/EditorWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/NewPostWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml.cs" />
       </list>
     </option>
   </component>
@@ -216,7 +216,7 @@
       <workItem from="1619765927395" duration="28000" />
       <workItem from="1620628927701" duration="158000" />
       <workItem from="1620977583986" duration="211000" />
-      <workItem from="1621401259056" duration="1062000" />
+      <workItem from="1621401259056" duration="3056000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1609588163173</created>
@@ -239,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611399026010</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1621402333075</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1621402333075</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,10 +268,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="update" />
     <MESSAGE value="add listPanel hidden related" />
     <MESSAGE value="add search and replace function" />
-    <option name="LAST_COMMIT_MESSAGE" value="add search and replace function" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1398" height="140" key="GridCell.Tab.0.bottom" timestamp="1617418963597">
@@ -296,6 +303,10 @@
       <screen x="-1920" y="23" width="1920" height="983" />
     </state>
     <state x="-1820" y="123" width="1720" height="783" key="VCS.FileHistoryDialog/0.23.1440.877/-1920.23.1920.983@-1920.23.1920.983" timestamp="1621401943564" />
+    <state x="-1360" y="254" key="Vcs.Push.Dialog.v2" timestamp="1621402349244">
+      <screen x="-1920" y="23" width="1920" height="983" />
+    </state>
+    <state x="-1360" y="254" key="Vcs.Push.Dialog.v2/0.23.1440.877/-1920.23.1920.983@-1920.23.1920.983" timestamp="1621402349244" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

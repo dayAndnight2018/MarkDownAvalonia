@@ -38,6 +38,10 @@
           <e p="MessageBox.cs" t="Include" />
           <e p="ThemeConfig.cs" t="Include" />
         </e>
+        <e p="Enums" t="Include">
+          <e p="Tag.cs" t="Include" />
+          <e p="TagCollection.cs" t="Include" />
+        </e>
         <e p="Extends" t="Include">
           <e p="CollectionExtends.cs" t="Include" />
         </e>

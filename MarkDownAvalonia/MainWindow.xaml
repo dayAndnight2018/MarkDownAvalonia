@@ -141,11 +141,11 @@
             </StackPanel>
         </Border>
 
-        <Grid Grid.Row="1" Grid.Column="0" Background="#303030" />
-
-        <ScrollViewer Grid.Row="1" Grid.Column="0" HorizontalScrollBarVisibility="Disabled" Name="listPanel">
-            <StackPanel Orientation="Vertical" Name="postItemsPanel" />
-        </ScrollViewer>
+        <Grid Grid.Row="1" Grid.Column="0" Background="#303030">
+            <ScrollViewer Grid.Row="1" Grid.Column="0" HorizontalScrollBarVisibility="Disabled" Name="listPanel">
+                <StackPanel Orientation="Vertical" Name="postItemsPanel" />
+            </ScrollViewer>
+        </Grid>
 
         <!-- Background="#2A3030"-->
         <Grid Grid.Row="1" Grid.Column="1">

@@ -14,6 +14,7 @@ using Avalonia.Media.Imaging;
 using Markdown.Avalonia;
 using MarkDownAvalonia.Controls;
 using MarkDownAvalonia.Data;
+using MarkDownAvalonia.Enums;
 using MarkDownAvalonia.Extends;
 
 namespace MarkDownAvalonia
@@ -44,7 +45,6 @@ namespace MarkDownAvalonia
         private static readonly string SUFFIX = ".md";
 
         private bool hidden = false;
-        private double oldGridWidth = 0;
 
         public MainWindow()
         {
@@ -93,7 +93,7 @@ namespace MarkDownAvalonia
             foreach (var file in files)
             {
                 PostItemControl current = new PostItemControl(file, this.inputTbx);
-                current.Register(new EventHandler<PointerPressedEventArgs>((sender, e) =>
+                current.Register((sender, e) =>
                 {
                     foreach (PostItemControl control in cacheControls)
                     {
@@ -107,7 +107,7 @@ namespace MarkDownAvalonia
                     current.Foreground = new SolidColorBrush(Colors.White);
                     selectedItem = current;
                     current.configTimer();
-                }));
+                });
                 articleListPanel.Children.Add(current);
             }
 
@@ -136,10 +136,8 @@ namespace MarkDownAvalonia
         {
             // todo : check config
             // there already a temp post
-            if (findTempFile() != null)
-            {
+            if (findTempFile())
                 return;
-            }
 
             PostItemControl current = new PostItemControl(this.inputTbx);
             current.Register((sender, e) =>
@@ -174,9 +172,7 @@ namespace MarkDownAvalonia
         public async void SavePost(object sender, RoutedEventArgs e)
         {
             if (selectedItem == null)
-            {
                 return;
-            }
 
             // current selected item is local not temp
             if (selectedItem.isExists)
@@ -316,7 +312,7 @@ namespace MarkDownAvalonia
                 {
                     // delete from disk
                     File.Delete(selectedItem.info.FullName);
-                    
+
                     RemoveItemInPanel();
 
                     await MessageBox.showSuccess(this, "Delete success!");
@@ -379,68 +375,9 @@ namespace MarkDownAvalonia
 
         public void ToggleListPanel(Object sender, RoutedEventArgs e)
         {
-            if (!hidden)
-            {
-                oldGridWidth = mainGrid.ColumnDefinitions[0].ActualWidth;
-                mainGrid.ColumnDefinitions[0].Width = new GridLength(0);
-            }
-            else
-            {
-                mainGrid.ColumnDefinitions[0].Width = new GridLength(oldGridWidth);
-            }
-
+            mainGrid.ColumnDefinitions[0].Width = !hidden ? new GridLength(0) : new GridLength(this.Width / 5);
             hidden = !hidden;
         }
-
-        /// <summary>
-        /// button effect
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void LabelMouseEntered(object sender, PointerEventArgs e)
-        {
-            Button button = sender as Button;
-            button.Background = new SolidColorBrush(Color.FromRgb(48, 48, 48));
-            button.Foreground = new SolidColorBrush(Color.FromRgb(199, 80, 73));
-            button.FontWeight = FontWeight.Bold;
-        }
-
-        /// <summary>
-        /// button effect
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void LabelMouseLeave(object sender, PointerEventArgs e)
-        {
-            Button button = sender as Button;
-
-// button.Background = new SolidColorBrush(Colors.Transparent);
-            button.Foreground = new SolidColorBrush(Colors.Transparent);
-            button.FontWeight = FontWeight.Normal;
-        }
-
-        public void PathIconMouseEnter(object sender, PointerEventArgs e)
-        {
-            PathIcon icon = sender as PathIcon;
-            icon.Foreground = new SolidColorBrush(Color.FromRgb(199, 80, 73));
-            icon.FontWeight = FontWeight.Bold;
-        }
-
-        public void PathIconMouseLeave(object sender, PointerEventArgs e)
-        {
-            PathIcon icon = sender as PathIcon;
-            icon.Foreground = new SolidColorBrush(Colors.White);
-            icon.FontWeight = FontWeight.Normal;
-        }
-
-        public void ContextMenuPointerEnter(object sender, PointerEventArgs e)
-        {
-            ContextMenu icon = sender as ContextMenu;
-            icon.Background = new SolidColorBrush(Color.FromRgb(48, 48, 48));
-// icon.Foreground = 
-// icon.FontWeight = FontWeight.Bold;
-        }
-
 
         /// <summary>
         /// flush preview when input text
@@ -457,17 +394,13 @@ namespace MarkDownAvalonia
             }
         }
 
-        private PostItemControl findTempFile()
+        /// <summary>
+        /// 查找是否存在临时文件
+        /// </summary>
+        /// <returns></returns>
+        private bool findTempFile()
         {
-            foreach (PostItemControl control in cacheControls)
-            {
-                if (!control.isExists)
-                {
-                    return control;
-                }
-            }
-
-            return null;
+            return cacheControls.Exists(ele => !ele.isExists);
         }
 
         /// <summary>
@@ -532,118 +465,23 @@ namespace MarkDownAvalonia
             if (key == Key.Tab)
             {
                 e.Handled = true;
-                this.inputTbx.Text =
-                    this.inputTbx.Text.Insert(this.inputTbx.CaretIndex, "        ");
+                this.inputTbx.Text = inputTbx.Text.Insert(this.inputTbx.CaretIndex, "        ");
                 return;
             }
 
             String selectedText = this.inputTbx.SelectedText;
-            // control + 1
-            if (modifiers == KeyModifiers.Control && key == Key.D1)
+
+            Dictionary<Key, Tag> dic = new Dictionary<Key, Tag>();
+            dic.Add(Key.D1, TagCollection.H1);
+            dic.Add(Key.D2, TagCollection.H2);
+            dic.Add(Key.D3, TagCollection.H3);
+            dic.Add(Key.D4, TagCollection.H4);
+            dic.Add(Key.D5, TagCollection.H5);
+            dic.Add(Key.D6, TagCollection.H6);
+
+            if (modifiers == KeyModifiers.Control && dic.ContainsKey(key))
             {
-                if (String.IsNullOrWhiteSpace(selectedText))
-                {
-                    return;
-                }
-
-                if (selectedText.StartsWith("# "))
-                {
-                    this.inputTbx.SelectedText = selectedText.Substring("# ".Length);
-                }
-                else
-                {
-                    this.inputTbx.SelectedText = String.Concat("# ", selectedText);
-                }
-            }
-
-// control + 2
-            if (modifiers == KeyModifiers.Control && key == Key.D2)
-            {
-                if (String.IsNullOrWhiteSpace(selectedText))
-                {
-                    return;
-                }
-
-                if (selectedText.StartsWith("## "))
-                {
-                    this.inputTbx.SelectedText = selectedText.Substring("## ".Length);
-                }
-                else
-                {
-                    this.inputTbx.SelectedText = String.Concat("## ", selectedText);
-                }
-            }
-
-// control + 3
-            if (modifiers == KeyModifiers.Control && key == Key.D3)
-            {
-                if (String.IsNullOrWhiteSpace(selectedText))
-                {
-                    return;
-                }
-
-                if (selectedText.StartsWith("### "))
-                {
-                    this.inputTbx.SelectedText = selectedText.Substring("### ".Length);
-                }
-                else
-                {
-                    this.inputTbx.SelectedText = String.Concat("### ", selectedText);
-                }
-            }
-
-// control + 4
-            if (modifiers == KeyModifiers.Control && key == Key.D4)
-            {
-                if (String.IsNullOrWhiteSpace(selectedText))
-                {
-                    return;
-                }
-
-                if (selectedText.StartsWith("#### "))
-                {
-                    this.inputTbx.SelectedText = selectedText.Substring("#### ".Length);
-                }
-                else
-                {
-                    this.inputTbx.SelectedText = String.Concat("#### ", selectedText);
-                }
-            }
-
-// control + 5
-            if (modifiers == KeyModifiers.Control && key == Key.D5)
-            {
-                if (String.IsNullOrWhiteSpace(selectedText))
-                {
-                    return;
-                }
-
-                if (selectedText.StartsWith("##### "))
-                {
-                    this.inputTbx.SelectedText = selectedText.Substring("##### ".Length);
-                }
-                else
-                {
-                    this.inputTbx.SelectedText = String.Concat("##### ", selectedText);
-                }
-            }
-
-// control + 6
-            if (modifiers == KeyModifiers.Control && key == Key.D6)
-            {
-                if (String.IsNullOrWhiteSpace(selectedText))
-                {
-                    return;
-                }
-
-                if (selectedText.StartsWith("###### "))
-                {
-                    this.inputTbx.SelectedText = selectedText.Substring("###### ".Length);
-                }
-                else
-                {
-                    this.inputTbx.SelectedText = String.Concat("###### ", selectedText);
-                }
+                HandleHeaderShortCutKeys(dic[key]);
             }
 
             if (modifiers == KeyModifiers.Control && key == Key.S)
@@ -661,6 +499,24 @@ namespace MarkDownAvalonia
             {
                 e.Handled = true;
                 return;
+            }
+        }
+
+        private void HandleHeaderShortCutKeys(Tag tag)
+        {
+            String selectedText = inputTbx.SelectedText;
+            if (String.IsNullOrWhiteSpace(selectedText))
+            {
+                return;
+            }
+
+            if (selectedText.StartsWith(tag.Prefix))
+            {
+                this.inputTbx.SelectedText = selectedText.Substring(tag.Prefix.Length);
+            }
+            else
+            {
+                this.inputTbx.SelectedText = String.Concat(tag.Prefix, selectedText);
             }
         }
 
@@ -694,6 +550,16 @@ namespace MarkDownAvalonia
 
                 e.Handled = true;
             }
+        }
+
+        /// <summary>
+        /// 处理窗体大小改变
+        /// </summary>
+        /// <param name="state"></param>
+        protected override void HandleWindowStateChanged(WindowState state)
+        {
+            mainGrid.ColumnDefinitions[0].Width = new GridLength(this.Width / 5);
+            base.HandleWindowStateChanged(state);
         }
     }
 }

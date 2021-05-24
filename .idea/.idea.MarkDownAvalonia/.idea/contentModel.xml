@@ -36,6 +36,10 @@
           <e p="FileHandler.cs" t="Include" />
           <e p="GitUtils.cs" t="Include" />
           <e p="MessageBox.cs" t="Include" />
+          <e p="ThemeConfig.cs" t="Include" />
+        </e>
+        <e p="Extends" t="Include">
+          <e p="CollectionExtends.cs" t="Include" />
         </e>
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />
@@ -52,6 +56,10 @@
           </e>
         </e>
         <e p="Program.cs" t="Include" />
+        <e p="ReactiveModels" t="Include">
+          <e p="MarkdownTextRM.cs" t="Include" />
+        </e>
+        <e p="theme.json" t="Include" />
       </e>
       <e p="MarkDownAvalonia.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

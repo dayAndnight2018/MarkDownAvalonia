@@ -19,14 +19,18 @@
         <Compile Update="Controls\WarningMessageBox.xaml.cs">
           <DependentUpon>WarningMessageBox.xaml</DependentUpon>
         </Compile>
+        <Content Include="theme.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="0.10.0-rc1" />
-        <PackageReference Include="Avalonia.Desktop" Version="0.10.0-rc1" />
-        <PackageReference Include="Avalonia.Markup.Xaml.Loader" Version="0.10.0-rc1" />
+        <PackageReference Include="Avalonia" Version="0.10.0" />
+        <PackageReference Include="Avalonia.Desktop" Version="0.10.0" />
+        <PackageReference Include="Avalonia.Markup.Xaml.Loader" Version="0.10.0" />
+        <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0" />
         <PackageReference Include="Citrus.Avalonia" Version="1.3.0-preview" />
-        <PackageReference Include="Markdown.Avalonia" Version="0.10.0-a9" />
-        <PackageReference Include="Material.Avalonia" Version="0.10.4" />
+        <PackageReference Include="Markdown.Avalonia" Version="0.10.4" />
+        <PackageReference Include="Material.Avalonia" Version="1.0.1" />
         <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     </ItemGroup>
     <ItemGroup>
@@ -34,6 +38,8 @@
     </ItemGroup>
     <ItemGroup>
       <None Remove="config.json" />
-      <Resource Include="config.json" />
+      <Content Include="config.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 </Project>

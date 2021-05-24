@@ -125,7 +125,7 @@ namespace MarkDownAvalonia.Controls
             this.PointerPressed += handler;
         }
 
-        public void Remove()
+        public void RemoveHandlers()
         {
             this.PointerEnter -= this.GetFocus;
             this.PointerLeave -= this.LostFocus;

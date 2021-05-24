@@ -7,6 +7,7 @@ namespace MarkDownAvalonia.Data
     {
         // config file name
         private static readonly string CONFIG = "config.json";
+        private static readonly string THEME = "theme.json";
         
         /// <summary>
         /// load config
@@ -27,7 +28,22 @@ namespace MarkDownAvalonia.Data
 
             return null;
         }
+        
+        public static ThemeConfig LoadTheme()
+        {
+            if (File.Exists(THEME))
+            {
+                using (StreamReader sr = new StreamReader(THEME))
+                {
+                    string data = sr.ReadToEnd();
+                    ThemeConfig theme =  JsonConvert.DeserializeObject<ThemeConfig>(data);
+                    return theme;
+                }
+            }
 
+            return null;
+        }
+        
         /// <summary>
         /// save config
         /// </summary>

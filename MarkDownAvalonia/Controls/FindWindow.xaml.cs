@@ -1,31 +1,20 @@
 using System;
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
-using Avalonia.Threading;
 
 namespace MarkDownAvalonia.Controls
 {
     public class FindWindow : Window
     {
-        private TextBox input;
-        private TextBox replace;
+        private readonly TextBox input;
+        private readonly TextBox replace;
+        private readonly TextBox mainWindowTextBox;
         
-        private TextBox mainWindowTextBox;
         private int matchOrder = -1;
         private String cacheMatchText = null;
         private int lastIndex = -1;
-
-        public FindWindow()
-        {
-            AvaloniaXamlLoader.Load(this);
-            input = this.FindControl<TextBox>("inputBox");
-            replace = this.FindControl<TextBox>("replaceBox");
-            mainWindowTextBox.SelectionBrush = new SolidColorBrush(Colors.Black);
-            mainWindowTextBox.SelectionForegroundBrush = new SolidColorBrush(Colors.White);
-        }
 
         public FindWindow(TextBox textBox)
         {
@@ -34,10 +23,17 @@ namespace MarkDownAvalonia.Controls
             input = this.FindControl<TextBox>("inputBox");
             replace = this.FindControl<TextBox>("replaceBox");
         }
+        
+        public FindWindow()
+        {
+            AvaloniaXamlLoader.Load(this);
+            input = this.FindControl<TextBox>("inputBox");
+            replace = this.FindControl<TextBox>("replaceBox");
+        }
 
         public void CloseWindow(object sender, RoutedEventArgs e)
         {
-            this.Close(false);
+            Close(false);
         }
 
         public void NextMatch(object sender, RoutedEventArgs e)

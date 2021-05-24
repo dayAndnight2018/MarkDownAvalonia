@@ -19,18 +19,25 @@ namespace MarkDownAvalonia.Controls
             this.rootDirectoryTbx = this.FindControl<TextBox>("rootDirectoryTbx");
             this.gitAddressTbx = this.FindControl<TextBox>("gitAddressTbx");
             this.config = CommonData.config;
+            
             if (config != null)
             {
-                this.rootDirectoryTbx.Text = config.RootDirectory??String.Empty;
-                this.gitAddressTbx.Text = config.GitAddress??String.Empty;
+                this.rootDirectoryTbx.Text = config.RootDirectory ?? string.Empty;
+                this.gitAddressTbx.Text = config.GitAddress ?? string.Empty;
             }
         }
 
+        /**
+         * 窗体关闭
+         */
         public void CloseWindow(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
+        /**
+         * 文件夹选择
+         */
         public async void selectDir(Object sender, GotFocusEventArgs e)
         {
             OpenFolderDialog ofd = new OpenFolderDialog();

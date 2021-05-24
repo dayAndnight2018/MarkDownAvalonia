@@ -306,51 +306,46 @@ namespace MarkDownAvalonia
 
             if (selectedItem.isExists)
             {
-                // file exists
-                if (File.Exists(selectedItem.info.FullName))
-                {
-                    bool result = await MessageBox.showWarnning(this, "Deleting file, continue?");
-                    if (result)
-                    {
-                        // stop auto save
-                        selectedItem.RemoveHandlers();
-                        // delete from dosk
-                        File.Delete(selectedItem.info.FullName);
-                        // remove 
-                        this.articleListPanel.Children.Remove(selectedItem);
-                        if (cacheControls.Contains(selectedItem))
-                        {
-                            cacheControls.Remove(selectedItem);
-                        }
-
-                        // remove selected
-                        selectedItem = null;
-                        // clear input text box
-                        inputTbx.Text = String.Empty;
-                        await MessageBox.showSuccess(this, "Delete success!");
-                    }
-                }
-                else
+                if (!File.Exists(selectedItem.info.FullName))
                 {
                     await MessageBox.showError(this, "File not exists!");
+                }
+
+                // file exists
+                if (await MessageBox.showWarnning(this, "Deleting file, continue?"))
+                {
+                    // delete from disk
+                    File.Delete(selectedItem.info.FullName);
+                    
+                    RemoveItemInPanel();
+
+                    await MessageBox.showSuccess(this, "Delete success!");
                 }
             }
             else
             {
                 if (await MessageBox.showWarnning(this, "Deleting file, continue?"))
                 {
-                    // remove event handler
-                    selectedItem.RemoveHandlers();
-                    // remove item in panel
-                    this.articleListPanel.Children.Remove(selectedItem);
-                    // try remove in cache
-                    cacheControls.TryRemove(selectedItem);
-                    
-                    // clear resource and input area
-                    selectedItem = null;
-                    inputTbx.Text = string.Empty;
+                    RemoveItemInPanel();
                 }
             }
+        }
+
+        /// <summary>
+        /// remove post item in panel
+        /// </summary>
+        private void RemoveItemInPanel()
+        {
+            // remove event handler
+            selectedItem.RemoveHandlers();
+            // remove 
+            this.articleListPanel.Children.Remove(selectedItem);
+            // remove cache
+            cacheControls.TryRemove(selectedItem);
+            // remove selected
+            selectedItem = null;
+            // clear input text box
+            inputTbx.Text = String.Empty;
         }
 
         public void OpenMenuClicked(object sender, RoutedEventArgs e)
@@ -418,7 +413,8 @@ namespace MarkDownAvalonia
         public void LabelMouseLeave(object sender, PointerEventArgs e)
         {
             Button button = sender as Button;
-            // button.Background = new SolidColorBrush(Colors.Transparent);
+
+// button.Background = new SolidColorBrush(Colors.Transparent);
             button.Foreground = new SolidColorBrush(Colors.Transparent);
             button.FontWeight = FontWeight.Normal;
         }
@@ -441,8 +437,8 @@ namespace MarkDownAvalonia
         {
             ContextMenu icon = sender as ContextMenu;
             icon.Background = new SolidColorBrush(Color.FromRgb(48, 48, 48));
-            // icon.Foreground = 
-            // icon.FontWeight = FontWeight.Bold;
+// icon.Foreground = 
+// icon.FontWeight = FontWeight.Bold;
         }
 
 
@@ -503,6 +499,7 @@ namespace MarkDownAvalonia
         public async void InputShortcutKeys(object sender, KeyEventArgs e)
         {
             KeyModifiers modifiers = e.KeyModifiers;
+
             Key key = e.Key;
             // control + v
             if (modifiers == KeyModifiers.Control && key == Key.V)
@@ -531,7 +528,7 @@ namespace MarkDownAvalonia
                 return;
             }
 
-            // tab
+// tab
             if (key == Key.Tab)
             {
                 e.Handled = true;
@@ -559,7 +556,7 @@ namespace MarkDownAvalonia
                 }
             }
 
-            // control + 2
+// control + 2
             if (modifiers == KeyModifiers.Control && key == Key.D2)
             {
                 if (String.IsNullOrWhiteSpace(selectedText))
@@ -577,7 +574,7 @@ namespace MarkDownAvalonia
                 }
             }
 
-            // control + 3
+// control + 3
             if (modifiers == KeyModifiers.Control && key == Key.D3)
             {
                 if (String.IsNullOrWhiteSpace(selectedText))
@@ -595,7 +592,7 @@ namespace MarkDownAvalonia
                 }
             }
 
-            // control + 4
+// control + 4
             if (modifiers == KeyModifiers.Control && key == Key.D4)
             {
                 if (String.IsNullOrWhiteSpace(selectedText))
@@ -613,7 +610,7 @@ namespace MarkDownAvalonia
                 }
             }
 
-            // control + 5
+// control + 5
             if (modifiers == KeyModifiers.Control && key == Key.D5)
             {
                 if (String.IsNullOrWhiteSpace(selectedText))
@@ -631,7 +628,7 @@ namespace MarkDownAvalonia
                 }
             }
 
-            // control + 6
+// control + 6
             if (modifiers == KeyModifiers.Control && key == Key.D6)
             {
                 if (String.IsNullOrWhiteSpace(selectedText))
@@ -658,6 +655,7 @@ namespace MarkDownAvalonia
         public void InputKeyDown(object sender, KeyEventArgs e)
         {
             KeyModifiers modifiers = e.KeyModifiers;
+
             Key key = e.Key;
             if (key == Key.Tab)
             {

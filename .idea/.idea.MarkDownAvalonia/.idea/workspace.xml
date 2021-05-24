@@ -14,20 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14c2ef56-7a95-4143-8bf6-009a37c1fb77" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Data/ThemeConfig.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/Extends/CollectionExtends.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/ReactiveModels/MarkdownTextRM.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarkDownAvalonia/theme.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/FindWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/FindWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/SettingWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/SettingWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Data/CommonData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Data/CommonData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Data/ConfigManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Data/ConfigManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MarkDownAvalonia.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MarkDownAvalonia.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +233,7 @@
       <workItem from="1621647472701" duration="1081000" />
       <workItem from="1621664408428" duration="1122000" />
       <workItem from="1621665542271" duration="5499000" />
-      <workItem from="1621820537941" duration="3573000" />
+      <workItem from="1621820537941" duration="3951000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1609588163173</created>
@@ -283,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621417016379</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update">
+      <created>1621824582310</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1621824582310</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,37 +474,5 @@
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
     <state width="960" height="528" key="XDebugger.FullValuePopup/0.23.1440.814/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1621664651653" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs</url>
-          <line>504</line>
-          <properties documentPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" initialLine="440">
-            <startOffsets>
-              <option value="17665" />
-            </startOffsets>
-            <endOffsets>
-              <option value="17705" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs</url>
-          <line>457</line>
-          <properties documentPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" initialLine="460">
-            <startOffsets>
-              <option value="16145" />
-            </startOffsets>
-            <endOffsets>
-              <option value="16186" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

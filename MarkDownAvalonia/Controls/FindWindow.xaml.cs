@@ -1,5 +1,3 @@
-using System;
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
@@ -15,7 +13,7 @@ namespace MarkDownAvalonia.Controls
         private readonly Border border;
 
         private int matchOrder = -1;
-        private String cacheMatchText = null;
+        private string cacheMatchText;
         private int lastIndex = -1;
 
         public FindWindow(TextBox textBox)
@@ -28,10 +26,8 @@ namespace MarkDownAvalonia.Controls
 
             LinearGradientBrush brush = new LinearGradientBrush();
             GradientStops stops = new GradientStops();
-            GradientStop stop1 = new GradientStop(Colors.Silver, 0);
-            GradientStop stop2 = new GradientStop(Color.Parse("#f2f2f2"), 1);
-            stops.Add(stop1);
-            stops.Add(stop2);
+            stops.Add(new GradientStop(Colors.Silver, 0));
+            stops.Add(new GradientStop(Color.Parse("#f2f2f2"), 1));
             brush.GradientStops = stops;
             border.BorderBrush = brush;
         }
@@ -44,11 +40,21 @@ namespace MarkDownAvalonia.Controls
             border = this.FindControl<Border>("windowBorder");
         }
 
+        /// <summary>
+        /// 关闭窗体
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void CloseWindow(object sender, RoutedEventArgs e)
         {
             Close(false);
         }
 
+        /// <summary>
+        /// 下一个匹配
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void NextMatch(object sender, RoutedEventArgs e)
         {
             var text = mainWindowTextBox.Text;
@@ -80,14 +86,21 @@ namespace MarkDownAvalonia.Controls
             }
         }
 
+        /// <summary>
+        /// 上一个匹配
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void LastMatch(object sender, RoutedEventArgs e)
         {
-            String text = mainWindowTextBox.Text;
-            String searchText = input.Text;
+            string text = mainWindowTextBox.Text;
+            string searchText = input.Text;
+            
             // 异常输入
             if (string.IsNullOrWhiteSpace(searchText))
                 return;
             
+            // 切换搜索文本
             if (!searchText.Equals(cacheMatchText))
             {
                 // search text changed 
@@ -110,10 +123,15 @@ namespace MarkDownAvalonia.Controls
             }
         }
 
+        /// <summary>
+        /// 替换一次
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void Replace(object sender, RoutedEventArgs e)
         {
-            String text = mainWindowTextBox.Text;
-            String searchText = input.Text;
+            string text = mainWindowTextBox.Text;
+            string searchText = input.Text;
             // 异常输入
             if (string.IsNullOrWhiteSpace(searchText))
                 return;
@@ -124,10 +142,15 @@ namespace MarkDownAvalonia.Controls
             }
         }
 
+        /// <summary>
+        /// 替换全部
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void ReplaceAll(object sender, RoutedEventArgs e)
         {
-            String text = mainWindowTextBox.Text;
-            String searchText = input.Text;
+            string text = mainWindowTextBox.Text;
+            string searchText = input.Text;
             // 异常输入
             if (string.IsNullOrWhiteSpace(searchText))
                 return;

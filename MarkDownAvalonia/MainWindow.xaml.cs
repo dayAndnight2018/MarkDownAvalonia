@@ -468,9 +468,7 @@ namespace MarkDownAvalonia
                 this.inputTbx.Text = inputTbx.Text.Insert(this.inputTbx.CaretIndex, "        ");
                 return;
             }
-
-            String selectedText = this.inputTbx.SelectedText;
-
+            
             Dictionary<Key, Tag> dic = new Dictionary<Key, Tag>();
             dic.Add(Key.D1, TagCollection.H1);
             dic.Add(Key.D2, TagCollection.H2);
@@ -558,7 +556,10 @@ namespace MarkDownAvalonia
         /// <param name="state"></param>
         protected override void HandleWindowStateChanged(WindowState state)
         {
-            mainGrid.ColumnDefinitions[0].Width = new GridLength(this.Width / 5);
+            if (!hidden)
+            {
+                mainGrid.ColumnDefinitions[0].Width = new GridLength(this.Width / 5);
+            }
             base.HandleWindowStateChanged(state);
         }
     }

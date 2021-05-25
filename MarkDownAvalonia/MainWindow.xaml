@@ -34,6 +34,10 @@
             <Setter Property="Foreground" Value="#C75049" />
             <Setter Property="FontWeight" Value="Bold" />
         </Style>
+        <Style Selector="Border.searchTbxBorder">
+            <Setter Property="BorderThickness" Value="0 0 0 2"></Setter>
+            <Setter Property="BorderBrush" Value="white"></Setter>
+        </Style>
     </Window.Styles>
     <Grid Name="mainGrid">
         <Grid.RowDefinitions>
@@ -133,8 +137,8 @@
                 </Button>
                 <PathIcon Margin="20 5 1 5" Width="15" Height="15" Foreground="white"
                           Data="M914.5 853.2L791 729.6c-14.2-14.2-35.4-15.9-52.1-6.4C801.4 656.8 840 567.5 840 469.1 840 264 673.7 97.8 468.6 97.8c-205 0-371.3 166.2-371.3 371.3 0 205.1 166.2 371.3 371.3 371.3 98.4 0 187.7-38.6 254.1-101.1-9.5 16.7-7.8 37.9 6.4 52.1L852.8 915c17.1 17.1 44.7 17.1 61.8 0 17-17.1 17-44.8-0.1-61.8z m-445.9-56.5C288 796.7 141 649.7 141 469.1c0-180.7 147-327.6 327.6-327.6 180.7 0 327.6 147 327.6 327.6 0.1 180.6-146.9 327.6-327.6 327.6z" />
-                <Border BorderThickness="0 0 0 2" BorderBrush="white" VerticalAlignment="Center">
-                    <TextBox Watermark="search post" FontSize="12" MaxWidth="200" MinWidth="120" Foreground="silver"
+                <Border VerticalAlignment="Center" Classes="searchTbxBorder" BorderThickness="0 0 0 2" BorderBrush="silver">
+                    <TextBox Watermark="search post" FontSize="12" MaxWidth="200" MinWidth="120" Foreground="white"
                              BorderThickness="0" AcceptsReturn="False" Name="searchBox" KeyDown="SearchBoxKeyDown"
                              Background="transparent" />
                 </Border>

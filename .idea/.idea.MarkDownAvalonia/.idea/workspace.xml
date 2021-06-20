@@ -13,10 +13,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14c2ef56-7a95-4143-8bf6-009a37c1fb77" name="Default Changelist" comment="update">
+    <list default="true" id="14c2ef56-7a95-4143-8bf6-009a37c1fb77" name="Default Changelist" comment="optimize code">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Data/ConfigManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Data/ConfigManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +121,6 @@
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/ErrorMessageBox.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/ErrorMessageBox.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/SuccessMessageBox.xaml.cs" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/Configuration.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/FileHandler.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/SuccessMessageBox.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/CommandRunner.cs" />
@@ -146,8 +144,9 @@
         <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/FindWindow.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/FindWindow.xaml.cs" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/ConfigManager.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/Configuration.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/ConfigManager.cs" />
       </list>
     </option>
   </component>
@@ -258,7 +257,7 @@
       <workItem from="1622122913302" duration="406000" />
       <workItem from="1622440093572" duration="614000" />
       <workItem from="1622643332004" duration="175000" />
-      <workItem from="1624197489897" duration="1198000" />
+      <workItem from="1624197489897" duration="2748000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1609588163173</created>
@@ -330,7 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1621942273364</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="optimize code">
+      <created>1624199375759</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1624199375759</updated>
+    </task>
+    <task id="LOCAL-00012" summary="optimize code">
+      <created>1624199530470</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1624199530470</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +370,8 @@
     <MESSAGE value="optimize" />
     <MESSAGE value="修复向前查找出现的问题" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="optimize code" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimize code" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1396" height="126" key="GridCell.Tab.0.bottom" timestamp="1622643505900">

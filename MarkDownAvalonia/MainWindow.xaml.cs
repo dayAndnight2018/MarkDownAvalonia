@@ -82,20 +82,20 @@ namespace MarkDownAvalonia
                 selectedItem = null;
             }
 
-            inputTbx.Text = String.Empty;
+            inputTbx.Text = string.Empty;
             // clear
             articleListPanel.Children.Clear();
 
             // get markdown files
-            IEnumerable<string> files = Directory.GetFiles(CommonData.config.PostDirectory)
+            var files = Directory.GetFiles(CommonData.config.PostDirectory)
                 .Where(f => f.EndsWith(SUFFIX));
             // deal with each post
             foreach (var file in files)
             {
-                PostItemControl current = new PostItemControl(file, this.inputTbx);
+                var current = new PostItemControl(file, this.inputTbx);
                 current.Register((sender, e) =>
                 {
-                    foreach (PostItemControl control in cacheControls)
+                    foreach (var control in cacheControls)
                     {
                         control.Background = new SolidColorBrush(Color.FromRgb(49, 47, 47));
                         control.Foreground = new SolidColorBrush(Colors.Silver);
@@ -112,7 +112,7 @@ namespace MarkDownAvalonia
             }
 
             // bake in cache
-            IControl[] array = new IControl[articleListPanel.Children.Count];
+            var array = new IControl[articleListPanel.Children.Count];
             articleListPanel.Children.CopyTo(array, 0);
             // add cache
             cacheControls.Clear();
@@ -139,10 +139,10 @@ namespace MarkDownAvalonia
             if (findTempFile())
                 return;
 
-            PostItemControl current = new PostItemControl(this.inputTbx);
+            var current = new PostItemControl(this.inputTbx);
             current.Register((sender, e) =>
             {
-                foreach (PostItemControl control in cacheControls)
+                foreach (var control in cacheControls)
                 {
                     control.Background = new SolidColorBrush(Color.FromRgb(49, 47, 47));
                     control.Foreground = new SolidColorBrush(Colors.Silver);
@@ -188,11 +188,11 @@ namespace MarkDownAvalonia
                 return;
             }
 
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            var saveFileDialog = new SaveFileDialog();
             saveFileDialog.DefaultExtension = SUFFIX;
             saveFileDialog.Directory = CommonData.config.PostDirectory;
-            string result = await saveFileDialog.ShowAsync(this);
-            if (!String.IsNullOrWhiteSpace(result))
+            var result = await saveFileDialog.ShowAsync(this);
+            if (!string.IsNullOrWhiteSpace(result))
             {
                 // auto detect suffix
                 if (!result.ToLower().EndsWith(SUFFIX))
@@ -208,14 +208,14 @@ namespace MarkDownAvalonia
                 else
                 {
                     // save file
-                    using (FileStream fs = new FileStream(result, FileMode.Create))
+                    using (var fs = new FileStream(result, FileMode.Create))
                     {
                         fs.Write(Encoding.UTF8.GetBytes(this.inputTbx.Text));
                         fs.Flush();
                     }
 
                     // deal for present
-                    string fileName = Path.GetFileNameWithoutExtension(result);
+                    var fileName = Path.GetFileNameWithoutExtension(result);
                     selectedItem.updateItemPresent(fileName);
                     selectedItem.isExists = true;
                     selectedItem.info = new FileInfo(result);
@@ -262,7 +262,7 @@ namespace MarkDownAvalonia
 
         public void PreviewPost(object sender, RoutedEventArgs e)
         {
-            FindWindow mb = new FindWindow(inputTbx);
+            var mb = new FindWindow(inputTbx);
             mb.Width = 500;
             mb.Height = 320;
             mb.Show(this);
@@ -341,13 +341,12 @@ namespace MarkDownAvalonia
             // remove selected
             selectedItem = null;
             // clear input text box
-            inputTbx.Text = String.Empty;
+            inputTbx.Text = string.Empty;
         }
 
         public void OpenMenuClicked(object sender, RoutedEventArgs e)
         {
-            OpenFolderDialog ofd = new OpenFolderDialog();
-            ofd.ShowAsync(this);
+            new OpenFolderDialog().ShowAsync(this);
         }
 
         /// <summary>
@@ -357,7 +356,7 @@ namespace MarkDownAvalonia
         /// <param name="e"></param>
         public void ExitButtonClicked(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         /// <summary>
@@ -388,7 +387,7 @@ namespace MarkDownAvalonia
         {
             if (e.Property.Name.Equals("Text"))
             {
-                Vector old = markdownPreview.ScrollValue;
+                var old = markdownPreview.ScrollValue;
                 markdownPreview.Markdown = this.inputTbx.Text;
                 markdownPreview.ScrollValue = new Vector(old.X, old.Y);
             }
@@ -409,7 +408,7 @@ namespace MarkDownAvalonia
         /// <param name="target"></param>
         private void SelectControl(PostItemControl target)
         {
-            foreach (PostItemControl control in this.cacheControls)
+            foreach (var control in this.cacheControls)
             {
                 if (control == target)
                 {
@@ -431,13 +430,13 @@ namespace MarkDownAvalonia
 
         public async void InputShortcutKeys(object sender, KeyEventArgs e)
         {
-            KeyModifiers modifiers = e.KeyModifiers;
+            var modifiers = e.KeyModifiers;
 
-            Key key = e.Key;
+            var key = e.Key;
             // control + v
             if (modifiers == KeyModifiers.Control && key == Key.V)
             {
-                String[] format = await Application.Current.Clipboard.GetFormatsAsync();
+                string[] format = await Application.Current.Clipboard.GetFormatsAsync();
                 if (format.Length > 0)
                 {
                     if (format[0].Equals("public.png") && selectedItem != null && selectedItem.isExists)
@@ -469,7 +468,7 @@ namespace MarkDownAvalonia
                 return;
             }
             
-            Dictionary<Key, Tag> dic = new Dictionary<Key, Tag>();
+            var dic = new Dictionary<Key, Tag>();
             dic.Add(Key.D1, TagCollection.H1);
             dic.Add(Key.D2, TagCollection.H2);
             dic.Add(Key.D3, TagCollection.H3);
@@ -490,10 +489,7 @@ namespace MarkDownAvalonia
 
         public void InputKeyDown(object sender, KeyEventArgs e)
         {
-            KeyModifiers modifiers = e.KeyModifiers;
-
-            Key key = e.Key;
-            if (key == Key.Tab)
+            if (e.Key == Key.Tab)
             {
                 e.Handled = true;
                 return;
@@ -502,8 +498,8 @@ namespace MarkDownAvalonia
 
         private void HandleHeaderShortCutKeys(Tag tag)
         {
-            String selectedText = inputTbx.SelectedText;
-            if (String.IsNullOrWhiteSpace(selectedText))
+            string selectedText = inputTbx.SelectedText;
+            if (string.IsNullOrWhiteSpace(selectedText))
             {
                 return;
             }
@@ -514,17 +510,17 @@ namespace MarkDownAvalonia
             }
             else
             {
-                this.inputTbx.SelectedText = String.Concat(tag.Prefix, selectedText);
+                this.inputTbx.SelectedText = string.Concat(tag.Prefix, selectedText);
             }
         }
 
 
         public void SearchBoxKeyDown(object sender, KeyEventArgs e)
         {
-            Key key = e.Key;
+            var key = e.Key;
             if (key == Key.Return)
             {
-                if (String.IsNullOrWhiteSpace(searchBox.Text))
+                if (string.IsNullOrWhiteSpace(searchBox.Text))
                 {
                     articleListPanel.Children.Clear();
                     foreach (var item in cacheControls)
@@ -535,7 +531,7 @@ namespace MarkDownAvalonia
                     return;
                 }
 
-                List<PostItemControl> filtered =
+                var filtered =
                     cacheControls.Where(c => c.GetName().ToLower().Contains(searchBox.Text.ToLower())).ToList();
                 articleListPanel.Children.Clear();
                 if (filtered.Count > 0)

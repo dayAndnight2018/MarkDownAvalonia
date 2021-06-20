@@ -15,18 +15,16 @@ namespace MarkDownAvalonia.Data
         /// <returns></returns>
         public static Configuration LoadConfig()
         {
-            if (File.Exists(CONFIG))
+            if (!File.Exists(CONFIG)) 
+                return null;
+            
+            using (var sr = new StreamReader(CONFIG))
             {
-                using (StreamReader sr = new StreamReader(CONFIG))
-                {
-                    string data = sr.ReadToEnd();
-                    Configuration config =  JsonConvert.DeserializeObject<Configuration>(data);
-                    config.PostDirectory = Path.Combine(config.RootDirectory, "editor", "source", "_posts");
-                    return config;
-                }
+                var data = sr.ReadToEnd();
+                var config =  JsonConvert.DeserializeObject<Configuration>(data);
+                config.PostDirectory = Path.Combine(config.RootDirectory, "editor", "source", "_posts");
+                return config;
             }
-
-            return null;
         }
         
         public static ThemeConfig LoadTheme()

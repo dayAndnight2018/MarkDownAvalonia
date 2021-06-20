@@ -547,9 +547,10 @@
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1619683981816" />
     <state x="-1625" y="120" key="SettingsEditor/0.23.1440.877/-1920.23.1920.983@-1920.23.1920.983" timestamp="1621401332239" />
-    <state x="-1820" y="131" width="1720" height="842" key="VCS.FileHistoryDialog" timestamp="1621942265562">
-      <screen x="-1920" y="23" width="1920" height="1057" />
+    <state x="75" y="92" width="1290" height="717" key="VCS.FileHistoryDialog" timestamp="1624199527881">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="75" y="92" width="1290" height="717" key="VCS.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1624199527881" />
     <state x="-1820" y="131" width="1720" height="842" key="VCS.FileHistoryDialog/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1621942265562" />
     <state x="-1820" y="123" width="1720" height="783" key="VCS.FileHistoryDialog/0.23.1440.877/-1920.23.1920.983@-1920.23.1920.983" timestamp="1621401943564" />
     <state x="-1360" y="254" key="Vcs.Push.Dialog.v2" timestamp="1621402349244">

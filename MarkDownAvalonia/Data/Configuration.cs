@@ -1,27 +1,23 @@
 namespace MarkDownAvalonia.Data
 {
+    /**
+     * application directory config
+     */
     public class Configuration
     {
-        private string rootDirectory;
-        private string gitAddress;
-        private string postDirectory;
+        /**
+         * root directory
+         */
+        public string RootDirectory { get; set; }
 
-        public string RootDirectory
-        {
-            get => rootDirectory;
-            set => rootDirectory = value;
-        }
+        /**
+         * git address
+         */
+        public string GitAddress { get; set; }
 
-        public string GitAddress
-        {
-            get => gitAddress;
-            set => gitAddress = value;
-        }
-
-        public string PostDirectory
-        {
-            get => postDirectory;
-            set => postDirectory = value;
-        }
+        /**
+         * post storage directory
+         */
+        public string PostDirectory { get; set; }
     }
 }

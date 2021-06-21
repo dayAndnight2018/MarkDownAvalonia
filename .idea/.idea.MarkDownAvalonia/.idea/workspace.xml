@@ -15,8 +15,9 @@
   <component name="ChangeListManager">
     <list default="true" id="14c2ef56-7a95-4143-8bf6-009a37c1fb77" name="Default Changelist" comment="optimize code">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Data/GitUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Data/GitUtils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Data/MessageBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Data/MessageBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/EditorWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/EditorWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/NewPostWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/NewPostWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,8 +129,6 @@
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/EditorWindow.xaml.cs" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/NewPostWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/theme.json" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/ReactiveModels/MarkdownTextRM.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Extends/CollectionExtends.cs" />
@@ -137,7 +136,6 @@
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/FindWindow.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/Configuration.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/ConfigManager.cs" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/CommonData.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/FindWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/SettingWindow.xaml.cs" />
@@ -150,6 +148,9 @@
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/MessageBox.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/GitUtils.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/EditorWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/NewPostWindow.xaml.cs" />
       </list>
     </option>
   </component>
@@ -261,7 +262,8 @@
       <workItem from="1622440093572" duration="614000" />
       <workItem from="1622643332004" duration="175000" />
       <workItem from="1624197489897" duration="3277000" />
-      <workItem from="1624233335407" duration="4070000" />
+      <workItem from="1624233335407" duration="4164000" />
+      <workItem from="1624262232750" duration="3231000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1609588163173</created>
@@ -389,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624235954369</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="optimize code">
+      <created>1624240830956</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1624240830956</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,13 +429,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="optimize code" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1396" height="134" key="GridCell.Tab.0.bottom" timestamp="1624201447382">
+    <state width="1396" height="134" key="GridCell.Tab.0.bottom" timestamp="1624265213727">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="213" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1621502171382" />
     <state width="1398" height="170" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.0.1920.1080@0.0.1440.900" timestamp="1621562037186" />
     <state width="1398" height="140" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1617334076174" />
-    <state width="1396" height="134" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1624201447382" />
+    <state width="1396" height="134" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1624265213727" />
     <state width="1878" height="66" key="GridCell.Tab.0.bottom/0.23.1440.811/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1621666946204" />
     <state width="1398" height="128" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1621688558229" />
     <state width="1878" height="128" key="GridCell.Tab.0.bottom/0.23.1440.812/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1621669879661" />
@@ -440,13 +449,13 @@
     <state width="1876" height="162" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1622116831854" />
     <state width="1878" height="75" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.23.1920.984@-1920.23.1920.984" timestamp="1621496218189" />
     <state width="1396" height="126" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1622643505900" />
-    <state width="1396" height="134" key="GridCell.Tab.0.center" timestamp="1624201447381">
+    <state width="1396" height="134" key="GridCell.Tab.0.center" timestamp="1624265213726">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="213" key="GridCell.Tab.0.center/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1621502171381" />
     <state width="1398" height="170" key="GridCell.Tab.0.center/0.0.1440.900/-1920.0.1920.1080@0.0.1440.900" timestamp="1621562037185" />
     <state width="1398" height="140" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1617334076172" />
-    <state width="1396" height="134" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1624201447381" />
+    <state width="1396" height="134" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1624265213726" />
     <state width="1878" height="66" key="GridCell.Tab.0.center/0.23.1440.811/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1621666946203" />
     <state width="1398" height="128" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1621688558229" />
     <state width="1878" height="128" key="GridCell.Tab.0.center/0.23.1440.812/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1621669879660" />
@@ -460,13 +469,13 @@
     <state width="1876" height="162" key="GridCell.Tab.0.center/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1622116831854" />
     <state width="1878" height="75" key="GridCell.Tab.0.center/0.23.1440.877/-1920.23.1920.984@-1920.23.1920.984" timestamp="1621496218188" />
     <state width="1396" height="126" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1622643505899" />
-    <state width="1396" height="134" key="GridCell.Tab.0.left" timestamp="1624201447381">
+    <state width="1396" height="134" key="GridCell.Tab.0.left" timestamp="1624265213724">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="213" key="GridCell.Tab.0.left/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1621502171380" />
     <state width="1398" height="170" key="GridCell.Tab.0.left/0.0.1440.900/-1920.0.1920.1080@0.0.1440.900" timestamp="1621562037184" />
     <state width="1398" height="140" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1617334076171" />
-    <state width="1396" height="134" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1624201447381" />
+    <state width="1396" height="134" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1624265213724" />
     <state width="1878" height="66" key="GridCell.Tab.0.left/0.23.1440.811/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1621666946202" />
     <state width="1398" height="128" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1621688558229" />
     <state width="1878" height="128" key="GridCell.Tab.0.left/0.23.1440.812/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1621669879659" />
@@ -480,13 +489,13 @@
     <state width="1876" height="162" key="GridCell.Tab.0.left/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1622116831854" />
     <state width="1878" height="75" key="GridCell.Tab.0.left/0.23.1440.877/-1920.23.1920.984@-1920.23.1920.984" timestamp="1621496218187" />
     <state width="1396" height="126" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1622643505899" />
-    <state width="1396" height="134" key="GridCell.Tab.0.right" timestamp="1624201447382">
+    <state width="1396" height="134" key="GridCell.Tab.0.right" timestamp="1624265213727">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="213" key="GridCell.Tab.0.right/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1621502171381" />
     <state width="1398" height="170" key="GridCell.Tab.0.right/0.0.1440.900/-1920.0.1920.1080@0.0.1440.900" timestamp="1621562037186" />
     <state width="1398" height="140" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1617334076172" />
-    <state width="1396" height="134" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1624201447382" />
+    <state width="1396" height="134" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1624265213727" />
     <state width="1878" height="66" key="GridCell.Tab.0.right/0.23.1440.811/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1621666946203" />
     <state width="1398" height="128" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1621688558229" />
     <state width="1878" height="128" key="GridCell.Tab.0.right/0.23.1440.812/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1621669879660" />

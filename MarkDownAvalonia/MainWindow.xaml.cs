@@ -6,7 +6,6 @@ using System.Text;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
-using Avalonia.Input.Platform;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
@@ -22,27 +21,27 @@ namespace MarkDownAvalonia
     public class MainWindow : Window
     {
         // input text box
-        private TextBox inputTbx;
+        private readonly TextBox inputTbx;
 
         // search text box
-        private TextBox searchBox;
+        private readonly TextBox searchBox;
 
         // container for posts
-        private StackPanel articleListPanel;
+        private readonly StackPanel articleListPanel;
 
-        private Grid mainGrid;
+        private readonly Grid mainGrid;
 
         // previewer
-        private MarkdownScrollViewer markdownPreview;
+        private readonly MarkdownScrollViewer markdownPreview;
 
         // selected item
         private PostItemControl selectedItem = null;
 
         // cache posts for search
-        private List<PostItemControl> cacheControls = new List<PostItemControl>();
+        private readonly List<PostItemControl> cacheControls = new List<PostItemControl>();
 
-        private static readonly string TIME_PATTERN = "yyyy/MM/dd HH:mm:ss";
-        private static readonly string SUFFIX = ".md";
+        private const string TimePattern = "yyyy/MM/dd HH:mm:ss";
+        private const string Suffix = ".md";
 
         private bool hidden = false;
 
@@ -64,8 +63,6 @@ namespace MarkDownAvalonia
             // load config
             // todo: check config is null or not
             // this.markdownPreview.AssetPathRoot = CommonData.config.PostDirectory;
-            // load posts
-            // LoadPosts();
         }
 
         /// <summary>
@@ -83,12 +80,17 @@ namespace MarkDownAvalonia
             }
 
             inputTbx.Text = string.Empty;
-            // clear
             articleListPanel.Children.Clear();
 
             // get markdown files
             var files = Directory.GetFiles(CommonData.config.PostDirectory)
-                .Where(f => f.EndsWith(SUFFIX));
+                .Where(f => f.EndsWith(Suffix));
+            
+            var targetBackground = new SolidColorBrush(Color.FromRgb(199, 80, 73));
+            var targetForeground = new SolidColorBrush(Colors.White);
+            var otherBackground = new SolidColorBrush(Color.FromRgb(49, 47, 47));
+            var otherForeground = new SolidColorBrush(Colors.Silver);
+            
             // deal with each post
             foreach (var file in files)
             {
@@ -97,14 +99,13 @@ namespace MarkDownAvalonia
                 {
                     foreach (var control in cacheControls)
                     {
-                        control.Background = new SolidColorBrush(Color.FromRgb(49, 47, 47));
-                        control.Foreground = new SolidColorBrush(Colors.Silver);
+                        control.Background = otherBackground;
+                        control.Foreground = otherForeground;
                         control.RemoveHandlers();
                     }
-
                     // current 
-                    current.Background = new SolidColorBrush(Color.FromRgb(199, 80, 73));
-                    current.Foreground = new SolidColorBrush(Colors.White);
+                    current.Background = targetBackground;
+                    current.Foreground = targetForeground;
                     selectedItem = current;
                     current.ConfigTimer();
                 });
@@ -112,14 +113,11 @@ namespace MarkDownAvalonia
             }
 
             // bake in cache
-            var array = new IControl[articleListPanel.Children.Count];
+            var array = new PostItemControl[articleListPanel.Children.Count];
             articleListPanel.Children.CopyTo(array, 0);
             // add cache
             cacheControls.Clear();
-            foreach (var item in array)
-            {
-                cacheControls.Add(item as PostItemControl);
-            }
+            cacheControls.AddRange(array);
         }
 
         private void InitializeComponent()
@@ -151,7 +149,7 @@ namespace MarkDownAvalonia
         {
             // todo : check config
             // there already a temp post
-            if (findTempFile())
+            if (FindTempFile())
                 return;
 
             var current = new PostItemControl(this.inputTbx);
@@ -170,9 +168,9 @@ namespace MarkDownAvalonia
                 current.ConfigTimer();
             });
             inputTbx.Text =
-                $"---{Environment.NewLine}{Environment.NewLine}title: {Environment.NewLine}{Environment.NewLine}date: {DateTime.Now.ToString(TIME_PATTERN)}{Environment.NewLine}{Environment.NewLine}tags: {Environment.NewLine}{Environment.NewLine}---{Environment.NewLine}{Environment.NewLine}";
+                $"---{Environment.NewLine}{Environment.NewLine}title: {Environment.NewLine}{Environment.NewLine}date: {DateTime.Now.ToString(TimePattern)}{Environment.NewLine}{Environment.NewLine}tags: {Environment.NewLine}{Environment.NewLine}---{Environment.NewLine}{Environment.NewLine}";
             markdownPreview.Markdown =
-                $"---{Environment.NewLine}{Environment.NewLine}title: {Environment.NewLine}{Environment.NewLine}date: {DateTime.Now.ToString(TIME_PATTERN)}{Environment.NewLine}{Environment.NewLine}tags: {Environment.NewLine}{Environment.NewLine}---{Environment.NewLine}{Environment.NewLine}";
+                $"---{Environment.NewLine}{Environment.NewLine}title: {Environment.NewLine}{Environment.NewLine}date: {DateTime.Now.ToString(TimePattern)}{Environment.NewLine}{Environment.NewLine}tags: {Environment.NewLine}{Environment.NewLine}---{Environment.NewLine}{Environment.NewLine}";
             current.UpdateCache();
             articleListPanel.Children.Insert(0, current);
             cacheControls.Add(current);
@@ -193,7 +191,7 @@ namespace MarkDownAvalonia
             if (selectedItem.isExists)
             {
                 // exists
-                using (FileStream sw = new FileStream(selectedItem.info.FullName, FileMode.Create))
+                using (var sw = new FileStream(selectedItem.info.FullName, FileMode.Create))
                 {
                     sw.Write(Encoding.UTF8.GetBytes(inputTbx.Text));
                     sw.Flush();
@@ -203,16 +201,19 @@ namespace MarkDownAvalonia
                 return;
             }
 
-            var saveFileDialog = new SaveFileDialog();
-            saveFileDialog.DefaultExtension = SUFFIX;
-            saveFileDialog.Directory = CommonData.config.PostDirectory;
+            var saveFileDialog = new SaveFileDialog()
+            {
+                DefaultExtension = Suffix,
+                Directory = CommonData.config.PostDirectory
+            };
+
             var result = await saveFileDialog.ShowAsync(this);
             if (!string.IsNullOrWhiteSpace(result))
             {
                 // auto detect suffix
-                if (!result.ToLower().EndsWith(SUFFIX))
+                if (!result.ToLower().EndsWith(Suffix))
                 {
-                    result = result + SUFFIX;
+                    result += Suffix;
                 }
 
                 // file name already exists
@@ -277,9 +278,7 @@ namespace MarkDownAvalonia
 
         public void PreviewPost(object sender, RoutedEventArgs e)
         {
-            var mb = new FindWindow(inputTbx);
-            mb.Width = 500;
-            mb.Height = 320;
+            var mb = new FindWindow(inputTbx) {Width = 500, Height = 320};
             mb.Show(this);
         }
 
@@ -350,7 +349,7 @@ namespace MarkDownAvalonia
             // remove event handler
             selectedItem.RemoveHandlers();
             // remove 
-            this.articleListPanel.Children.Remove(selectedItem);
+            articleListPanel.Children.Remove(selectedItem);
             // remove cache
             cacheControls.TryRemove(selectedItem);
             // remove selected
@@ -379,15 +378,17 @@ namespace MarkDownAvalonia
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void OpenSettingWindow(Object sender, RoutedEventArgs e)
+        public void OpenSettingWindow(object sender, RoutedEventArgs e)
         {
-            SettingWindow mb = new SettingWindow();
-            mb.Width = 500;
-            mb.Height = 320;
+            var mb = new SettingWindow()
+            {
+                Width = 500,
+                Height = 320
+            };
             mb.Show(this);
         }
 
-        public void ToggleListPanel(Object sender, RoutedEventArgs e)
+        public void ToggleListPanel(object sender, RoutedEventArgs e)
         {
             mainGrid.ColumnDefinitions[0].Width = !hidden ? new GridLength(0) : new GridLength(this.Width / 5);
             hidden = !hidden;
@@ -409,35 +410,39 @@ namespace MarkDownAvalonia
         }
 
         /// <summary>
-        /// 查找是否存在临时文件
+        /// check if exist temp markdown file
         /// </summary>
         /// <returns></returns>
-        private bool findTempFile()
+        private bool FindTempFile()
         {
             return cacheControls.Exists(ele => !ele.isExists);
         }
 
         /// <summary>
-        /// 选中指定项
+        /// enable some item selected
         /// </summary>
         /// <param name="target"></param>
         private void SelectControl(PostItemControl target)
         {
-            foreach (var control in this.cacheControls)
+            var targetBackground = new SolidColorBrush(Color.FromRgb(199, 80, 73));
+            var targetForeground = new SolidColorBrush(Colors.White);
+            var otherBackground = new SolidColorBrush(Color.FromRgb(49, 47, 47));
+            var otherForeground = new SolidColorBrush(Colors.Silver);
+            
+            foreach (var control in cacheControls)
             {
+                control.RemoveHandlers();
                 if (control == target)
                 {
-                    control.RemoveHandlers();
-                    control.Background = new SolidColorBrush(Color.FromRgb(199, 80, 73));
-                    control.Foreground = new SolidColorBrush(Colors.White);
+                    control.Background = targetBackground;
+                    control.Foreground = targetForeground;
                     selectedItem = control;
                     control.ConfigTimer();
                 }
                 else
                 {
-                    control.Background = new SolidColorBrush(Color.FromRgb(49, 47, 47));
-                    control.Foreground = new SolidColorBrush(Colors.Silver);
-                    control.RemoveHandlers();
+                    control.Background = otherBackground;
+                    control.Foreground = otherForeground;
                 }
             }
         }
@@ -446,56 +451,59 @@ namespace MarkDownAvalonia
         public async void InputShortcutKeys(object sender, KeyEventArgs e)
         {
             var modifiers = e.KeyModifiers;
-
             var key = e.Key;
+            
             // control + v
             if (modifiers == KeyModifiers.Control && key == Key.V)
             {
-                string[] format = await Application.Current.Clipboard.GetFormatsAsync();
+                var format = await Application.Current.Clipboard.GetFormatsAsync();
                 if (format.Length > 0)
                 {
                     if (format[0].Equals("public.png") && selectedItem != null && selectedItem.isExists)
                     {
-                        IClipboard clipboard = Application.Current.Clipboard;
-                        byte[] data = await clipboard.GetDataAsync(format[1]) as byte[];
-                        Stream stream = new MemoryStream(data);
-                        Bitmap image = new Bitmap(stream);
-                        string path = Path.Combine(CommonData.config.PostDirectory,
+                        var data = await Application.Current.Clipboard.GetDataAsync(format[1]) as byte[];
+                        var stream = new MemoryStream(data);
+                        var image = new Bitmap(stream);
+                        var path = Path.Combine(CommonData.config.PostDirectory,
                             Path.GetFileNameWithoutExtension(selectedItem.info.FullName));
                         GitUtils.MakeDirectory(path);
-                        string fileName = Guid.NewGuid().ToString() + ".png";
-                        string filePath = Path.Combine(Path.GetFileNameWithoutExtension(selectedItem.info.FullName),
+                        var fileName = Guid.NewGuid().ToString() + ".png";
+                        var filePath = Path.Combine(Path.GetFileNameWithoutExtension(selectedItem.info.FullName),
                             fileName);
                         image.Save(Path.Combine(path, fileName));
-                        this.inputTbx.Text =
-                            this.inputTbx.Text.Insert(this.inputTbx.CaretIndex, $"![image]({filePath})");
+                        inputTbx.Text =
+                            inputTbx.Text.Insert(this.inputTbx.CaretIndex, $"![image]({filePath})");
                     }
                 }
 
                 return;
             }
 
-// tab
+            // tab
             if (key == Key.Tab)
             {
                 e.Handled = true;
-                this.inputTbx.Text = inputTbx.Text.Insert(this.inputTbx.CaretIndex, "        ");
+                inputTbx.Text = inputTbx.Text.Insert(this.inputTbx.CaretIndex, "        ");
                 return;
             }
 
-            var dic = new Dictionary<Key, Tag>();
-            dic.Add(Key.D1, TagCollection.H1);
-            dic.Add(Key.D2, TagCollection.H2);
-            dic.Add(Key.D3, TagCollection.H3);
-            dic.Add(Key.D4, TagCollection.H4);
-            dic.Add(Key.D5, TagCollection.H5);
-            dic.Add(Key.D6, TagCollection.H6);
+            var dic = new Dictionary<Key, Tag>
+            {
+                {Key.D1, TagCollection.H1},
+                {Key.D2, TagCollection.H2},
+                {Key.D3, TagCollection.H3},
+                {Key.D4, TagCollection.H4},
+                {Key.D5, TagCollection.H5},
+                {Key.D6, TagCollection.H6}
+            };
 
+            // hot shortcut keys
             if (modifiers == KeyModifiers.Control && dic.ContainsKey(key))
             {
                 HandleHeaderShortCutKeys(dic[key]);
             }
 
+            // command + s
             if (modifiers == KeyModifiers.Control && key == Key.S)
             {
                 SavePost(null, null);
@@ -511,21 +519,18 @@ namespace MarkDownAvalonia
             }
         }
 
+        /// <summary>
+        /// handle hot shortcut keys
+        /// </summary>
+        /// <param name="tag"></param>
         private void HandleHeaderShortCutKeys(Tag tag)
         {
-            string selectedText = inputTbx.SelectedText;
-            if (string.IsNullOrWhiteSpace(selectedText))
+            var selectedText = inputTbx.SelectedText;
+            if (!string.IsNullOrWhiteSpace(selectedText))
             {
-                return;
-            }
-
-            if (selectedText.StartsWith(tag.Prefix))
-            {
-                this.inputTbx.SelectedText = selectedText.Substring(tag.Prefix.Length);
-            }
-            else
-            {
-                this.inputTbx.SelectedText = string.Concat(tag.Prefix, selectedText);
+                inputTbx.SelectedText = selectedText.StartsWith(tag.Prefix)
+                    ? selectedText.Substring(tag.Prefix.Length)
+                    : string.Concat(tag.Prefix, selectedText);
             }
         }
 
@@ -544,7 +549,7 @@ namespace MarkDownAvalonia
                     filtered = cacheControls.Where(
                         c => c.GetName().Contains(searchBox.Text, StringComparison.OrdinalIgnoreCase)).ToList();
                 }
-                
+
                 articleListPanel.Children.Clear();
                 articleListPanel.Children.AddRange(filtered);
                 e.Handled = true;

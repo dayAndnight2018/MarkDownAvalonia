@@ -9,8 +9,8 @@ namespace MarkDownAvalonia.Controls
     {
         private string title;
         private string content;
-        private Label titleLabel;
-        private TextBox contentTbx;
+        private readonly Label titleLabel;
+        private readonly TextBox contentTbx;
         
         public NewPostWindow(string title, string content)
         {

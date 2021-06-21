@@ -27,15 +27,12 @@ namespace MarkDownAvalonia.Controls
         public void OnButtonClick(object sender, RoutedEventArgs e)
         {
             this.FindControl<Button>("btn").Content = "test";
-            
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.ShowAsync(this);
+            new OpenFileDialog().ShowAsync(this);
         }
 
         public void OpenMenuClicked(object sender, RoutedEventArgs e)
         {
-            OpenFolderDialog ofd = new OpenFolderDialog();
-            ofd.ShowAsync(this);
+            new OpenFolderDialog().ShowAsync(this);
         }
 
         public void ExitButtonClicked(object sender, RoutedEventArgs e)
@@ -45,21 +42,21 @@ namespace MarkDownAvalonia.Controls
         
         public void LabelMouseEntered(object sender, PointerEventArgs e)
         {
-            Button button = sender as Button;
+            var button = sender as Button;
             button.Background = new SolidColorBrush(Color.FromRgb(199,80,73));
             button.FontWeight = FontWeight.Bold;
         }
         
         public void LabelMouseLeave(object sender, PointerEventArgs e)
         {
-            Button button = sender as Button;
+            var button = sender as Button;
             button.Background = new SolidColorBrush(Colors.Transparent);
             button.FontWeight = FontWeight.Normal;
         }
 
         public void TbxKeyUp(object sender, KeyEventArgs e)
         {
-            TextBox tbx = sender as TextBox;
+            var tbx = sender as TextBox;
             this.FindControl<MarkdownScrollViewer>("markdownPreview").Markdown = tbx.Text;
         }
 

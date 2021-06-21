@@ -5,40 +5,82 @@ using Avalonia.Controls;
 
 namespace MarkDownAvalonia.Data
 {
+    /**
+     * message box helper
+     */
     public static class MessageBox
     {
+        /// <summary>
+        /// width of message box
+        /// </summary>
         private static readonly double MESSAGE_BOX_WIDTH = 480;
+        
+        /// <summary>
+        /// height of message box
+        /// </summary>
         private static readonly double MESSAGE_BOX_HEIGHT = 300;
         
-        public static Task showSuccess(Window sender, String message)
+        /// <summary>
+        /// show success message box
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        public static Task ShowSuccess(Window sender, string message)
         {
-            SuccessMessageBox successMessageBox = new SuccessMessageBox(null, message);
-            successMessageBox.Width = MESSAGE_BOX_WIDTH;
-            successMessageBox.Height = MESSAGE_BOX_HEIGHT;
+            var successMessageBox = new SuccessMessageBox(null, message)
+            {
+                Width = MESSAGE_BOX_WIDTH,
+                Height = MESSAGE_BOX_HEIGHT
+            };
             return successMessageBox.ShowDialog(sender);
         }
         
-        public static Task showError(Window sender, String message)
+        /// <summary>
+        /// show error message box
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        public static Task ShowError(Window sender, String message)
         {
-            ErrorMessageBox errorMessageBox = new ErrorMessageBox(null, message);
-            errorMessageBox.Width = MESSAGE_BOX_WIDTH;
-            errorMessageBox.Height = MESSAGE_BOX_HEIGHT;
+            var errorMessageBox = new ErrorMessageBox(null, message)
+            {
+                Width = MESSAGE_BOX_WIDTH,
+                Height = MESSAGE_BOX_HEIGHT
+            };
             return errorMessageBox.ShowDialog(sender);
         }
         
-        public static Task showInfo(Window sender, String message)
+        /// <summary>
+        /// show info message box
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        public static Task ShowInfo(Window sender, String message)
         {
-            InfoMessageBox infoMessageBox = new InfoMessageBox(null, message);
-            infoMessageBox.Width = MESSAGE_BOX_WIDTH;
-            infoMessageBox.Height = MESSAGE_BOX_HEIGHT;
+            var infoMessageBox = new InfoMessageBox(null, message)
+            {
+                Width = MESSAGE_BOX_WIDTH,
+                Height = MESSAGE_BOX_HEIGHT
+            };
             return infoMessageBox.ShowDialog(sender);
         }
         
-        public static Task<bool> showWarnning(Window sender, String message)
+        /// <summary>
+        /// show warning message box
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        public static Task<bool> ShowWarning(Window sender, String message)
         {
-            WarningMessageBox warningMessageBox = new WarningMessageBox(null, message);
-            warningMessageBox.Width = MESSAGE_BOX_WIDTH;
-            warningMessageBox.Height = MESSAGE_BOX_HEIGHT;
+            var warningMessageBox = new WarningMessageBox(null, message)
+            {
+                Width = MESSAGE_BOX_WIDTH,
+                Height = MESSAGE_BOX_HEIGHT
+            };
             return warningMessageBox.ShowDialog<bool>(sender);
         }
 

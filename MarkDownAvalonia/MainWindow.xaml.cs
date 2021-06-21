@@ -199,7 +199,7 @@ namespace MarkDownAvalonia
                     sw.Flush();
                 }
 
-                await MessageBox.showSuccess(this, "Saved success!");
+                await MessageBox.ShowSuccess(this, "Saved success!");
                 return;
             }
 
@@ -218,7 +218,7 @@ namespace MarkDownAvalonia
                 // file name already exists
                 if (File.Exists(result))
                 {
-                    await MessageBox.showError(this, "File is already exists!");
+                    await MessageBox.ShowError(this, "File is already exists!");
                 }
                 else
                 {
@@ -234,12 +234,12 @@ namespace MarkDownAvalonia
                     selectedItem.updateItemPresent(fileName);
                     selectedItem.isExists = true;
                     selectedItem.info = new FileInfo(result);
-                    await MessageBox.showSuccess(this, "Saved success!");
+                    await MessageBox.ShowSuccess(this, "Saved success!");
                 }
             }
             else
             {
-                await MessageBox.showError(this, "File name could not be null or empty!");
+                await MessageBox.ShowError(this, "File name could not be null or empty!");
             }
         }
 
@@ -319,23 +319,23 @@ namespace MarkDownAvalonia
             {
                 if (!File.Exists(selectedItem.info.FullName))
                 {
-                    await MessageBox.showError(this, "File not exists!");
+                    await MessageBox.ShowError(this, "File not exists!");
                 }
 
                 // file exists
-                if (await MessageBox.showWarnning(this, "Deleting file, continue?"))
+                if (await MessageBox.ShowWarning(this, "Deleting file, continue?"))
                 {
                     // delete from disk
                     File.Delete(selectedItem.info.FullName);
 
                     RemoveItemInPanel();
 
-                    await MessageBox.showSuccess(this, "Delete success!");
+                    await MessageBox.ShowSuccess(this, "Delete success!");
                 }
             }
             else
             {
-                if (await MessageBox.showWarnning(this, "Deleting file, continue?"))
+                if (await MessageBox.ShowWarning(this, "Deleting file, continue?"))
                 {
                     RemoveItemInPanel();
                 }

@@ -15,11 +15,15 @@ namespace MarkDownAvalonia.Controls
         
         public SettingWindow()
         {
+            // control
             AvaloniaXamlLoader.Load(this);
             this.rootDirectoryTbx = this.FindControl<TextBox>("rootDirectoryTbx");
             this.gitAddressTbx = this.FindControl<TextBox>("gitAddressTbx");
+            
+            // config
             this.config = CommonData.config;
             
+            // load config
             if (config != null)
             {
                 this.rootDirectoryTbx.Text = config.RootDirectory ?? string.Empty;
@@ -28,7 +32,7 @@ namespace MarkDownAvalonia.Controls
         }
 
         /**
-         * 窗体关闭
+         * close window
          */
         public void CloseWindow(object sender, RoutedEventArgs e)
         {
@@ -36,13 +40,12 @@ namespace MarkDownAvalonia.Controls
         }
 
         /**
-         * 文件夹选择
+         * choose directory
          */
         public async void selectDir(Object sender, GotFocusEventArgs e)
         {
-            OpenFolderDialog ofd = new OpenFolderDialog();
-            string task = await ofd.ShowAsync(this);
-            TextBox tbx = sender as TextBox;
+            var task = await new OpenFolderDialog().ShowAsync(this);
+            var tbx = sender as TextBox;
             tbx.Text = task;
         }
     }

@@ -14,11 +14,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14c2ef56-7a95-4143-8bf6-009a37c1fb77" name="Default Changelist" comment="optimize code">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/FindWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/FindWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Data/CommonData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Data/CommonData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Data/GitUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Data/GitUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Enums/Tag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Enums/Tag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Enums/TagCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Enums/TagCollection.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,22 +125,18 @@
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/FileHandler.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/SuccessMessageBox.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/CommandRunner.cs" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/GitUtils.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/WarningMessageBox.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/MessageBox.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/EditorWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/NewPostWindow.xaml.cs" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/SettingWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/ThemeConfig.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/theme.json" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/ReactiveModels/MarkdownTextRM.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Extends/CollectionExtends.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Enums/TagEnum.cs" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Enums/Tag.cs" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Enums/TagCollection.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/FindWindow.xaml" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/Configuration.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/ConfigManager.cs" />
@@ -150,6 +144,10 @@
         <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/CommonData.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/FindWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/SettingWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Enums/Tag.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Enums/TagCollection.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/GitUtils.cs" />
       </list>
     </option>
   </component>
@@ -261,7 +259,7 @@
       <workItem from="1622440093572" duration="614000" />
       <workItem from="1622643332004" duration="175000" />
       <workItem from="1624197489897" duration="3277000" />
-      <workItem from="1624233335407" duration="706000" />
+      <workItem from="1624233335407" duration="1227000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1609588163173</created>
@@ -354,7 +352,21 @@
       <option name="project" value="LOCAL" />
       <updated>1624200919507</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="optimize code">
+      <created>1624234056248</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1624234056248</updated>
+    </task>
+    <task id="LOCAL-00015" summary="optimize code">
+      <created>1624234223598</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1624234223598</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

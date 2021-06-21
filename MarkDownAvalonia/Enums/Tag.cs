@@ -2,25 +2,30 @@ using System;
 
 namespace MarkDownAvalonia.Enums
 {
+    /**
+     * abstract tag class
+     */
     public struct Tag
     {
-        private String prefix;
-        private String suffix;
-
-        public Tag(String prefix, String suffix)
+        /// <summary>
+        /// constructor
+        /// </summary>
+        /// <param name="prefix"></param>
+        /// <param name="suffix"></param>
+        public Tag(string prefix, string suffix)
         {
-            this.prefix = prefix;
-            this.suffix = suffix;
+            this.Prefix = prefix;
+            this.Suffix = suffix;
         }
 
-        public string Prefix
-        {
-            get => prefix;
-        }
+        /// <summary>
+        /// prefix
+        /// </summary>
+        public string Prefix { get; }
 
-        public string Suffix
-        {
-            get => suffix;
-        }
+        /// <summary>
+        /// suffix
+        /// </summary>
+        public string Suffix { get; }
     }
 }

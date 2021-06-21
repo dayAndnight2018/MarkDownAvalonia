@@ -17,11 +17,11 @@ namespace MarkDownAvalonia.Data
         /// <returns></returns>
         public static bool GitPush()
         {
-            string path = CommonData.config.RootDirectory;
-            string address = CommonData.config.GitAddress;
-            if (!String.IsNullOrWhiteSpace(path) && !String.IsNullOrWhiteSpace(address))
+            var path = CommonData.config.RootDirectory;
+            var address = CommonData.config.GitAddress;
+            if (!string.IsNullOrWhiteSpace(path) && !string.IsNullOrWhiteSpace(address))
             {
-                StringBuilder sb = new StringBuilder();
+                var sb = new StringBuilder();
                 var git = new CommandRunner("git", Path.Combine(path, "blog"));
                 // checkout
                 var result = git.Run("checkout hexo");
@@ -46,11 +46,11 @@ namespace MarkDownAvalonia.Data
         /// <returns></returns>
         public static bool GitPull()
         {
-            string path = CommonData.config.RootDirectory;
-            string address = CommonData.config.GitAddress;
-            if (!String.IsNullOrWhiteSpace(path) && !String.IsNullOrWhiteSpace(address))
+            var path = CommonData.config.RootDirectory;
+            var address = CommonData.config.GitAddress;
+            if (!string.IsNullOrWhiteSpace(path) && !string.IsNullOrWhiteSpace(address))
             {
-                StringBuilder sb = new StringBuilder();
+                var sb = new StringBuilder();
                 var git = new CommandRunner("git", Path.Combine(path, "blog"));
                 // checkout
                 var result = git.Run("checkout hexo");
@@ -70,11 +70,11 @@ namespace MarkDownAvalonia.Data
         /// <returns></returns>
         public static bool GitRestore()
         {
-            string path = CommonData.config.RootDirectory;
-            string address = CommonData.config.GitAddress;
-            if (!String.IsNullOrWhiteSpace(path) && !String.IsNullOrWhiteSpace(address))
+            var path = CommonData.config.RootDirectory;
+            var address = CommonData.config.GitAddress;
+            if (!string.IsNullOrWhiteSpace(path) && !string.IsNullOrWhiteSpace(address))
             {
-                StringBuilder sb = new StringBuilder();
+                var sb = new StringBuilder();
                 var git = new CommandRunner("git", path);
                 // pull
                 var result = git.Run("clone -b hexo " + address);
@@ -91,10 +91,10 @@ namespace MarkDownAvalonia.Data
         /// <returns></returns>
         public static bool HexoDeploy()
         {
-            string path = CommonData.config.RootDirectory;
-            if (!String.IsNullOrWhiteSpace(path))
+            var path = CommonData.config.RootDirectory;
+            if (!string.IsNullOrWhiteSpace(path))
             {
-                StringBuilder sb = new StringBuilder();
+                var sb = new StringBuilder();
                 var hexo = new CommandRunner("hexo", Path.Combine(path, "editor"));
                 var result = hexo.Run("clean");
                 sb.Append(result);
@@ -116,10 +116,10 @@ namespace MarkDownAvalonia.Data
         /// <returns></returns>
         public static bool HexoPublish()
         {
-            string path = CommonData.config.RootDirectory;
-            if (!String.IsNullOrWhiteSpace(path))
+            var path = CommonData.config.RootDirectory;
+            if (!string.IsNullOrWhiteSpace(path))
             {
-                StringBuilder sb = new StringBuilder();
+                var sb = new StringBuilder();
                 var hexo = new CommandRunner("hexo", Path.Combine(path, "editor"));
                 // generate
                 var result = hexo.Run("generate");
@@ -139,14 +139,14 @@ namespace MarkDownAvalonia.Data
         /// <returns></returns>
         public static bool HexoInit()
         {
-            string path = CommonData.config.RootDirectory;
-            if (!String.IsNullOrWhiteSpace(path))
+            var path = CommonData.config.RootDirectory;
+            if (!string.IsNullOrWhiteSpace(path))
             {
                 // empty directory
-                string realPath = Path.Combine(path, "editor");
+                var realPath = Path.Combine(path, "editor");
                 MakeItEmpty(realPath);
                 // init
-                StringBuilder sb = new StringBuilder();
+                var sb = new StringBuilder();
                 var hexo = new CommandRunner("hexo", realPath);
                 // generate
                 var result = hexo.Run("init");
@@ -161,7 +161,7 @@ namespace MarkDownAvalonia.Data
         /// make sure the directory exists
         /// </summary>
         /// <param name="path"></param>
-        public static void MakeDirectory(String path)
+        public static void MakeDirectory(string path)
         {
             if (!Directory.Exists(path))
             {
@@ -169,9 +169,9 @@ namespace MarkDownAvalonia.Data
             }
         }
         
-        public static void ClearDirectory(String path)
+        public static void ClearDirectory(string path)
         {
-            String[] files = Directory.GetFiles(path);
+            var files = Directory.GetFiles(path);
             if (Directory.Exists(path) && files.Length > 0)
             {
                 foreach (var file in files)
@@ -188,7 +188,7 @@ namespace MarkDownAvalonia.Data
             }
         }
 
-        public static void MakeItEmpty(String path)
+        public static void MakeItEmpty(string path)
         {
             MakeDirectory(path);
             ClearDirectory(path);

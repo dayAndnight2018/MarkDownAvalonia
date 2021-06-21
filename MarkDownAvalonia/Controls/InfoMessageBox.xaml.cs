@@ -5,6 +5,9 @@ using Avalonia.Markup.Xaml;
 
 namespace MarkDownAvalonia.Controls
 {
+    /// <summary>
+    /// info message box
+    /// </summary>
     public class InfoMessageBox : Window
     {
         private string title;
@@ -17,13 +20,11 @@ namespace MarkDownAvalonia.Controls
             this.content = content;
         }
 
-        public InfoMessageBox():this("Message",String.Empty)
-        {
-        }
+        public InfoMessageBox():this("Message",string.Empty) { }
         
         public void CloseWindow(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

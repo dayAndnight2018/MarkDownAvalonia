@@ -5,28 +5,29 @@ using Avalonia.Markup.Xaml;
 
 namespace MarkDownAvalonia.Controls
 {
+    /// <summary>
+    /// error message box
+    /// </summary>
     public class ErrorMessageBox : Window
     {
-        private string title;
-        private string content;
-        private Label messageLabel;
-        
+        private readonly string title;
+        private readonly string content;
+
         public ErrorMessageBox(string title, string content)
         {
             AvaloniaXamlLoader.Load(this);
             this.title = title;
             this.content = content;
-            messageLabel = this.FindControl<Label>("message");
+            
+            var messageLabel = this.FindControl<Label>("message");
             messageLabel.Content = content;
         }
 
-        public ErrorMessageBox():this("Message",String.Empty)
-        {
-        }
+        public ErrorMessageBox():this("Message",string.Empty) { }
         
         public void CloseWindow(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

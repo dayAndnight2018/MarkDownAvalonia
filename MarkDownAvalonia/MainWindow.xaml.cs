@@ -53,7 +53,7 @@ namespace MarkDownAvalonia
             {
                 Background = new SolidColorBrush(Color.Parse(CommonData.theme.Background)),
                 Foreground = new SolidColorBrush(Color.Parse(CommonData.theme.Foreground)),
-                Activecolor = new SolidColorBrush(Color.Parse(CommonData.theme.Activecolor))
+                Activecolor = new SolidColorBrush(Color.Parse(CommonData.theme.ActiveColor))
             };
             // load controls
             this.inputTbx = this.FindControl<TextBox>("inputTextBox");
@@ -106,7 +106,7 @@ namespace MarkDownAvalonia
                     current.Background = new SolidColorBrush(Color.FromRgb(199, 80, 73));
                     current.Foreground = new SolidColorBrush(Colors.White);
                     selectedItem = current;
-                    current.configTimer();
+                    current.ConfigTimer();
                 });
                 articleListPanel.Children.Add(current);
             }
@@ -167,13 +167,13 @@ namespace MarkDownAvalonia
                 current.Background = new SolidColorBrush(Color.FromRgb(199, 80, 73));
                 current.Foreground = new SolidColorBrush(Colors.White);
                 selectedItem = current;
-                current.configTimer();
+                current.ConfigTimer();
             });
             inputTbx.Text =
                 $"---{Environment.NewLine}{Environment.NewLine}title: {Environment.NewLine}{Environment.NewLine}date: {DateTime.Now.ToString(TIME_PATTERN)}{Environment.NewLine}{Environment.NewLine}tags: {Environment.NewLine}{Environment.NewLine}---{Environment.NewLine}{Environment.NewLine}";
             markdownPreview.Markdown =
                 $"---{Environment.NewLine}{Environment.NewLine}title: {Environment.NewLine}{Environment.NewLine}date: {DateTime.Now.ToString(TIME_PATTERN)}{Environment.NewLine}{Environment.NewLine}tags: {Environment.NewLine}{Environment.NewLine}---{Environment.NewLine}{Environment.NewLine}";
-            current.updateCache();
+            current.UpdateCache();
             articleListPanel.Children.Insert(0, current);
             cacheControls.Add(current);
             SelectControl(current);
@@ -231,7 +231,7 @@ namespace MarkDownAvalonia
 
                     // deal for present
                     var fileName = Path.GetFileNameWithoutExtension(result);
-                    selectedItem.updateItemPresent(fileName);
+                    selectedItem.UpdateItemPresent(fileName);
                     selectedItem.isExists = true;
                     selectedItem.info = new FileInfo(result);
                     await MessageBox.ShowSuccess(this, "Saved success!");
@@ -431,7 +431,7 @@ namespace MarkDownAvalonia
                     control.Background = new SolidColorBrush(Color.FromRgb(199, 80, 73));
                     control.Foreground = new SolidColorBrush(Colors.White);
                     selectedItem = control;
-                    control.configTimer();
+                    control.ConfigTimer();
                 }
                 else
                 {

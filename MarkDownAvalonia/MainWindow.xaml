@@ -54,9 +54,16 @@
             <StackPanel HorizontalAlignment="Stretch" Orientation="Horizontal" Background="#303030">
                 <Border HorizontalAlignment="Center" BorderThickness="1" BorderBrush="white" Width="50" Height="50"
                         CornerRadius="40" Margin="5" Background="white">
-                    <PathIcon Foreground="black"
-                              Data="M670.4 329.344L512 487.744 353.6 329.344a31.936 31.936 0 0 0-25.344-9.216l-2.56 0.384a32 32 0 0 0-37.76 31.488l0.064 320a32 32 0 0 0 64 0l-0.064-253.76 137.408 137.408a32 32 0 0 0 40.832 3.712l4.48-3.712L672 418.24V672a32 32 0 1 0 64 0v-320A32 32 0 0 0 704 320l-5.76 0.512-2.496-0.384a31.936 31.936 0 0 0-25.344 9.216z"
-                              FontSize="30" />
+                    <Button Classes="tab" Click="OpenSln">
+                        <StackPanel Orientation="Horizontal">
+                            <PathIcon Foreground="black"
+                                      Data="M670.4 329.344L512 487.744 353.6 329.344a31.936 31.936 0 0 0-25.344-9.216l-2.56 0.384a32 32 0 0 0-37.76 31.488l0.064 320a32 32 0 0 0 64 0l-0.064-253.76 137.408 137.408a32 32 0 0 0 40.832 3.712l4.48-3.712L672 418.24V672a32 32 0 1 0 64 0v-320A32 32 0 0 0 704 320l-5.76 0.512-2.496-0.384a31.936 31.936 0 0 0-25.344 9.216z"
+                                      FontSize="30" />    
+                        </StackPanel>
+                    </Button>
+                    <!-- <PathIcon Foreground="black" -->
+                    <!--           Data="M670.4 329.344L512 487.744 353.6 329.344a31.936 31.936 0 0 0-25.344-9.216l-2.56 0.384a32 32 0 0 0-37.76 31.488l0.064 320a32 32 0 0 0 64 0l-0.064-253.76 137.408 137.408a32 32 0 0 0 40.832 3.712l4.48-3.712L672 418.24V672a32 32 0 1 0 64 0v-320A32 32 0 0 0 704 320l-5.76 0.512-2.496-0.384a31.936 31.936 0 0 0-25.344 9.216z" -->
+                    <!--           FontSize="30" /> -->
                 </Border>
                 <Button Classes="tab" Click="NewPost" ToolTip.Tip="new post">
                     <StackPanel Orientation="Horizontal">

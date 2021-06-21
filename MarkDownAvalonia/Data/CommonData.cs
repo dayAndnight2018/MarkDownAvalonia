@@ -7,7 +7,7 @@ namespace MarkDownAvalonia.Data
         
         static CommonData()
         {
-            config = ConfigManager.LoadConfig();
+            // config = ConfigManager.LoadConfig();
             theme = ConfigManager.LoadTheme();
         }
     }

@@ -63,9 +63,9 @@ namespace MarkDownAvalonia
             this.mainGrid = this.FindControl<Grid>("mainGrid");
             // load config
             // todo: check config is null or not
-            this.markdownPreview.AssetPathRoot = CommonData.config.PostDirectory;
+            // this.markdownPreview.AssetPathRoot = CommonData.config.PostDirectory;
             // load posts
-            LoadPosts();
+            // LoadPosts();
         }
 
         /// <summary>
@@ -127,6 +127,21 @@ namespace MarkDownAvalonia
             AvaloniaXamlLoader.Load(this);
         }
 
+        public async void OpenSln(object sender, RoutedEventArgs e)
+        {
+           var path = await new OpenFolderDialog().ShowAsync(this);
+           if (string.IsNullOrWhiteSpace(path) || !Directory.Exists(path))
+               return;
+
+           // load sln file
+           var config = ConfigManager.loadSln(path);
+           CommonData.config = config;
+           this.markdownPreview.AssetPathRoot = CommonData.config.PostDirectory;
+           
+           // load posts
+           LoadPosts();
+        }
+        
         /// <summary>
         /// add new post
         /// </summary>

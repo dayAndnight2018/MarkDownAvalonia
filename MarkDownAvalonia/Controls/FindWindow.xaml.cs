@@ -1,3 +1,4 @@
+using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
@@ -24,12 +25,22 @@ namespace MarkDownAvalonia.Controls
             replace = this.FindControl<TextBox>("replaceBox");
             border = this.FindControl<Border>("windowBorder");
 
-            LinearGradientBrush brush = new LinearGradientBrush();
-            GradientStops stops = new GradientStops();
-            stops.Add(new GradientStop(Colors.Silver, 0));
-            stops.Add(new GradientStop(Color.Parse("#f2f2f2"), 1));
-            brush.GradientStops = stops;
-            border.BorderBrush = brush;
+            border.BorderBrush = new LinearGradientBrush()
+            {
+                GradientStops = new GradientStops()
+                {
+                    new GradientStop()
+                    {
+                        Color = Colors.Silver,
+                        Offset = 0
+                    },
+                    new GradientStop()
+                    {
+                        Color = Color.Parse("#f2f2f2"),
+                        Offset = 0
+                    }
+                }
+            };
         }
 
         public FindWindow()
@@ -59,11 +70,11 @@ namespace MarkDownAvalonia.Controls
         {
             var text = mainWindowTextBox.Text;
             var searchText = input.Text;
-            
+
             // 异常输入
             if (string.IsNullOrWhiteSpace(searchText))
                 return;
-            
+
             // 切换搜索文本
             if (!searchText.Equals(cacheMatchText))
             {
@@ -93,14 +104,14 @@ namespace MarkDownAvalonia.Controls
         /// <param name="e"></param>
         public void LastMatch(object sender, RoutedEventArgs e)
         {
-            string text = mainWindowTextBox.Text;
-            string searchText = input.Text;
-            
-            // 异常输入
+            var text = mainWindowTextBox.Text;
+            var searchText = input.Text;
+
+            // error input
             if (string.IsNullOrWhiteSpace(searchText))
                 return;
-            
-            // 切换搜索文本
+
+            // new search
             if (!searchText.Equals(cacheMatchText))
             {
                 // search text changed 
@@ -109,9 +120,10 @@ namespace MarkDownAvalonia.Controls
                 cacheMatchText = input.Text;
             }
 
-            int currentMatchIndex = -1;
+            var currentMatchIndex = -1;
+            var searchEndIndex = Math.Max(lastIndex, 0);
             if ((currentMatchIndex =
-                text.Substring(0, lastIndex < 0 ? 0 : lastIndex).LastIndexOf(searchText)) != -1)
+                text.Substring(0, searchEndIndex).LastIndexOf(searchText)) != -1)
             {
                 mainWindowTextBox.SelectionBrush = new SolidColorBrush(Colors.DodgerBlue);
                 mainWindowTextBox.SelectionForegroundBrush = new SolidColorBrush(Colors.White);
@@ -124,18 +136,19 @@ namespace MarkDownAvalonia.Controls
         }
 
         /// <summary>
-        /// 替换一次
+        /// replace text
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         public void Replace(object sender, RoutedEventArgs e)
         {
-            string text = mainWindowTextBox.Text;
-            string searchText = input.Text;
+            var text = mainWindowTextBox.Text;
+            var searchText = input.Text;
+
             // 异常输入
             if (string.IsNullOrWhiteSpace(searchText))
                 return;
-            
+
             if (searchText.Equals(mainWindowTextBox.SelectedText))
             {
                 mainWindowTextBox.SelectedText = replace.Text;
@@ -143,18 +156,19 @@ namespace MarkDownAvalonia.Controls
         }
 
         /// <summary>
-        /// 替换全部
+        /// replace all
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         public void ReplaceAll(object sender, RoutedEventArgs e)
         {
-            string text = mainWindowTextBox.Text;
-            string searchText = input.Text;
+            var text = mainWindowTextBox.Text;
+            var searchText = input.Text;
+
             // 异常输入
             if (string.IsNullOrWhiteSpace(searchText))
                 return;
-            
+
             mainWindowTextBox.Text = mainWindowTextBox.Text.Replace(searchText, replace.Text);
         }
     }

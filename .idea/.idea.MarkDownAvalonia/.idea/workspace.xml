@@ -14,10 +14,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14c2ef56-7a95-4143-8bf6-009a37c1fb77" name="Default Changelist" comment="optimize code">
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/ErrorMessageBox.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/ErrorMessageBox.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/InfoMessageBox.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/InfoMessageBox.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Data/ThemeConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Data/ThemeConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MarkDownAvalonia/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Data/GitUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Data/GitUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/Data/MessageBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/Data/MessageBox.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +59,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/901D0287-899F-4379-87F8-8FB13D3BE845/1B/Control.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E9CB8FBD-A44D-4E4D-9389-94F415C36F74/c2/1bb65d65/TopLevel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/901D0287-899F-4379-87F8-8FB13D3BE845/25/Decorator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D6E9398D-598F-4A13-8EC3-E3DD7267D234/d6/fc59c082/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B971FD86-5926-47CF-90D5-9F158B07D572/44/08d38f1d/Markdown.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/901D0287-899F-4379-87F8-8FB13D3BE845/C/Border.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C6B1368F-EFBD-495B-890F-F5C67710A11F/ef/53169db6/CTextBlock.cs" root0="SKIP_HIGHLIGHTING" />
@@ -138,18 +138,18 @@
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/Configuration.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/ConfigManager.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/CommonData.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/FindWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/SettingWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Enums/Tag.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Enums/TagCollection.cs" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/GitUtils.cs" />
-        <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/MessageBox.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/ThemeConfig.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/ErrorMessageBox.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/InfoMessageBox.xaml.cs" />
         <option value="$PROJECT_DIR$/MarkDownAvalonia/Controls/PostItemControl.xaml.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/MessageBox.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/Data/GitUtils.cs" />
+        <option value="$PROJECT_DIR$/MarkDownAvalonia/MainWindow.xaml.cs" />
       </list>
     </option>
   </component>
@@ -261,7 +261,7 @@
       <workItem from="1622440093572" duration="614000" />
       <workItem from="1622643332004" duration="175000" />
       <workItem from="1624197489897" duration="3277000" />
-      <workItem from="1624233335407" duration="2587000" />
+      <workItem from="1624233335407" duration="4070000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1609588163173</created>
@@ -382,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624235113052</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="optimize code">
+      <created>1624235954369</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1624235954369</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,9 +613,10 @@
     <state x="75" y="92" width="1290" height="717" key="VCS.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1624235951563" />
     <state x="-1820" y="131" width="1720" height="842" key="VCS.FileHistoryDialog/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1621942265562" />
     <state x="-1820" y="123" width="1720" height="783" key="VCS.FileHistoryDialog/0.23.1440.877/-1920.23.1920.983@-1920.23.1920.983" timestamp="1621401943564" />
-    <state x="-1360" y="254" key="Vcs.Push.Dialog.v2" timestamp="1621402349244">
-      <screen x="-1920" y="23" width="1920" height="983" />
+    <state x="420" y="211" key="Vcs.Push.Dialog.v2" timestamp="1624236057466">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="420" y="211" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1624236057466" />
     <state x="-1360" y="254" key="Vcs.Push.Dialog.v2/0.23.1440.877/-1920.23.1920.983@-1920.23.1920.983" timestamp="1621402349244" />
     <state width="960" height="528" key="XDebugger.FullValuePopup" timestamp="1621664651653">
       <screen x="-1920" y="23" width="1920" height="1057" />

@@ -129,19 +129,19 @@ namespace MarkDownAvalonia
 
         public async void OpenSln(object sender, RoutedEventArgs e)
         {
-           var path = await new OpenFolderDialog().ShowAsync(this);
-           if (string.IsNullOrWhiteSpace(path) || !Directory.Exists(path))
-               return;
+            var path = await new OpenFolderDialog().ShowAsync(this);
+            if (string.IsNullOrWhiteSpace(path) || !Directory.Exists(path))
+                return;
 
-           // load sln file
-           var config = ConfigManager.loadSln(path);
-           CommonData.config = config;
-           this.markdownPreview.AssetPathRoot = CommonData.config.PostDirectory;
-           
-           // load posts
-           LoadPosts();
+            // load sln file
+            var config = ConfigManager.loadSln(path);
+            CommonData.config = config;
+            this.markdownPreview.AssetPathRoot = CommonData.config.PostDirectory;
+
+            // load posts
+            LoadPosts();
         }
-        
+
         /// <summary>
         /// add new post
         /// </summary>
@@ -482,7 +482,7 @@ namespace MarkDownAvalonia
                 this.inputTbx.Text = inputTbx.Text.Insert(this.inputTbx.CaretIndex, "        ");
                 return;
             }
-            
+
             var dic = new Dictionary<Key, Tag>();
             dic.Add(Key.D1, TagCollection.H1);
             dic.Add(Key.D2, TagCollection.H2);
@@ -529,34 +529,24 @@ namespace MarkDownAvalonia
             }
         }
 
-
+        /// <summary>
+        /// search box trigger
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void SearchBoxKeyDown(object sender, KeyEventArgs e)
         {
-            var key = e.Key;
-            if (key == Key.Return)
+            if (e.Key == Key.Return)
             {
-                if (string.IsNullOrWhiteSpace(searchBox.Text))
+                var filtered = new List<PostItemControl>();
+                if (!string.IsNullOrWhiteSpace(searchBox.Text))
                 {
-                    articleListPanel.Children.Clear();
-                    foreach (var item in cacheControls)
-                    {
-                        articleListPanel.Children.Add(item);
-                    }
-
-                    return;
+                    filtered = cacheControls.Where(
+                        c => c.GetName().Contains(searchBox.Text, StringComparison.OrdinalIgnoreCase)).ToList();
                 }
-
-                var filtered =
-                    cacheControls.Where(c => c.GetName().ToLower().Contains(searchBox.Text.ToLower())).ToList();
+                
                 articleListPanel.Children.Clear();
-                if (filtered.Count > 0)
-                {
-                    foreach (var item in filtered)
-                    {
-                        articleListPanel.Children.Add(item);
-                    }
-                }
-
+                articleListPanel.Children.AddRange(filtered);
                 e.Handled = true;
             }
         }
@@ -571,6 +561,7 @@ namespace MarkDownAvalonia
             {
                 mainGrid.ColumnDefinitions[0].Width = new GridLength(this.Width / 5);
             }
+
             base.HandleWindowStateChanged(state);
         }
     }

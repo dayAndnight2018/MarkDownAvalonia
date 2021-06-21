@@ -42,7 +42,7 @@ namespace MarkDownAvalonia.Data
         /// <param name="sender"></param>
         /// <param name="message"></param>
         /// <returns></returns>
-        public static Task ShowError(Window sender, String message)
+        public static Task ShowError(Window sender, string message)
         {
             var errorMessageBox = new ErrorMessageBox(null, message)
             {
@@ -58,7 +58,7 @@ namespace MarkDownAvalonia.Data
         /// <param name="sender"></param>
         /// <param name="message"></param>
         /// <returns></returns>
-        public static Task ShowInfo(Window sender, String message)
+        public static Task ShowInfo(Window sender, string message)
         {
             var infoMessageBox = new InfoMessageBox(null, message)
             {
@@ -74,7 +74,7 @@ namespace MarkDownAvalonia.Data
         /// <param name="sender"></param>
         /// <param name="message"></param>
         /// <returns></returns>
-        public static Task<bool> ShowWarning(Window sender, String message)
+        public static Task<bool> ShowWarning(Window sender, string message)
         {
             var warningMessageBox = new WarningMessageBox(null, message)
             {
